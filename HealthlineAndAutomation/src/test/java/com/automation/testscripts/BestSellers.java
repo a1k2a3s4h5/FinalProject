@@ -1,8 +1,9 @@
-package AutomationTestScripts;
+package com.automation.testscripts;
 
 import org.testng.annotations.Test;
 
-import AutomationLocators.BestSellersLocator;
+import com.automation.locators.BestSellersLocator;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -12,17 +13,18 @@ import org.testng.annotations.AfterMethod;
 public class BestSellers {
 
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	AutomationLocators.BestSellersLocator loc=new AutomationLocators.BestSellersLocator();
+	com.automation.locators.BestSellersLocator loc=new com.automation.locators.BestSellersLocator();
 	
 	/**
 	 * check the best seller functionality operation perform click
+	 * 
 	 */
 
 	@Test
 	@Parameters("browserName")
-	public void bestSellerFunctionality() {
-		setup.browserSetup("chrome");
-		WebDriver driver = setup.driverReturn("chrome");
+	public void bestSellerFunctionality(String browserName) {
+		setup.browserSetup(browserName);
+		WebDriver driver = setup.driverReturn(browserName);
 		loc = PageFactory.initElements(driver, BestSellersLocator.class);
 		loc.bestSeller.click();
 		driver.quit();

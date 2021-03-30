@@ -5,10 +5,12 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 	</listeners>
 	
-  <parameter name = "browserName" value="chrome"/> 
-  <test thread-count="5" name="Test">
+   <parameter name = "browserName" value="chrome"/>
+  <test thread-count="5" name="Test"> 
     <classes>
-      <class name="AutomationTestScripts.Categories"/>
+      <class name="AutomationTestScripts.BestSellers"/>
     </classes>
   </test> <!-- Test -->
+  
+  
 </suite> <!-- Suite -->

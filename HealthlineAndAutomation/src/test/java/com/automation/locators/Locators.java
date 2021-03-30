@@ -1,4 +1,4 @@
-package AutomationLocators;
+package com.automation.locators;
 /**
  * Locators of automationpractice.com website
  * Date: 4/03/2021

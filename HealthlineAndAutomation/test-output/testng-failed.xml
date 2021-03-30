@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationTestScripts.BestSellers">
+      <class name="com.automation.testscripts.BestSellers">
         <methods>
           <include name="bestSellerFunctionality"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- AutomationTestScripts.BestSellers -->
+      </class> <!-- com.automation.testscripts.BestSellers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
