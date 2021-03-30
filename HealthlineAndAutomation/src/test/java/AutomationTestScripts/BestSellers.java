@@ -17,8 +17,9 @@ public class BestSellers {
 	/**
 	 * check the best seller functionality operation perform click
 	 */
-	@Parameters("browserName")
+
 	@Test
+	@Parameters("browserName")
 	public void bestSellerFunctionality() {
 		setup.browserSetup("chrome");
 		WebDriver driver = setup.driverReturn("chrome");
