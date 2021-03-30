@@ -1,9 +1,13 @@
 package com.automation.testscripts;
-
+/*
+ * Aim: To view the best seller items
+ * Author:Vaishvi Patel
+ * Created on:13/03/2021
+ * Modified Last:30/03/2021
+ */
 import org.testng.annotations.Test;
-
 import com.automation.locators.BestSellersLocator;
-
+import utils.SetupEnvironment;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -12,18 +16,17 @@ import org.testng.annotations.AfterMethod;
 
 public class BestSellers {
 
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	com.automation.locators.BestSellersLocator loc=new com.automation.locators.BestSellersLocator();
+	SetupEnvironment setup=new SetupEnvironment();
+	BestSellersLocator loc=new BestSellersLocator();
 	
 	/**
 	 * check the best seller functionality operation perform click
 	 * 
 	 */
-
-	@Test
+	
+	@Test(description = "To verify the bestseller item")
 	@Parameters("browserName")
 	public void bestSellerFunctionality(String browserName) {
-		setup.browserSetup(browserName);
 		WebDriver driver = setup.driverReturn(browserName);
 		loc = PageFactory.initElements(driver, BestSellersLocator.class);
 		loc.bestSeller.click();
