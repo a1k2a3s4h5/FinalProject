@@ -6,11 +6,14 @@
 	</listeners>
 	
    <parameter name = "browserName" value="chrome"/>
-  <test thread-count="5" name="Test"> 
-    <classes>
-      <class name="AutomationTestScripts.BestSellers"/>
-    </classes>
-  </test> <!-- Test -->
-  
-  
+<!--   <test thread-count="5" name="Test">  -->
+<!--     <classes> -->
+<!--       <class name="AutomationTestScripts.BestSellers"/> -->
+<!--     </classes> -->
+<!--   </test> Test -->
+    <test name="SignUp" > 
+     <classes>
+        <class name="com.automation.testscripts.SignUp" /> 
+   </classes> 
+  </test> 
 </suite> <!-- Suite -->
