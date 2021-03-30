@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+=======
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2021-03-30T18:56:28 IST" name="Suite" finished-at="2021-03-30T18:56:57 IST" duration-ms="28499">
+=======
+  <suite started-at="2021-03-30T18:18:58 IST" name="Suite" finished-at="2021-03-30T18:19:58 IST" duration-ms="60084">
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2021-03-30T18:56:28 IST" name="SignUp" finished-at="2021-03-30T18:56:57 IST" duration-ms="28499">
       <class name="com.automation.testscripts.SignUp">
         <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@564fabc8]" started-at="2021-03-30T18:56:28 IST" name="beforeMethod" finished-at="2021-03-30T18:56:41 IST" duration-ms="12569" status="PASS">
@@ -15,8 +24,90 @@
               </value>
             </param>
           </params>
+=======
+    <test started-at="2021-03-30T18:18:58 IST" name="BestSellerTestCase" finished-at="2021-03-30T18:19:15 IST" duration-ms="17467">
+      <class name="com.automation.testscripts.BestSellers">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.BestSellers@460d0a57]" started-at="2021-03-30T18:18:58 IST" name="beforeMethod" finished-at="2021-03-30T18:18:58 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="bestSellerFunctionality(java.lang.String)[pri:0, instance:com.automation.testscripts.BestSellers@460d0a57]" started-at="2021-03-30T18:18:58 IST" name="bestSellerFunctionality" description="To verify the bestseller item" finished-at="2021-03-30T18:19:15 IST" duration-ms="17399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bestSellerFunctionality -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.BestSellers@460d0a57]" started-at="2021-03-30T18:19:15 IST" name="afterMethod" finished-at="2021-03-30T18:19:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.automation.testscripts.BestSellers -->
+    </test> <!-- BestSellerTestCase -->
+    <test started-at="2021-03-30T18:19:15 IST" name="CategoriesTestCase" finished-at="2021-03-30T18:19:30 IST" duration-ms="14116">
+      <class name="com.automation.testscripts.Categories">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.Categories@353d0772]" started-at="2021-03-30T18:19:15 IST" name="beforeMethod" finished-at="2021-03-30T18:19:15 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="categoriesWomenCheck(java.lang.String)[pri:0, instance:com.automation.testscripts.Categories@353d0772]" started-at="2021-03-30T18:19:15 IST" name="categoriesWomenCheck" description="To verify the women category" finished-at="2021-03-30T18:19:30 IST" duration-ms="14104" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy13.click(Unknown Source)
+at com.automation.locators.CategoriesLocator.womenCategoryClicks(CategoriesLocator.java:40)
+at com.automation.testscripts.Categories.categoriesWomenCheck(Categories.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- beforeMethod -->
         <test-method signature="invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@564fabc8]" started-at="2021-03-30T18:56:41 IST" name="invalidSignUp" data-provider="invalidEmail" finished-at="2021-03-30T18:56:46 IST" duration-ms="4654" status="PASS">
           <params>
@@ -53,5 +144,37 @@
         </test-method> <!-- emailIdExits -->
       </class> <!-- com.automation.testscripts.SignUp -->
     </test> <!-- SignUp -->
+=======
+        </test-method> <!-- categoriesWomenCheck -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.Categories@353d0772]" started-at="2021-03-30T18:19:30 IST" name="afterMethod" finished-at="2021-03-30T18:19:30 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.automation.testscripts.Categories -->
+    </test> <!-- CategoriesTestCase -->
+    <test started-at="2021-03-30T18:19:30 IST" name="ContactUsTestCase" finished-at="2021-03-30T18:19:58 IST" duration-ms="28399">
+      <class name="com.automation.testscripts.ContactUs">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.ContactUs@31d7b7bf]" started-at="2021-03-30T18:19:30 IST" name="beforeMethod" finished-at="2021-03-30T18:19:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="contactUsFunctionality(java.lang.String)[pri:0, instance:com.automation.testscripts.ContactUs@31d7b7bf]" started-at="2021-03-30T18:19:30 IST" name="contactUsFunctionality" finished-at="2021-03-30T18:19:58 IST" duration-ms="28391" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactUsFunctionality -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.ContactUs@31d7b7bf]" started-at="2021-03-30T18:19:58 IST" name="afterMethod" finished-at="2021-03-30T18:19:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.automation.testscripts.ContactUs -->
+    </test> <!-- ContactUsTestCase -->
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
   </suite> <!-- Suite -->
 </testng-results>
