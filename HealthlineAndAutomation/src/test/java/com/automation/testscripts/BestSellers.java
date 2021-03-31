@@ -21,11 +21,10 @@ public class BestSellers {
 	
 	/**
 	 * Function name: bestSellerFunctionality
-	 * Check the best seller functionality to perform click
+	 * Check the best seller product functionality that performs click
 	 * @param browserName
 	 * 
 	 */
-	
 	@Test(description = "To verify the bestseller item")
 	@Parameters("browserName")
 	public void bestSellerFunctionality(String browserName) {

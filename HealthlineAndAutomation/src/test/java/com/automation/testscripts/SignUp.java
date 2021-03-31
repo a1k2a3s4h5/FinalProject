@@ -86,7 +86,7 @@ public class SignUp {
 	
 	/**
 	 * Function name: validSignUp
-	 * To provide valid details for signup 
+	 * To provide valid details for signup and verify the functionality
 	 * @param emailAddress
 	 * @param firstname
 	 * @param lastname

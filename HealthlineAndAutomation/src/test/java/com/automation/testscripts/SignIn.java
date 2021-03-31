@@ -49,6 +49,7 @@ public class SignIn {
 	/**
 	 * Function name: invalidSignIn
 	 * To check the login functionality with invalid email address and password
+	 * There are 2 test scenarios where email address is invalid and in other email is valid but password is invalid
 	 * @param emailAddress
 	 * @param pswd
 	 */
