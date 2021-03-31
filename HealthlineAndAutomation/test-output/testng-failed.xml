@@ -2,31 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browserName" value="chrome"/>
-  <test thread-count="5" name="CategoriesTestCase(failed)">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="AddToCart(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.automation.testscripts.SignUp">
-=======
-      <class name="com.automation.testscripts.Categories">
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+      <class name="com.automation.testscripts.SearchAndAddToCart">
         <methods>
-<<<<<<< HEAD
-          <include name="invalidSignUp"/>
-=======
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+          <include name="addToCart" invocation-numbers="0"/>
           <include name="beforeMethod"/>
-<<<<<<< HEAD
-          <include name="emailIdExits"/>
-=======
-          <include name="afterMethod"/>
-          <include name="categoriesWomenCheck" invocation-numbers="0"/>
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.automation.testscripts.SignUp -->
-=======
-      </class> <!-- com.automation.testscripts.Categories -->
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+      </class> <!-- com.automation.testscripts.SearchAndAddToCart -->
     </classes>
-  </test> <!-- CategoriesTestCase(failed) -->
+  </test> <!-- AddToCart(failed) -->
 </suite> <!-- Failed suite [Suite] -->

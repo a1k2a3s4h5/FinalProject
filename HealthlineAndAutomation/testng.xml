@@ -7,11 +7,11 @@
 	</listeners>
 	
    <parameter name = "browserName" value="chrome"/>
-  <test name="SignIn"> 
-    <classes>
-      <class name="com.automation.testscripts.SignIn"/>
-    </classes>
-  </test> 
+<!--   <test name="SignIn">  -->
+<!--     <classes> -->
+<!--       <class name="com.automation.testscripts.SignIn"/> -->
+<!--     </classes> -->
+<!--   </test>  -->
 <!--     <test name="SignUp" >  -->
 <!--      <classes> -->
 <!--         <class name="com.automation.testscripts.SignUp" />  -->
@@ -36,4 +36,10 @@
 <!--       <class name="com.automation.testscripts.ContactUs"/> -->
 <!--     </classes> -->
 <!--   </test> -->
+
+	<test name="AddToCart">  
+    <classes>
+      <class name="com.automation.testscripts.SearchAndAddToCart"/>
+    </classes>
+  </test>
 </suite> 

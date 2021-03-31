@@ -5,14 +5,14 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="SignUp(failed)">
+  <test thread-count="5" name="AddToCart(failed)">
     <classes>
-      <class name="com.automation.testscripts.SignUp">
+      <class name="com.automation.testscripts.SearchAndAddToCart">
         <methods>
-          <include name="invalidSignUp" invocation-numbers="0"/>
+          <include name="addToCart" invocation-numbers="0"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.automation.testscripts.SignUp -->
+      </class> <!-- com.automation.testscripts.SearchAndAddToCart -->
     </classes>
-  </test> <!-- SignUp(failed) -->
+  </test> <!-- AddToCart(failed) -->
 </suite> <!-- Failed suite [Suite] -->
