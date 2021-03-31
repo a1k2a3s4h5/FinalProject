@@ -15,15 +15,8 @@ public class EditorsPick {
 	EditorsPickLocators loc;
 	
 	@Test
-	public void f() {
-		loc.editorPick1.click();
-		driver.navigate().back();
-		loc.editorPick2.click();
-		driver.navigate().back();
-		loc.editorPick3.click();
-
-		driver.navigate().back();
-		driver.quit();
+	public void editorsPickWork() {
+		loc.WrokingOfEditorsPickLocators();
 	}
 
 	@BeforeMethod

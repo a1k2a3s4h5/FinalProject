@@ -18,8 +18,7 @@ public class SearchBar {
 	
 	@Test
 	  public void searchBar() {
-			loc.searchBox.sendKeys("Women Health");
-			loc.searchElement.click();
+			loc.workingOfSearchBar();
 	  }
 	  @BeforeMethod
 		public void beforeMethod() {
@@ -35,7 +34,7 @@ public class SearchBar {
 		@AfterMethod
 		public void afterMethod() {
 			System.out.println("Closing Browser");
-			
+			driver.quit();	
 		}
 
 	

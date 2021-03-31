@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class EditorsPickLocators {
 	
+	public WebDriver driver;
+	
 	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[1]")
 	public WebElement editorPick1;
 	
@@ -21,4 +23,13 @@ public class EditorsPickLocators {
 		PageFactory.initElements(driver, this);
 	}
 
+	public void WrokingOfEditorsPickLocators() {
+		editorPick1.click();
+		driver.navigate().back();
+		editorPick2.click();
+		driver.navigate().back();
+		editorPick3.click();
+		driver.navigate().back();
+		driver.quit();
+	}
 }

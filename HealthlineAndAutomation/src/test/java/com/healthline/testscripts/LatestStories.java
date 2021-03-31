@@ -17,9 +17,7 @@ public class LatestStories {
 	
 	@Test
 	public void f() {
-		loc.latestStories.click();
-		driver.navigate().back();
-		driver.quit();	
+		loc.workingOfLatestStories();
 	}
 
 	@BeforeMethod
@@ -36,6 +34,6 @@ public class LatestStories {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("closing browser");
-		
+		driver.quit();
 	}
 }

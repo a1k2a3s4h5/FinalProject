@@ -15,22 +15,11 @@ public class TrendingPost {
 	TrendingPostLocators loc;
 	
 	@Test
-	public void f() {
-		loc.trendingPost1.click();
-		driver.navigate().back();
-
-		try {
-			loc.mainPopUp.click();
-			} catch (Exception e) {
-				System.out.println("Pop-UP not found.");
-			}
-		loc.trendingPost2.click();
-		driver.navigate().back();
-		loc.trendingPost3.click();
-		driver.navigate().back();
-		driver.quit();
-
+	public void trendingPostFunctionality() {
+		loc.workingOfTrendingPost();
 	}
+	
+	
 
 	@BeforeMethod
 	public void beforeMethod() {
@@ -46,7 +35,7 @@ public class TrendingPost {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browsr");
-		
+		driver.quit();
 	}
 
 }

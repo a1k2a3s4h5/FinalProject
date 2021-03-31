@@ -7,6 +7,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class HealthTopicsLocators {
+	
+	public WebDriver driver;
 
 	@FindBy(how=How.XPATH , using="//button[@data-auto='header-menu']")
 	public WebElement menuButton;
@@ -14,8 +16,11 @@ public class HealthTopicsLocators {
 	@FindBy(how=How.XPATH , using="//ul[@class='css-1t6cvut']/li[@class='css-efqyut'][1]/a")
 	public WebElement  allTopicsAtoZ;
 	
-	@FindBy(how=How.XPATH , using="//div[@class='css-1rr4qq7']/ul[@class='css-1j6hmye']//li[62]/a")
+	@FindBy(how=How.XPATH , using="//a[text()='What to Know About GlassesUSA']")
 	public WebElement usaGlasses;
+	
+	@FindBy(how=How.XPATH, using= "//span[text()='Next']")
+	public WebElement next;
 	
 	@FindBy(how=How.XPATH , using="//button[@class='css-1eiym9q icon-hl-close window-close-button']")
 	public WebElement mainPopUp;
@@ -38,7 +43,7 @@ public class HealthTopicsLocators {
 	@FindBy(how=How.XPATH , using="//input[@class='css-12ffvwx']")
 	public WebElement enterEmail;
 	
-	@FindBy(how=How.XPATH , using="//button[@class='css-1l30t0b']")
+	@FindBy(how=How.XPATH , using="//button[@class='css-160vb1s']")
 	public WebElement signUp;
 	
 	@FindBy(how=How.XPATH , using="//span[text()='2 sources']")
@@ -70,6 +75,63 @@ public class HealthTopicsLocators {
 	
 	public HealthTopicsLocators(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void workingOfHealthTopics() {
+		menuButton.click();
+		allTopicsAtoZ.click();
+		next.click();
+		next.click();
+		next.click();
+		usaGlasses.click();
+
+		try {
+			mainPopUp.click();
+		} catch (Exception e) {
+			System.out.println("Pop-UP not found.");
+		}
+		prosAndCons.click();
+		eyeStrain.click();
+
+		driver.navigate().back();
+		visionPresc.click();
+
+		driver.navigate().back();
+
+		doubleVision.click();
+
+		driver.navigate().back();
+
+		enterEmail.click();
+		enterEmail.clear();
+
+		enterEmail.sendKeys("akash@gmail.com");
+		signUp.click();
+
+		sourceButton.click();
+
+		mailClick.click();
+
+		popUpClose.click();
+
+		driver.navigate().back();
+
+		menuButton.click();
+
+		allTopicsAtoZ.click();
+		
+		symptom.click();
+		ticherbust.click();
+		
+
+		driver.navigate().back();
+		nutri.click();
+
+		news.click();
+		Diabetes.click();
+		
+		menuButton.click();
+		adhd.click();
 	}
 	
 }

@@ -21,14 +21,8 @@ public class FeaturedTopics {
 	FeaturedTopicsLocators loc;
 
 	@Test
-	public void f() {
-		loc.coronaVirus.click();
-		driver.navigate().back();
-		loc.nutrition.click();
-		driver.navigate().back();
-		loc.parentHood.click();
-		driver.navigate().back();
-		driver.quit();
+	public void featuredTopicsWork() {
+		 loc.workingOfFeaturedTopics(); 
 	}
 
 	@BeforeMethod
@@ -45,7 +39,6 @@ public class FeaturedTopics {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browser");
-
+		driver.quit();
 	}
-
 }

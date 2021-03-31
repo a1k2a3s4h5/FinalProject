@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SearchBarLocators {
 
+	public WebDriver driver;
+	
 	@FindBy(how=How.CLASS_NAME , using="autocomplete")
 	public WebElement searchBox;
 	
@@ -16,5 +18,10 @@ public class SearchBarLocators {
 	
 	public SearchBarLocators(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void workingOfSearchBar() {
+		searchBox.sendKeys("Women Health");
+		searchElement.click();
 	}
 }

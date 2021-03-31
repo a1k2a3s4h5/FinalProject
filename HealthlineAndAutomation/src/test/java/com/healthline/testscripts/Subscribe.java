@@ -25,19 +25,8 @@ public class Subscribe {
 	SubscribeLocators loc;
 
 	@Test
-	public void f() {
-		loc.subscribeButton.click();
-
-		loc.subscribeTestBox.sendKeys("vaishvipatel365@gmail.com");
-
-		loc.subscribeButton2.click();
-
-		loc.subscribeButton3.click();
-		Set<String> handlesSet = driver.getWindowHandles();
-		List<String> handlesList = new ArrayList<String>(handlesSet);
-		driver.switchTo().window(handlesList.get(1));
-		driver.close();
-		driver.switchTo().window(handlesList.get(0));
+	public void subscribeFunctionality() {
+		loc.workingOfSubscriber();
 	}
 
 	@BeforeMethod

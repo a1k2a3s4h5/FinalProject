@@ -20,57 +20,7 @@ public class HealthTopics {
 		@Test
 		public void healthTopics() {
 			
-			loc.menuButton.click();
-			loc.allTopicsAtoZ.click();
-			loc.usaGlasses.click();
-
-			try {
-				loc.mainPopUp.click();
-			} catch (Exception e) {
-				System.out.println("Pop-UP not found.");
-			}
-			loc.prosAndCons.click();
-			loc.eyeStrain.click();
-
-			driver.navigate().back();
-			loc.visionPresc.click();
-
-			driver.navigate().back();
-
-			loc.doubleVision.click();
-
-			driver.navigate().back();
-
-			loc.enterEmail.click();
-			loc.enterEmail.clear();
-
-			loc.enterEmail.sendKeys("akash@gmail.com");
-			loc.signUp.click();
-
-			loc.sourceButton.click();
-
-			loc.mailClick.click();
-
-			loc.popUpClose.click();
-
-			driver.navigate().back();
-
-			loc.menuButton.click();
-
-			loc.allTopicsAtoZ.click();
-			
-			loc.symptom.click();
-			loc.ticherbust.click();
-			
-
-			driver.navigate().back();
-			loc.nutri.click();
-
-			loc.news.click();
-			loc.Diabetes.click();
-			
-			loc.menuButton.click();
-			loc.adhd.click();
+		loc.workingOfHealthTopics();
 		}
 
 		@BeforeMethod

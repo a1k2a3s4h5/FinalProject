@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TrendingPostLocators {
 
+	public WebDriver driver;
 
 	@FindBy(how=How.XPATH , using="//a[contains(text(),'authorize the use of Johnson')]")
 	public WebElement trendingPost1;
@@ -25,4 +26,19 @@ public class TrendingPostLocators {
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void workingOfTrendingPost() {
+		trendingPost1.click();
+		driver.navigate().back();
+
+		try {
+			mainPopUp.click();
+			} catch (Exception e) {
+				System.out.println("Pop-UP not found.");
+			}
+		trendingPost2.click();
+		driver.navigate().back();
+		trendingPost3.click();
+		driver.navigate().back();
+		
+	}
 }

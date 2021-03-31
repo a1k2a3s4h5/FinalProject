@@ -2,49 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-31T11:36:54 IST" name="Automation Practice Suite" finished-at="2021-03-31T11:37:29 IST" duration-ms="34767">
+  <suite started-at="2021-03-31T15:46:55 IST" name="Default suite" finished-at="2021-03-31T15:47:40 IST" duration-ms="44886">
     <groups>
     </groups>
-    <test started-at="2021-03-31T11:36:54 IST" name="AddToCart" finished-at="2021-03-31T11:37:29 IST" duration-ms="34767">
-      <class name="com.automation.testscripts.SearchAndAddToCart">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SearchAndAddToCart@7e07db1f]" started-at="2021-03-31T11:36:54 IST" name="beforeMethod" finished-at="2021-03-31T11:37:03 IST" duration-ms="9243" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2021-03-31T15:46:55 IST" name="Default test" finished-at="2021-03-31T15:47:40 IST" duration-ms="44886">
+      <class name="com.healthline.testscripts.HealthTopics">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.healthline.testscripts.HealthTopics@6ac13091]" started-at="2021-03-31T15:46:55 IST" name="beforeMethod" finished-at="2021-03-31T15:47:10 IST" duration-ms="14780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="addToCart(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.SearchAndAddToCart@7e07db1f]" started-at="2021-03-31T11:37:03 IST" name="addToCart" data-provider="validDetails" finished-at="2021-03-31T11:37:29 IST" duration-ms="25459" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test1605@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abcde]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Printed Chiffon Dress]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[XYZ]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="healthTopics()[pri:0, instance:com.healthline.testscripts.HealthTopics@6ac13091]" started-at="2021-03-31T15:47:10 IST" name="healthTopics" finished-at="2021-03-31T15:47:40 IST" duration-ms="30053" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addToCart -->
-      </class> <!-- com.automation.testscripts.SearchAndAddToCart -->
-    </test> <!-- AddToCart -->
-  </suite> <!-- Automation Practice Suite -->
+        </test-method> <!-- healthTopics -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.HealthTopics@6ac13091]" started-at="2021-03-31T15:47:40 IST" name="afterMethod" finished-at="2021-03-31T15:47:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.healthline.testscripts.HealthTopics -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

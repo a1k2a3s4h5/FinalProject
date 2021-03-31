@@ -18,10 +18,8 @@ public class HealthlineLogo {
 	HealthlineLogoLocators loc;
 
 	@Test
-	public void f() {
-		loc.logo.click();
-		System.out.println("The page is refreshed");
-		driver.quit();
+	public void clickFunctionalityOfHealthlineLogo() {
+		loc.workOfHealthlineLogo();
 	}
 
 	@BeforeMethod
