@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
-=======
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2021-03-30T18:56:28 IST" name="Suite" finished-at="2021-03-30T18:56:57 IST" duration-ms="28499">
-=======
-  <suite started-at="2021-03-30T18:18:58 IST" name="Suite" finished-at="2021-03-30T18:19:58 IST" duration-ms="60084">
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+  <suite started-at="2021-03-31T10:41:59 IST" name="Suite" finished-at="2021-03-31T10:43:36 IST" duration-ms="97590">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test started-at="2021-03-30T18:56:28 IST" name="SignUp" finished-at="2021-03-30T18:56:57 IST" duration-ms="28499">
-      <class name="com.automation.testscripts.SignUp">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@564fabc8]" started-at="2021-03-30T18:56:28 IST" name="beforeMethod" finished-at="2021-03-30T18:56:41 IST" duration-ms="12569" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-=======
-    <test started-at="2021-03-30T18:18:58 IST" name="BestSellerTestCase" finished-at="2021-03-30T18:19:15 IST" duration-ms="17467">
+    <test started-at="2021-03-31T10:41:59 IST" name="BestSellerTestCase" finished-at="2021-03-31T10:42:11 IST" duration-ms="12677">
       <class name="com.automation.testscripts.BestSellers">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.BestSellers@460d0a57]" started-at="2021-03-30T18:18:58 IST" name="beforeMethod" finished-at="2021-03-30T18:18:58 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.BestSellers@245b4bdc]" started-at="2021-03-31T10:41:59 IST" name="beforeMethod" finished-at="2021-03-31T10:41:59 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="bestSellerFunctionality(java.lang.String)[pri:0, instance:com.automation.testscripts.BestSellers@460d0a57]" started-at="2021-03-30T18:18:58 IST" name="bestSellerFunctionality" description="To verify the bestseller item" finished-at="2021-03-30T18:19:15 IST" duration-ms="17399" status="PASS">
+        <test-method signature="bestSellerFunctionality(java.lang.String)[pri:0, instance:com.automation.testscripts.BestSellers@245b4bdc]" started-at="2021-03-31T10:41:59 IST" name="bestSellerFunctionality" description="To verify the bestseller item" finished-at="2021-03-31T10:42:11 IST" duration-ms="12613" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,19 +22,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bestSellerFunctionality -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.BestSellers@460d0a57]" started-at="2021-03-30T18:19:15 IST" name="afterMethod" finished-at="2021-03-30T18:19:15 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.BestSellers@245b4bdc]" started-at="2021-03-31T10:42:11 IST" name="afterMethod" finished-at="2021-03-31T10:42:11 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.automation.testscripts.BestSellers -->
     </test> <!-- BestSellerTestCase -->
-    <test started-at="2021-03-30T18:19:15 IST" name="CategoriesTestCase" finished-at="2021-03-30T18:19:30 IST" duration-ms="14116">
+    <test started-at="2021-03-31T10:42:11 IST" name="CategoriesTestCase" finished-at="2021-03-31T10:42:22 IST" duration-ms="11067">
       <class name="com.automation.testscripts.Categories">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.Categories@353d0772]" started-at="2021-03-30T18:19:15 IST" name="beforeMethod" finished-at="2021-03-30T18:19:15 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.Categories@7d8995e]" started-at="2021-03-31T10:42:11 IST" name="beforeMethod" finished-at="2021-03-31T10:42:11 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="categoriesWomenCheck(java.lang.String)[pri:0, instance:com.automation.testscripts.Categories@353d0772]" started-at="2021-03-30T18:19:15 IST" name="categoriesWomenCheck" description="To verify the women category" finished-at="2021-03-30T18:19:30 IST" duration-ms="14104" status="FAIL">
+        <test-method signature="categoriesWomenCheck(java.lang.String)[pri:0, instance:com.automation.testscripts.Categories@7d8995e]" started-at="2021-03-31T10:42:11 IST" name="categoriesWomenCheck" description="To verify the women category" finished-at="2021-03-31T10:42:22 IST" duration-ms="11045" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -70,9 +50,9 @@
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.click(Unknown Source)
-at com.automation.locators.CategoriesLocator.womenCategoryClicks(CategoriesLocator.java:40)
-at com.automation.testscripts.Categories.categoriesWomenCheck(Categories.java:29)
+at com.sun.proxy.$Proxy14.click(Unknown Source)
+at com.automation.locators.CategoriesLocator.womenCategoryClicks(CategoriesLocator.java:37)
+at com.automation.testscripts.Categories.categoriesWomenCheck(Categories.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -104,61 +84,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.NullPointerException -->
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@564fabc8]" started-at="2021-03-30T18:56:41 IST" name="invalidSignUp" data-provider="invalidEmail" finished-at="2021-03-30T18:56:46 IST" duration-ms="4654" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test1510.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidSignUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@564fabc8]" started-at="2021-03-30T18:56:46 IST" name="beforeMethod" finished-at="2021-03-30T18:56:53 IST" duration-ms="7328" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="emailIdExits(java.lang.String)[pri:2, instance:com.automation.testscripts.SignUp@564fabc8]" started-at="2021-03-30T18:56:53 IST" name="emailIdExits" data-provider="emailIdExists" finished-at="2021-03-30T18:56:57 IST" duration-ms="3879" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test1605@gmail.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emailIdExits -->
-      </class> <!-- com.automation.testscripts.SignUp -->
-    </test> <!-- SignUp -->
-=======
         </test-method> <!-- categoriesWomenCheck -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.Categories@353d0772]" started-at="2021-03-30T18:19:30 IST" name="afterMethod" finished-at="2021-03-30T18:19:30 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.Categories@7d8995e]" started-at="2021-03-31T10:42:22 IST" name="afterMethod" finished-at="2021-03-31T10:42:22 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.automation.testscripts.Categories -->
     </test> <!-- CategoriesTestCase -->
-    <test started-at="2021-03-30T18:19:30 IST" name="ContactUsTestCase" finished-at="2021-03-30T18:19:58 IST" duration-ms="28399">
+    <test started-at="2021-03-31T10:42:22 IST" name="ContactUsTestCase" finished-at="2021-03-31T10:42:43 IST" duration-ms="20786">
       <class name="com.automation.testscripts.ContactUs">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.ContactUs@31d7b7bf]" started-at="2021-03-30T18:19:30 IST" name="beforeMethod" finished-at="2021-03-30T18:19:30 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.ContactUs@409bf450]" started-at="2021-03-31T10:42:22 IST" name="beforeMethod" finished-at="2021-03-31T10:42:22 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="contactUsFunctionality(java.lang.String)[pri:0, instance:com.automation.testscripts.ContactUs@31d7b7bf]" started-at="2021-03-30T18:19:30 IST" name="contactUsFunctionality" finished-at="2021-03-30T18:19:58 IST" duration-ms="28391" status="PASS">
+        <test-method signature="contactUsFunctionality(java.lang.String)[pri:0, instance:com.automation.testscripts.ContactUs@409bf450]" started-at="2021-03-31T10:42:22 IST" name="contactUsFunctionality" description="To verify the contact us functionality" finished-at="2021-03-31T10:42:43 IST" duration-ms="20776" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -169,12 +110,151 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUsFunctionality -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.ContactUs@31d7b7bf]" started-at="2021-03-30T18:19:58 IST" name="afterMethod" finished-at="2021-03-30T18:19:58 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.ContactUs@409bf450]" started-at="2021-03-31T10:42:43 IST" name="afterMethod" finished-at="2021-03-31T10:42:43 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.automation.testscripts.ContactUs -->
     </test> <!-- ContactUsTestCase -->
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+    <test started-at="2021-03-31T10:42:43 IST" name="SignUp" finished-at="2021-03-31T10:43:36 IST" duration-ms="52986">
+      <class name="com.automation.testscripts.SignUp">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@692f203f]" started-at="2021-03-31T10:42:43 IST" name="beforeMethod" finished-at="2021-03-31T10:42:52 IST" duration-ms="8843" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@692f203f]" started-at="2021-03-31T10:42:52 IST" name="invalidSignUp" description="Provide invalid email and check the functionality" data-provider="invalidEmail" finished-at="2021-03-31T10:42:59 IST" duration-ms="7296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1510.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidSignUp -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@692f203f]" started-at="2021-03-31T10:42:59 IST" name="beforeMethod" finished-at="2021-03-31T10:43:09 IST" duration-ms="9422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="emailIdExits(java.lang.String)[pri:2, instance:com.automation.testscripts.SignUp@692f203f]" started-at="2021-03-31T10:43:09 IST" name="emailIdExits" description="Provide already exists email and check the functionality" data-provider="emailIdExists" finished-at="2021-03-31T10:43:14 IST" duration-ms="5599" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1605@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailIdExits -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@692f203f]" started-at="2021-03-31T10:43:14 IST" name="beforeMethod" finished-at="2021-03-31T10:43:26 IST" duration-ms="11474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validSignUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.automation.testscripts.SignUp@692f203f]" started-at="2021-03-31T10:43:26 IST" name="validSignUp" description="Provide valid email and check the functionality" data-provider="validDetails" finished-at="2021-03-31T10:43:36 IST" duration-ms="10332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1510@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Xyz]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abcde]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Xyz]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Pqr]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Gateway Group]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Gateway]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Ahmedabad]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[00000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[abcdefgh]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[0000000000]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[0000000000]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[pqr]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSignUp -->
+      </class> <!-- com.automation.testscripts.SignUp -->
+    </test> <!-- SignUp -->
   </suite> <!-- Suite -->
 </testng-results>

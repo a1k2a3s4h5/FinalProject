@@ -5,14 +5,15 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="SignUp(failed)">
+  <test thread-count="5" name="CategoriesTestCase(failed)">
     <classes>
-      <class name="com.automation.testscripts.SignUp">
+      <class name="com.automation.testscripts.Categories">
         <methods>
-          <include name="invalidSignUp" invocation-numbers="0"/>
           <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="categoriesWomenCheck" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.automation.testscripts.SignUp -->
+      </class> <!-- com.automation.testscripts.Categories -->
     </classes>
-  </test> <!-- SignUp(failed) -->
+  </test> <!-- CategoriesTestCase(failed) -->
 </suite> <!-- Failed suite [Suite] -->
