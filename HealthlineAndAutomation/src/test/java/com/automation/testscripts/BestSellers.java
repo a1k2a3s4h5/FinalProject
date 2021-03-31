@@ -23,12 +23,13 @@ public class BestSellers {
 	 * Function name: bestSellerFunctionality
 	 * Check the best seller product functionality that performs click
 	 * @param browserName
+	 * @param url
 	 * 
 	 */
 	@Test(description = "To verify the bestseller item")
-	@Parameters("browserName")
-	public void bestSellerFunctionality(String browserName) {
-		WebDriver driver = setup.driverReturn(browserName);
+	@Parameters({"browserName","url"})
+	public void bestSellerFunctionality(String browserName,String url) {
+		WebDriver driver = setup.driverReturn(browserName,url);
 		loc = PageFactory.initElements(driver, BestSellersLocator.class);
 		loc.bestSeller.click();
 		driver.quit();

@@ -1,5 +1,9 @@
 package com.automation.testscripts;
-
+/**
+ * Aim: to verify the newletter email functionality
+ * Author: Group Q
+ * Created on:31/03/2021
+ */
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -10,6 +14,9 @@ import org.testng.annotations.Test;
 
 public class NewsLetter {
 	public WebDriver driver;
+	
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.NewsLetterPage newsLetter;
 	
 	@DataProvider(name="unRegisteredEmail")
 	public Object[] newsLetterUnRegisteredEmail(){
@@ -25,19 +32,18 @@ public class NewsLetter {
 	public Object[][] newsLetterInValidEmail(){
 	return new Object[][] {{"    "},{"test@gmail"}};
 }
-	
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.NewsLetterPage newsLetter;
-	
-	@Parameters("browserName")
+
+	@Parameters({"browserName","url"})
 	@BeforeMethod
-	public void beforeMethod(String browserName) {
-		setup.browserSetup(browserName);
-		driver = setup.driverReturn(browserName);
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
 		newsLetter=new com.page.object.model.NewsLetterPage(driver);
 	}
 	
-
+	/*
+	 * Function name:  inValidEmailNewsLetter
+	 * 
+	 */
 	@Test(dataProvider="inValidEmail",priority=1)
 	public void inValidEmailNewsLetter(String email)
 	{

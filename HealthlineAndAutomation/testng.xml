@@ -7,6 +7,7 @@
 
 	
    <parameter name = "browserName" value="chrome"/>
+   
 <!--   <test name="SignIn">  -->
 <!--     <classes> -->
 <!--       <class name="com.automation.testscripts.SignIn"/> -->
@@ -48,9 +49,15 @@
 <!--   </classes> -->
 <!--   </test> -->
   
-    <test name="About us">
+<!--     <test name="About us"> -->
+<!--   <classes> -->
+<!--   <class name="com.automation.testscripts.AboutUs" /> -->
+<!--   </classes> -->
+<!--   </test> -->
+  <parameter name = "url" value="https://www.healthline.com/"/>
+   <test name="Editors Pick">
   <classes>
-  <class name="com.automation.testscripts.AboutUs" />
+  <class name="com.healthline.testscripts.EditorsPick" />
   </classes>
   </test>
 </suite> 

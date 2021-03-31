@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.healthline.testscripts.HealthTopics">
+      <class name="com.automation.testscripts.Categories">
         <methods>
-          <include name="healthTopics"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
+          <include name="categoriesWomenCheck"/>
         </methods>
-      </class> <!-- com.healthline.testscripts.HealthTopics -->
+      </class> <!-- com.automation.testscripts.Categories -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

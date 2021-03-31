@@ -17,18 +17,17 @@ public class SearchAndAddToCart {
 	}
 	
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.SearchAndAddToCartPage addtocart;
+	public com.page.object.model.SearchAndAddToCartPOM addtocart;
 	
 	
-	@Parameters("browserName")
+	@Parameters({"browserName","url"})
 	@BeforeMethod
-	public void beforeMethod(String browserName) {
-		setup.browserSetup(browserName);
-		driver = setup.driverReturn(browserName);
-		addtocart=new com.page.object.model.SearchAndAddToCartPage(driver);
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		addtocart=new com.page.object.model.SearchAndAddToCartPOM(driver);
 	}
 
-	@Test(dataProvider="validDetails")
+	@Test(dataProvider="validDetails", description = "To provide valid details for login")
 	public void addToCart(String email,String password,String item,String comments)
 	{
 		addtocart.signIn(email, password);
