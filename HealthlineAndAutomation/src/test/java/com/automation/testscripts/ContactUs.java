@@ -29,11 +29,12 @@ public class ContactUs {
 	 * Function name: contactUsFunctionality
 	 * test the contact us fuctionality with email, file upload and message
 	 * @param browserName
+	 * @param
 	 */
 	@Test(description = "To verify the contact us functionality")
-	@Parameters("browserName")
-	public void contactUsFunctionality(@Optional String browserName) {
-		WebDriver driver = setup.driverReturn("chrome");
+	@Parameters({"browserName","url"})
+	public void contactUsFunctionality(@Optional String browserName, String url) {
+		WebDriver driver = setup.driverReturn(browserName,url);
 		loc = PageFactory.initElements(driver, ContactUsLocators.class);
 		loc.contactUs.click();
 

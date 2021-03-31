@@ -11,29 +11,9 @@ public class SetupEnvironment {
 	/**
 	 * Browser setting path for chrome,firefox and edge
 	 * @param browserName
+	 * @param url
 	 */
-	public void browserSetup(String browserName) {
-		if(browserName.equalsIgnoreCase("chrome")) {
-			
-		String chromePath ="./Drivers/chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver", chromePath);
-		}
-		else if(browserName.equalsIgnoreCase("firefox")) {
-			String edgePath = "./msedgedriver.exe";
-			System.setProperty("webdriver.msedge.driver", edgePath);
-		}
-		
-		else if(browserName.equalsIgnoreCase("edge")) {
-			String edgePath = "./msedgedriver.exe";
-			System.setProperty("webdriver.msedge.driver", edgePath);
-		}
-		else {
-			System.out.println("Invalid browser name");
-		}
-	}
-
-	public WebDriver driverReturn(String browserName) {
-		String url = "http://automationpractice.com/index.php";
+	public WebDriver driverReturn(String browserName, String url) {
 		WebDriver driver=null;
 		if(browserName.equalsIgnoreCase("chrome")) {
 			

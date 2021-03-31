@@ -6,11 +6,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.automation.locators.SearchAndAddToCart;
 
-public class SearchAndAddToCartPage {
+public class SearchAndAddToCartPOM {
 
 public SearchAndAddToCart addtocart;
 	
-	public SearchAndAddToCartPage(WebDriver driver) {	
+	public SearchAndAddToCartPOM(WebDriver driver) {	
 		addtocart=new SearchAndAddToCart(driver);
 	}
 	

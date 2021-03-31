@@ -15,15 +15,14 @@ import org.testng.annotations.Test;
 
 public class SignIn {
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.SignInPage signIn;
+	public com.page.object.model.SignInPagePOM signIn;
 	public WebDriver driver;
 	
-	@Parameters("browserName")
+	@Parameters({"browserName","url"})
 	@BeforeMethod
-	public void beforeMethod(String browserName) {
-		setup.browserSetup(browserName);
-		driver = setup.driverReturn(browserName);
-		signIn=new com.page.object.model.SignInPage(driver);
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		signIn=new com.page.object.model.SignInPagePOM(driver);
 	}
 	
 	/**

@@ -25,9 +25,9 @@ public class SendToEmail {
 	 * 
 	 */
 	@Test(description = "To verify the send to email item")
-	@Parameters("browserName")
-	public void sendToEmailTestCase(String browserName) {
-		WebDriver driver = setup.driverReturn(browserName);
+	@Parameters({"browserName","url"})
+	public void sendToEmailTestCase(String browserName,String url) {
+		WebDriver driver = setup.driverReturn(browserName,url);
 		WebElement sendTolink = driver.findElement(By.linkText("support@seleniumframework.com"));
 		sendTolink.click();
 		driver.quit();

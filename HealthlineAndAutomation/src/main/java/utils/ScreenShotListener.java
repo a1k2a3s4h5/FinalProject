@@ -14,6 +14,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 
 public class ScreenShotListener implements ITestListener {
 
@@ -26,14 +27,13 @@ public class ScreenShotListener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-
 	}
 
 	// When Test case get failed, this method is called.
 	@Override
 	public void onTestFailure(ITestResult result) {
 		SetupEnvironment setup=new SetupEnvironment();
-		WebDriver driver = setup.driverReturn("chrome");
+		WebDriver driver = setup.driverReturn("chrome","");
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		String methodName = result.getName();

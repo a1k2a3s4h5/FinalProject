@@ -17,14 +17,13 @@ public class SignUp {
 	
 	public WebDriver driver;
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.SignUpPage signUp;
+	public com.page.object.model.SignUpPagePOM signUp;
 	
-	@Parameters("browserName")
+	@Parameters({"browserName","url"})
 	@BeforeMethod
-	public void beforeMethod(String browserName) {
-		setup.browserSetup(browserName);
-		driver = setup.driverReturn(browserName);
-		signUp=new com.page.object.model.SignUpPage(driver);
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		signUp=new com.page.object.model.SignUpPagePOM(driver);
 	}
 	
 	

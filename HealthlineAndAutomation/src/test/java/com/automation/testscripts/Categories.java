@@ -24,11 +24,12 @@ public class Categories {
 	 * Function name: categoriesWomenCheck
 	 * To verify the categories of women
 	 * @param browserName
+	 * @param url
 	 */
 	@Test(description = "To verify the women category")
-	@Parameters("browserName")
-	public void categoriesWomenCheck(String browserName) {
-		driver= setup.driverReturn(browserName);
+	@Parameters({"browserName","url"})
+	public void categoriesWomenCheck(String browserName,String url) {
+		driver= setup.driverReturn(browserName,url);
 		loc.womenCategoryClicks();
 		driver.quit();
 	}

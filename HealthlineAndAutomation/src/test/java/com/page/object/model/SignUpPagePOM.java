@@ -3,10 +3,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import com.automation.locators.SignUpLocators;
-public class SignUpPage {
+public class SignUpPagePOM {
 	public SignUpLocators signup;
 	
-	public SignUpPage(WebDriver driver) {	
+	public SignUpPagePOM(WebDriver driver) {	
 		signup=new SignUpLocators(driver);
 	}
 	

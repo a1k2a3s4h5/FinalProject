@@ -13,26 +13,27 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import utils.Logger;
 import utils.SetupEnvironment;
 
 public class AboutUs {
 	
 	SetupEnvironment setup = new SetupEnvironment();
-
 	/**
 	 * Function name: aboutUs 
 	 * Check the about us functionality that performs click
-	 * 
+	 * @param url
 	 * @param browserName
 	 * 
 	 */
 	@Test(description = "To verify the send to email item")
-	@Parameters("browserName")
-	public void aboutUs(String browserName) {
-		WebDriver driver = setup.driverReturn(browserName);
+	@Parameters({"browserName","url"})
+	public void aboutUs(String browserName,String url) {
+		WebDriver driver = setup.driverReturn(browserName,url);
 		WebElement aboutUsLink = driver.findElement(By.xpath("//a[@title=\"About us\"]"));
 		aboutUsLink.click();
 		Assert.assertEquals(driver.findElement(By.id("center_column")).isDisplayed(), true);
+		Logger.print("The about us page is opened successfully");
 		driver.quit();
 	}
 

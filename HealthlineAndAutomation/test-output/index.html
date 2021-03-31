@@ -186,6 +186,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
+<<<<<<< HEAD
 suiteTableInitFunctions.push('tableData_Automation_Practice_Suite');
 function tableData_Automation_Practice_Suite() {
 var data = new google.visualization.DataTable();
@@ -201,6 +202,23 @@ data.setCell(0, 3, 15978);
 window.suiteTableData['Automation_Practice_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Suite'}
 return data;
 }
+=======
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'healthTopics')
+data.setCell(0, 2, 'com.healthline.testscripts.HealthTopics')
+data.setCell(0, 3, 30053);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject.git
               </script>
               <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Automation_Practice_Suite">

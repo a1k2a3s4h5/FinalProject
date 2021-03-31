@@ -15,11 +15,10 @@ public class SearchItems {
 	SearchPOM search;
 	public WebDriver driver;
 	
-	@Parameters("browserName")
+	@Parameters({"browserName","url"})
 	@BeforeMethod
-	public void beforeMethod(@Optional String browserName) {
-		setup.browserSetup(browserName);
-		driver = setup.driverReturn(browserName);
+	public void beforeMethod(@Optional String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
 		search=new com.page.object.model.SearchPOM(driver);
 	}
 

@@ -4,11 +4,11 @@ import org.openqa.selenium.WebDriver;
 
 import com.automation.locators.SignInLocators;;
 
-public class SignInPage {
+public class SignInPagePOM {
 	
 public SignInLocators signin;
 	
-	public SignInPage(WebDriver driver) {	
+	public SignInPagePOM(WebDriver driver) {	
 		signin=new SignInLocators(driver);
 	}
 	
