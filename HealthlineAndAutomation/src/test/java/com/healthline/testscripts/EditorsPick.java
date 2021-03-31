@@ -14,8 +14,6 @@ public class EditorsPick {
 	SetupEnvironment setup=new SetupEnvironment();
 	EditorsPickLocators loc;
 	
-	
-
 	@Test
 	public void f() {
 		loc.editorPick1.click();
