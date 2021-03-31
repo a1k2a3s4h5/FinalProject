@@ -2,24 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-31T15:46:55 IST" name="Default suite" finished-at="2021-03-31T15:47:40 IST" duration-ms="44886">
+  <suite started-at="2021-03-31T17:41:14 IST" name="Automation Practice Suite" finished-at="2021-03-31T17:41:30 IST" duration-ms="16038">
     <groups>
     </groups>
-    <test started-at="2021-03-31T15:46:55 IST" name="Default test" finished-at="2021-03-31T15:47:40 IST" duration-ms="44886">
-      <class name="com.healthline.testscripts.HealthTopics">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.healthline.testscripts.HealthTopics@6ac13091]" started-at="2021-03-31T15:46:55 IST" name="beforeMethod" finished-at="2021-03-31T15:47:10 IST" duration-ms="14780" status="PASS">
+    <test started-at="2021-03-31T17:41:14 IST" name="About us" finished-at="2021-03-31T17:41:30 IST" duration-ms="16038">
+      <class name="com.automation.testscripts.AboutUs">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.automation.testscripts.AboutUs@dd8ba08]" started-at="2021-03-31T17:41:14 IST" name="beforeMethod" finished-at="2021-03-31T17:41:14 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="healthTopics()[pri:0, instance:com.healthline.testscripts.HealthTopics@6ac13091]" started-at="2021-03-31T15:47:10 IST" name="healthTopics" finished-at="2021-03-31T15:47:40 IST" duration-ms="30053" status="PASS">
+        <test-method signature="aboutUs(java.lang.String)[pri:0, instance:com.automation.testscripts.AboutUs@dd8ba08]" started-at="2021-03-31T17:41:14 IST" name="aboutUs" description="To verify the send to email item" finished-at="2021-03-31T17:41:30 IST" duration-ms="15978" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- healthTopics -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.HealthTopics@6ac13091]" started-at="2021-03-31T15:47:40 IST" name="afterMethod" finished-at="2021-03-31T15:47:40 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- aboutUs -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.AboutUs@dd8ba08]" started-at="2021-03-31T17:41:30 IST" name="afterMethod" finished-at="2021-03-31T17:41:30 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.healthline.testscripts.HealthTopics -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.automation.testscripts.AboutUs -->
+    </test> <!-- About us -->
+  </suite> <!-- Automation Practice Suite -->
 </testng-results>
