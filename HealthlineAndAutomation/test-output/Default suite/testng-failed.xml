@@ -3,30 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.automation.testscripts.SignUp">
-=======
-      <class name="com.automation.testscripts.Categories">
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+      <class name="com.healthline.testscripts.EditorsPick">
         <methods>
-<<<<<<< HEAD
-          <include name="invalidSignUp"/>
-=======
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
           <include name="beforeMethod"/>
-<<<<<<< HEAD
-          <include name="emailIdExits"/>
-=======
+          <include name="f"/>
           <include name="afterMethod"/>
-          <include name="categoriesWomenCheck"/>
-          <include name="categoriesMenCheck"/>
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.automation.testscripts.SignUp -->
-=======
-      </class> <!-- com.automation.testscripts.Categories -->
->>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
+      </class> <!-- com.healthline.testscripts.EditorsPick -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
