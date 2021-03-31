@@ -1,7 +1,7 @@
 package com.automation.testscripts;
 /**
  * Aim: To check the categories functionality 
- * Author: Vaishvi Patel
+ * Author:Group Q
  * Date: 06/03/2021
  * Modified on:30/03/2021
  */
@@ -21,7 +21,9 @@ public class Categories {
 	SetupEnvironment setup= new SetupEnvironment();
 
 	/**
+	 * Function name: categoriesWomenCheck
 	 * To verify the categories of women
+	 * @param browserName
 	 */
 	@Test(description = "To verify the women category")
 	@Parameters("browserName")
@@ -31,7 +33,6 @@ public class Categories {
 		driver.quit();
 	}
 	
-
 	
 	@BeforeMethod
 	public void beforeMethod() {

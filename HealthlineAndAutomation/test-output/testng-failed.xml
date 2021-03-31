@@ -5,14 +5,34 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" name="AddToCart(failed)">
+=======
+  <test thread-count="5" name="CategoriesTestCase(failed)">
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
     <classes>
+<<<<<<< HEAD
       <class name="com.automation.testscripts.SearchAndAddToCart">
+=======
+      <class name="com.automation.testscripts.Categories">
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
         <methods>
+<<<<<<< HEAD
           <include name="addToCart" invocation-numbers="0"/>
+=======
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
           <include name="beforeMethod"/>
+<<<<<<< HEAD
+=======
+          <include name="afterMethod"/>
+          <include name="categoriesWomenCheck" invocation-numbers="0"/>
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.automation.testscripts.SearchAndAddToCart -->
+=======
+      </class> <!-- com.automation.testscripts.Categories -->
+>>>>>>> branch 'master' of https://github.com/a1k2a3s4h5/FinalProject
     </classes>
   </test> <!-- AddToCart(failed) -->
 </suite> <!-- Failed suite [Suite] -->
