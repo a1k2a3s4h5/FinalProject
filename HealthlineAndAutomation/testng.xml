@@ -25,10 +25,10 @@
 <!--     </classes> -->
 <!--   </test> -->
    
-   <test name="CategoriesTestCase">      <classes> 
-       <class name="com.automation.testscripts.Categories"/> 
-     </classes> 
-   </test> 
+<!--    <test name="CategoriesTestCase">      <classes>  -->
+<!--        <class name="com.automation.testscripts.Categories"/>  -->
+<!--      </classes>  -->
+<!--    </test>  -->
   
 <!--   <test name="ContactUsTestCase">  -->
 <!--     <classes> -->
@@ -41,4 +41,16 @@
       <class name="com.automation.testscripts.SearchAndAddToCart"/>
     </classes>
   </test>  -->
+  
+<!--   <test name="Send Email To"> -->
+<!--   <classes> -->
+<!--   <class name="com.automation.testscripts.SendToEmail" /> -->
+<!--   </classes> -->
+<!--   </test> -->
+  
+    <test name="About us">
+  <classes>
+  <class name="com.automation.testscripts.AboutUs" />
+  </classes>
+  </test>
 </suite> 
