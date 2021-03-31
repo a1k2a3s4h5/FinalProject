@@ -40,19 +40,13 @@ public SearchAndAddToCart addtocart;
 	public void addToCart(String comments) {
 		addtocart.dress.click();
 		addtocart.quantityUp.click();
-		
 		Select size=new Select(addtocart.sizeDD);
 		size.selectByVisibleText("M");
-		
 		addtocart.colorGreen.click();
-		
 		addtocart.btnAddToCart.click();
-		
 		addtocart.closePopup.click();
-		
 		addtocart.shoppingCart.click();
 		addtocart.btnProceed.click();
-		
 		addtocart.addComments.click();
 		addtocart.addComments.clear();
 		addtocart.addComments.sendKeys(comments);
