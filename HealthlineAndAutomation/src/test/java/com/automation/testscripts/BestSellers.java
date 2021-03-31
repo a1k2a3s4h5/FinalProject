@@ -1,7 +1,7 @@
 package com.automation.testscripts;
 /*
  * Aim: To view the best seller items
- * Author:Vaishvi Patel
+ * Author:Group Q
  * Created on:13/03/2021
  * Modified Last:30/03/2021
  */
@@ -20,7 +20,9 @@ public class BestSellers {
 	BestSellersLocator loc=new BestSellersLocator();
 	
 	/**
-	 * check the best seller functionality operation perform click
+	 * Function name: bestSellerFunctionality
+	 * Check the best seller functionality to perform click
+	 * @param browserName
 	 * 
 	 */
 	

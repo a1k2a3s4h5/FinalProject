@@ -2,7 +2,7 @@ package com.automation.testscripts;
 
 /**
  * Aim: To check the categories functionality 
- * Author: Vaishvi Patel
+ * Author:Group Q
  * Date: 06/03/2021
  * Modified on:30/03/2021
  */
@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -25,12 +26,14 @@ public class ContactUs {
 	SetupEnvironment setup = new SetupEnvironment();
 
 	/**
+	 * Function name: contactUsFunctionality
 	 * test the contact us fuctionality with email, file upload and message
+	 * @param browserName
 	 */
 	@Test(description = "To verify the contact us functionality")
-	@Parameters({ "browserName" })
-	public void contactUsFunctionality(String browserName) {
-		WebDriver driver = setup.driverReturn(browserName);
+	@Parameters("browserName")
+	public void contactUsFunctionality(@Optional String browserName) {
+		WebDriver driver = setup.driverReturn("chrome");
 		loc = PageFactory.initElements(driver, ContactUsLocators.class);
 		loc.contactUs.click();
 
