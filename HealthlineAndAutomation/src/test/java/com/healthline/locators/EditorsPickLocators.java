@@ -20,6 +20,7 @@ public class EditorsPickLocators {
 	public WebElement editorPick3;
 	
 	public EditorsPickLocators(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 

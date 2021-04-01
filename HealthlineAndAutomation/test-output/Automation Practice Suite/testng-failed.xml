@@ -6,39 +6,6 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="EditorsPick(failed)">
-    <classes>
-      <class name="com.healthline.testscripts.EditorsPick">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="editorsPickWork"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.healthline.testscripts.EditorsPick -->
-    </classes>
-  </test> <!-- EditorsPick(failed) -->
-  <test thread-count="5" name="HealthlineLogo(failed)">
-    <classes>
-      <class name="com.healthline.testscripts.HealthlineLogo">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="clickFunctionalityOfHealthlineLogo"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.healthline.testscripts.HealthlineLogo -->
-    </classes>
-  </test> <!-- HealthlineLogo(failed) -->
-  <test thread-count="5" name="HealthTopics(failed)">
-    <classes>
-      <class name="com.healthline.testscripts.HealthTopics">
-        <methods>
-          <include name="healthTopics"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.healthline.testscripts.HealthTopics -->
-    </classes>
-  </test> <!-- HealthTopics(failed) -->
   <test thread-count="5" name="Latest Stories(failed)">
     <classes>
       <class name="com.healthline.testscripts.LatestStories">
@@ -61,17 +28,6 @@
       </class> <!-- com.healthline.testscripts.SearchBar -->
     </classes>
   </test> <!-- Search Bar(failed) -->
-  <test thread-count="5" name="Subscribe(failed)">
-    <classes>
-      <class name="com.healthline.testscripts.Subscribe">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="subscribeFunctionality"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.healthline.testscripts.Subscribe -->
-    </classes>
-  </test> <!-- Subscribe(failed) -->
   <test thread-count="5" name="Trending Post(failed)">
     <classes>
       <class name="com.healthline.testscripts.TrendingPost">

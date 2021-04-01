@@ -27,6 +27,7 @@ public class SubscribeLocators {
 	public WebElement subscribeButton3;
 	
 	public SubscribeLocators(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	

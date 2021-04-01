@@ -14,6 +14,7 @@ public class HealthlineLogoLocators {
 	public WebElement logo;
 	
 	public HealthlineLogoLocators(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	

@@ -10,7 +10,7 @@ public class LatestStoriesLocators {
 
 	public WebDriver driver;
 	
-	@FindBy(how=How.XPATH , using="//a[contains(text(),'How to Get COVID-19')]")
+	@FindBy(how=How.XPATH , using="//li[@class='css-a4lyxf']/div")
 	public WebElement latestStories;
 	
 	public void workingOfLatestStories() {
@@ -20,6 +20,7 @@ public class LatestStoriesLocators {
 	}
 	
 	public LatestStoriesLocators(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 }

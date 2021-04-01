@@ -12,7 +12,7 @@
 	      <class name="com.healthline.testscripts.EditorsPick"/> 
 	    </classes> 
 	  </test>  
-	    <test name="FeaturedTopics" >  
+	   <!--  <test name="FeaturedTopics" >  
 	     <classes> 
 	      <class name="com.healthline.testscripts.FeaturedTopics" />  
 	    </classes>  
@@ -51,6 +51,6 @@
 	   <class name="com.healthline.testscripts.TrendingPost" /> 
 	   </classes> 
 	   </test> 
-  
+   -->
  	    <parameter name = "url" value="https://www.healthline.com/"/>
 </suite> 

@@ -74,6 +74,7 @@ public class HealthTopicsLocators {
 	public WebElement adhd;
 	
 	public HealthTopicsLocators(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	

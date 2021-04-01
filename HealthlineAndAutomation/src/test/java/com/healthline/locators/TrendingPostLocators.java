@@ -23,6 +23,7 @@ public class TrendingPostLocators {
 	public WebElement mainPopUp;
 	
 	public TrendingPostLocators(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
