@@ -11,25 +11,22 @@ import org.testng.annotations.AfterMethod;
 
 public class HealthlineLogo {
 	public WebDriver driver;
-	SetupEnvironment setup = new SetupEnvironment();
-	HealthlineLogoLocators loc;
-
-	@Test
-	public void clickFunctionalityOfHealthlineLogo() {
-		loc.workOfHealthlineLogo();
-	}
+	
+	
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.HealthlineLogoPOM healthlineLogo;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
-	public void beforeMethod(String browserName, String url) {
+	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		loc = new HealthlineLogoLocators(driver);
-		System.out.println("Starting Browser");
+		healthlineLogo=new com.page.object.model.HealthlineLogoPOM(driver);
 	}
 
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Browser closing");
-
+	@Test
+	public void clickFunctionalityOfHealthlineLogo() {
+		healthlineLogo.workOfHealthlineLogo();
 	}
+	
+
 }

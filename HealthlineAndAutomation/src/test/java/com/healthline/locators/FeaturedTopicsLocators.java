@@ -8,7 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FeaturedTopicsLocators {
 
-	public WebDriver driver;
+	
+	public FeaturedTopicsLocators(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
 	
 	@FindBy(how=How.XPATH , using="//img[@alt='Coronavirus 2021']")
 	public WebElement coronaVirus;
@@ -19,19 +22,9 @@ public class FeaturedTopicsLocators {
 	@FindBy(how=How.XPATH , using="//img[@alt='Parenthood']")
 	public WebElement parentHood;
 	
-	public FeaturedTopicsLocators(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
 	
-	public void workingOfFeaturedTopics() {
-		coronaVirus.click();
-		driver.navigate().back();
-		nutrition.click();
-		driver.navigate().back();
-		parentHood.click();
-		driver.navigate().back();
-	}
+	
+
 	
 	
 }

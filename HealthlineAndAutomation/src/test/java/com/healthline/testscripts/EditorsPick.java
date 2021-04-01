@@ -6,40 +6,30 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
-import com.healthline.locators.EditorsPickLocators;
-import utils.SetupEnvironment;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
 
 public class EditorsPick {
 
 	public WebDriver driver;
-	SetupEnvironment setup=new SetupEnvironment();
-	EditorsPickLocators loc;
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.EditorsPickPOM editorsPick;
 	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		editorsPick=new com.page.object.model.EditorsPickPOM(driver);
+	}
 	/**
 	 * Function name: editorsPickWork
 	 * To verify the click functionality of editor's pick collection
+	 * @throws InterruptedException 
 	 */
 	@Test(description = "To verify editor's pick functionality")
 	public void editorsPickWork() {
-		loc.WrokingOfEditorsPickLocators();
+		editorsPick.workingOfEditorsPickLocators();
 	}
-
-	@Parameters({"browserName","url"})
-	@BeforeMethod
-	public void beforeMethod(String browserName, String url) {
-		driver = setup.driverReturn(browserName,url);
-		loc = new EditorsPickLocators(driver);
-		System.out.println("Starting Browser");
-	}
-
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Closing Browser");
-	}
-
 }
 

@@ -7,50 +7,50 @@
 
    <parameter name = "browserName" value="chrome"/>
    
-	   <test name="EditorsPick">  
+	   <test name="Editors Pick">  
 	   <classes> 
 	      <class name="com.healthline.testscripts.EditorsPick"/> 
 	    </classes> 
 	  </test>  
-	    <test name="FeaturedTopics" >  
-	     <classes> 
-	      <class name="com.healthline.testscripts.FeaturedTopics" />  
-	    </classes>  
-	   </test>  
-		<test name="HealthlineLogo">
-		<classes>
-		<class name="com.healthline.testscripts.HealthlineLogo"/>
-		</classes>
-		</test>
-	   <test name="HealthTopics">  
-	  		<classes> 
-	     		<class name="com.healthline.testscripts.HealthTopics"/> 
-	     </classes> 
-	   </test> 
+<!-- 	    <test name="FeaturedTopics" >   -->
+<!-- 	     <classes>  -->
+<!-- 	      <class name="com.healthline.testscripts.FeaturedTopics" />   -->
+<!-- 	    </classes>   -->
+<!-- 	   </test>   -->
+<!-- 		<test name="HealthlineLogo"> -->
+<!-- 		<classes> -->
+<!-- 		<class name="com.healthline.testscripts.HealthlineLogo"/> -->
+<!-- 		</classes> -->
+<!-- 		</test> -->
+<!-- 	   <test name="HealthTopics">   -->
+<!-- 	  		<classes>  -->
+<!-- 	     		<class name="com.healthline.testscripts.HealthTopics"/>  -->
+<!-- 	     </classes>  -->
+<!-- 	   </test>  -->
    
-	    <test name="Latest Stories">     
-	     <classes>  
-	       <class name="com.healthline.testscripts.LatestStories"/>  
-	      </classes>  
-	    </test>  
+<!-- 	    <test name="Latest Stories">      -->
+<!-- 	     <classes>   -->
+<!-- 	       <class name="com.healthline.testscripts.LatestStories"/>   -->
+<!-- 	      </classes>   -->
+<!-- 	    </test>   -->
   
-		   <test name="Search Bar">  
-		    <classes> 
-		     <class name="com.healthline.testscripts.SearchBar"/> 
-		    </classes> 
-		   </test> 
+<!-- 		   <test name="Search Bar">   -->
+<!-- 		    <classes>  -->
+<!-- 		     <class name="com.healthline.testscripts.SearchBar"/>  -->
+<!-- 		    </classes>  -->
+<!-- 		   </test>  -->
 
-		<test name="Subscribe">  
-	    <classes>
-	      <class name="com.healthline.testscripts.Subscribe"/>
-	    </classes>
-	   </test>  
+<!-- 		<test name="Subscribe">   -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.healthline.testscripts.Subscribe"/> -->
+<!-- 	    </classes> -->
+<!-- 	   </test>   -->
   
-	   <test name="Trending Post"> 
-	   <classes> 
-	   <class name="com.healthline.testscripts.TrendingPost" /> 
-	   </classes> 
-	   </test> 
+<!-- 	   <test name="Trending Post">  -->
+<!-- 	   <classes>  -->
+<!-- 	   <class name="com.healthline.testscripts.TrendingPost" />  -->
+<!-- 	   </classes>  -->
+<!-- 	   </test>  -->
   
  	    <parameter name = "url" value="https://www.healthline.com/"/>
 </suite> 

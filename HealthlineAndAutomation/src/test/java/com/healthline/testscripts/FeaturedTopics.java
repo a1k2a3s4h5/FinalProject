@@ -6,40 +6,32 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
-import com.healthline.locators.FeaturedTopicsLocators;
-import utils.SetupEnvironment;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
 
 public class FeaturedTopics {
 
-	public WebDriver driver;
-	SetupEnvironment setup = new SetupEnvironment();
-	FeaturedTopicsLocators loc;
+public WebDriver driver;
+	
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.FeaturedTopicsPOM featuredTopics;
+	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		featuredTopics=new com.page.object.model.FeaturedTopicsPOM(driver);
+	}
 
 	/**
 	 * Function name: featuredTopicsWork
 	 * To verify the click functionality of editor's pick collection
+	 * @throws InterruptedException 
 	 */
 	@Test(description = "To verify the featured topics")
 	public void featuredTopicsWork() {
-		 loc.workingOfFeaturedTopics(); 
-	}
-
-	@Parameters({"browserName","url"})
-	@BeforeMethod
-	public void beforeMethod(String browserName, String url) {
-		driver = setup.driverReturn(browserName,url);
-		loc = new FeaturedTopicsLocators(driver);
-		System.out.println("Starting Browser");
-	}
-
-
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Closing Browser");
-		driver.quit();
+		
+		featuredTopics.workingOfFeaturedTopics(); 
 	}
 }
