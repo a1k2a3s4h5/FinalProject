@@ -10,17 +10,11 @@ public class LatestStoriesLocators {
 
 	public WebDriver driver;
 	
-	@FindBy(how=How.XPATH , using="//li[@class='css-a4lyxf']/div")
-	public WebElement latestStories;
-	
-	public void workingOfLatestStories() {
-		latestStories.click();
-		driver.navigate().back();
-			
-	}
-	
 	public LatestStoriesLocators(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(how=How.XPATH , using="//li[@class='css-a4lyxf']/div")
+	public WebElement latestStories;
 }

@@ -7,11 +7,11 @@
 
    <parameter name = "browserName" value="chrome"/>
    
-	   <test name="Editors Pick">  
-	   <classes> 
-	      <class name="com.healthline.testscripts.EditorsPick"/> 
-	    </classes> 
-	  </test>  
+<!-- 	   <test name="Editors Pick">   -->
+<!-- 	   <classes>  -->
+<!-- 	      <class name="com.healthline.testscripts.EditorsPick"/>  -->
+<!-- 	    </classes>  -->
+<!-- 	  </test>   -->
 <!-- 	    <test name="FeaturedTopics" >   -->
 <!-- 	     <classes>  -->
 <!-- 	      <class name="com.healthline.testscripts.FeaturedTopics" />   -->
@@ -28,11 +28,11 @@
 <!-- 	     </classes>  -->
 <!-- 	   </test>  -->
    
-<!-- 	    <test name="Latest Stories">      -->
-<!-- 	     <classes>   -->
-<!-- 	       <class name="com.healthline.testscripts.LatestStories"/>   -->
-<!-- 	      </classes>   -->
-<!-- 	    </test>   -->
+	    <test name="Latest Stories">     
+	     <classes>  
+	       <class name="com.healthline.testscripts.LatestStories"/>  
+	      </classes>  
+	    </test>  
   
 <!-- 		   <test name="Search Bar">   -->
 <!-- 		    <classes>  -->

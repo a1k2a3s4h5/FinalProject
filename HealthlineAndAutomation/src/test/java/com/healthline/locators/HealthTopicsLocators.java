@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 public class HealthTopicsLocators {
 	
 	public WebDriver driver;
+	public HealthTopicsLocators(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
 
 	@FindBy(how=How.XPATH , using="//button[@data-auto='header-menu']")
 	public WebElement menuButton;
@@ -73,10 +77,7 @@ public class HealthTopicsLocators {
 	@FindBy(how=How.XPATH , using="//a[text()='ADHD']")
 	public WebElement adhd;
 	
-	public HealthTopicsLocators(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
+	
 	
 	public void workingOfHealthTopics() {
 		menuButton.click();

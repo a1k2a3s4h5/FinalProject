@@ -11,8 +11,6 @@ import org.testng.annotations.AfterMethod;
 
 public class HealthlineLogo {
 	public WebDriver driver;
-	
-	
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
 	public com.page.object.model.HealthlineLogoPOM healthlineLogo;
 	

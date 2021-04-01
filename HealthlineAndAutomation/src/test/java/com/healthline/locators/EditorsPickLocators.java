@@ -11,6 +11,9 @@ public class EditorsPickLocators {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	public WebElement popupSubmitButton;
+	
 	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[1]")
 	public WebElement editorPick1;
 	
@@ -19,6 +22,8 @@ public class EditorsPickLocators {
 	
 	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[3]")
 	public WebElement editorPick3;
+	
+	
 	
 	
 }

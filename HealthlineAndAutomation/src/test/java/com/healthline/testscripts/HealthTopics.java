@@ -6,8 +6,6 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 
-import com.healthline.locators.HealthTopicsLocators;
-import utils.SetupEnvironment;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,24 +14,26 @@ import org.testng.annotations.Test;
 
 public class HealthTopics {
 
-	public WebDriver driver;
-	SetupEnvironment setup=new SetupEnvironment();
-	HealthTopicsLocators loc;
+public WebDriver driver;
+	
+	
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.HealthTopicsPOM healthlineTopics;
+	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		healthlineTopics=new com.page.object.model.HealthTopicsPOM(driver);
+	}
 
-		@Test
+		@Test(description="To verify the health topics")
 		public void healthTopics() {
 			
-		loc.workingOfHealthTopics();
+		healthlineTopics.workingOfHealthTopics();
 		}
 
-		@Parameters({"browserName","url"})
-		@BeforeMethod
-		public void beforeMethod(String browserName, String url) {
-			driver = setup.driverReturn(browserName,url);
-			loc = new HealthTopicsLocators(driver);
-			System.out.println("Starting Browser");
-		}
-
+	
 		@AfterMethod
 		public void afterMethod() {
 			System.out.println("Closing Browser");

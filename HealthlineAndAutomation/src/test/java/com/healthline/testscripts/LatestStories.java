@@ -17,22 +17,20 @@ import utils.SetupEnvironment;
 public class LatestStories {
 
 	public WebDriver driver;
-	SetupEnvironment setup=new SetupEnvironment();
-	LatestStoriesLocators loc;
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.LatestStoriesPOM latestStories;
+	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		latestStories=new com.page.object.model.LatestStoriesPOM(driver);
+	}
 	
 	@Test
 	public void f() {
-		loc.workingOfLatestStories();
+		latestStories.workingOfLatestStories();
 	}
-
-	@Parameters({"browserName","url"})
-	@BeforeMethod
-	public void beforeMethod(String browserName, String url) {
-		driver = setup.driverReturn(browserName,url);
-		loc = new LatestStoriesLocators(driver);
-		System.out.println("Starting Browser");
-	}
-
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("closing browser");

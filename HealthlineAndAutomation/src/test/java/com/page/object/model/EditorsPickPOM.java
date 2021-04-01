@@ -15,6 +15,7 @@ public class EditorsPickPOM {
 	}
 	
 	public void workingOfEditorsPickLocators() {
+		editor.popupSubmitButton.click();
 		editor.editorPick1.click();
 		driver.navigate().back();
 		editor.editorPick2.click();
