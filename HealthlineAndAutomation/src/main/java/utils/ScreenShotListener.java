@@ -14,7 +14,6 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.Parameters;
 
 public class ScreenShotListener implements ITestListener {
 

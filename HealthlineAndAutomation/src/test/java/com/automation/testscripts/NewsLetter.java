@@ -1,6 +1,6 @@
 package com.automation.testscripts;
 /**
- * Aim: to verify the newletter email functionality
+ * Aim: to verify the newsletter email functionality
  * Author: Group Q
  * Created on:31/03/2021
  */
@@ -42,7 +42,6 @@ public class NewsLetter {
 	
 	/*
 	 * Function name:  inValidEmailNewsLetter
-	 * 
 	 */
 	@Test(dataProvider="inValidEmail",priority=1)
 	public void inValidEmailNewsLetter(String email)
@@ -50,6 +49,9 @@ public class NewsLetter {
 		newsLetter.newsLetter(email);
 		Assert.assertEquals(driver.findElement(By.xpath("//p[@class='alert alert-danger']")).isDisplayed(), true);
 	}
+	/*
+	 * Function name:  registeredNewsLetter
+	 */
 	
 	@Test(dataProvider="regsiteredEmail",priority=2)
 	public void registeredNewsLetter(String email)
@@ -57,6 +59,9 @@ public class NewsLetter {
 		newsLetter.newsLetter(email);
 		Assert.assertEquals(driver.findElement(By.xpath("//p[@class='alert alert-danger']")).isDisplayed(), true);
 	}
+	/*
+	 * Function name:  unRegisterednNewsLetter
+	 */
 
 	@Test(dataProvider="unRegisteredEmail",priority=3)
 	public void unRegisterednNewsLetter(String email)

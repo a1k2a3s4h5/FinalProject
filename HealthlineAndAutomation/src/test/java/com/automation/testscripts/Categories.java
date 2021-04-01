@@ -6,20 +6,21 @@ package com.automation.testscripts;
  * Modified on:30/03/2021
  */
 import org.testng.annotations.Test;
-import com.automation.locators.*;
-import utils.SetupEnvironment;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterMethod;
 
 public class Categories {
-	WebDriver driver;
-	CategoriesLocator loc=new CategoriesLocator() ;
-	SetupEnvironment setup= new SetupEnvironment();
-
+	public WebDriver driver;
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.CategoriesPOM categories;
+	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		categories=new com.page.object.model.CategoriesPOM(driver);
+	}
 	/**
 	 * Function name: categoriesWomenCheck
 	 * To verify the categories of women
@@ -27,22 +28,7 @@ public class Categories {
 	 * @param url
 	 */
 	@Test(description = "To verify the women category")
-	@Parameters({"browserName","url"})
-	public void categoriesWomenCheck(String browserName,String url) {
-		driver= setup.driverReturn(browserName,url);
-		loc.womenCategoryClicks();
-		driver.quit();
-	}
-	
-	
-	@BeforeMethod
-	public void beforeMethod() {
-		loc=PageFactory.initElements(driver,CategoriesLocator.class);
-		System.out.println("Starting test");
-	}
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Closing Browser");
-		
+	public void categoriesWomenCheck() {
+		categories.womenCategoryClicks();
 	}
 }

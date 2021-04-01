@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Practice Suite">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+
+   <parameter name = "browserName" value="chrome"/>
+   
+	   <test name="SignIn">  
+	   <classes> 
+	      <class name="com.automation.testscripts.SignIn"/> 
+	    </classes> 
+	  </test>  
+<!--     <test name="SignUp" >   -->
+<!--      <classes>  -->
+<!--       <class name="com.automation.testscripts.SignUp" />   -->
+<!--     </classes>   -->
+<!--    </test>   -->
+		<test name="NewsLetter">
+		<classes>
+		<class name="com.automation.testscripts.NewsLetter"/>
+		</classes>
+		</test>
+   <test name="BestSellerTestCase">  
+  		<classes> 
+     		<class name="com.automation.testscripts.BestSellers"/> 
+     </classes> 
+   </test> 
+   
+	    <test name="CategoriesTestCase">     
+	     <classes>  
+	       <class name="com.automation.testscripts.Categories"/>  
+	      </classes>  
+	    </test>  
+  
+	   <test name="ContactUsTestCase">  
+	    <classes> 
+	     <class name="com.automation.testscripts.ContactUs"/> 
+	    </classes> 
+	   </test> 
+
+		<test name="AddToCart">  
+	    <classes>
+	      <class name="com.automation.testscripts.SearchAndAddToCart"/>
+	    </classes>
+	   </test>  
+	  
+	   <test name="Send Email To"> 
+	   <classes> 
+	   <class name="com.automation.testscripts.SendToEmail" /> 
+	   </classes> 
+	   </test> 
+	  
+	     <test name="About us"> 
+	   <classes> 
+	   <class name="com.automation.testscripts.AboutUs" /> 
+	   </classes> 
+	   </test> 
+ 	    <parameter name = "url" value="http://automationpractice.com/index.php"/>
+</suite> 

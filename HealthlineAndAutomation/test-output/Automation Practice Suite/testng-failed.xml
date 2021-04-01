@@ -6,7 +6,7 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Editors Pick(failed)">
+  <test thread-count="5" name="EditorsPick(failed)">
     <classes>
       <class name="com.healthline.testscripts.EditorsPick">
         <methods>
@@ -16,5 +16,71 @@
         </methods>
       </class> <!-- com.healthline.testscripts.EditorsPick -->
     </classes>
-  </test> <!-- Editors Pick(failed) -->
+  </test> <!-- EditorsPick(failed) -->
+  <test thread-count="5" name="HealthlineLogo(failed)">
+    <classes>
+      <class name="com.healthline.testscripts.HealthlineLogo">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="clickFunctionalityOfHealthlineLogo"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.healthline.testscripts.HealthlineLogo -->
+    </classes>
+  </test> <!-- HealthlineLogo(failed) -->
+  <test thread-count="5" name="HealthTopics(failed)">
+    <classes>
+      <class name="com.healthline.testscripts.HealthTopics">
+        <methods>
+          <include name="healthTopics"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.healthline.testscripts.HealthTopics -->
+    </classes>
+  </test> <!-- HealthTopics(failed) -->
+  <test thread-count="5" name="Latest Stories(failed)">
+    <classes>
+      <class name="com.healthline.testscripts.LatestStories">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="f"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.healthline.testscripts.LatestStories -->
+    </classes>
+  </test> <!-- Latest Stories(failed) -->
+  <test thread-count="5" name="Search Bar(failed)">
+    <classes>
+      <class name="com.healthline.testscripts.SearchBar">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="searchBar"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.healthline.testscripts.SearchBar -->
+    </classes>
+  </test> <!-- Search Bar(failed) -->
+  <test thread-count="5" name="Subscribe(failed)">
+    <classes>
+      <class name="com.healthline.testscripts.Subscribe">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="subscribeFunctionality"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.healthline.testscripts.Subscribe -->
+    </classes>
+  </test> <!-- Subscribe(failed) -->
+  <test thread-count="5" name="Trending Post(failed)">
+    <classes>
+      <class name="com.healthline.testscripts.TrendingPost">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="trendingPostFunctionality"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.healthline.testscripts.TrendingPost -->
+    </classes>
+  </test> <!-- Trending Post(failed) -->
 </suite> <!-- Failed suite [Automation Practice Suite] -->
