@@ -34,17 +34,17 @@
 <!-- 	      </classes>   -->
 <!-- 	    </test>   -->
   
-		   <test name="Search Bar">  
-		    <classes> 
-		     <class name="com.healthline.testscripts.SearchBar"/> 
-		    </classes> 
-		   </test> 
+<!-- 		   <test name="Search Bar">   -->
+<!-- 		    <classes>  -->
+<!-- 		     <class name="com.healthline.testscripts.SearchBar"/>  -->
+<!-- 		    </classes>  -->
+<!-- 		   </test>  -->
 
-<!-- 		<test name="Subscribe">   -->
-<!-- 	    <classes> -->
-<!-- 	      <class name="com.healthline.testscripts.Subscribe"/> -->
-<!-- 	    </classes> -->
-<!-- 	   </test>   -->
+		<test name="Subscribe">  
+	    <classes>
+	      <class name="com.healthline.testscripts.Subscribe"/>
+	    </classes>
+	   </test>  
   
 <!-- 	   <test name="Trending Post">  -->
 <!-- 	   <classes>  -->

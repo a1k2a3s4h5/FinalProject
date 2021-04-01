@@ -7,11 +7,6 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
-
-import com.healthline.locators.SubscribeLocators;
-
-import utils.SetupEnvironment;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -20,20 +15,19 @@ import org.testng.annotations.AfterMethod;
 public class Subscribe {
 
 	public WebDriver driver;
-	SetupEnvironment setup = new SetupEnvironment();
-	SubscribeLocators loc;
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.SubscribePOM subscribe;
+	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		subscribe=new com.page.object.model.SubscribePOM(driver);
+	}
 
 	@Test
 	public void subscribeFunctionality() {
-		loc.workingOfSubscriber();
-	}
-
-	@Parameters({ "browserName", "url" })
-	@BeforeMethod
-	public void beforeMethod(String browserName, String url) {
-		driver = setup.driverReturn(browserName, url);
-		loc = new SubscribeLocators(driver);
-		System.out.println("Starting Browser");
+		subscribe.workingOfSubscriber();
 	}
 
 	@AfterMethod

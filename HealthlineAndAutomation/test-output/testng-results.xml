@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-01T19:08:34 IST" name="Automation Practice Suite" finished-at="2021-04-01T19:08:45 IST" duration-ms="11588">
+  <suite started-at="2021-04-01T19:21:45 IST" name="Automation Practice Suite" finished-at="2021-04-01T19:21:53 IST" duration-ms="8019">
     <groups>
     </groups>
-    <test started-at="2021-04-01T19:08:34 IST" name="Search Bar" finished-at="2021-04-01T19:08:45 IST" duration-ms="11588">
-      <class name="com.healthline.testscripts.SearchBar">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.SearchBar@6ae5aa72]" started-at="2021-04-01T19:08:34 IST" name="beforeMethod" finished-at="2021-04-01T19:08:40 IST" duration-ms="6447" status="PASS">
+    <test started-at="2021-04-01T19:21:45 IST" name="Subscribe" finished-at="2021-04-01T19:21:53 IST" duration-ms="8019">
+      <class name="com.healthline.testscripts.Subscribe">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.Subscribe@6ae5aa72]" started-at="2021-04-01T19:21:45 IST" name="beforeMethod" finished-at="2021-04-01T19:21:52 IST" duration-ms="6706" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,69 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="searchBar()[pri:0, instance:com.healthline.testscripts.SearchBar@6ae5aa72]" started-at="2021-04-01T19:08:40 IST" name="searchBar" finished-at="2021-04-01T19:08:45 IST" duration-ms="4292" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate an element using class name=autocomplete
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using class name=autocomplete
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
-at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at com.page.object.model.HealthlineSearchBar.workingOfSearchBar(HealthlineSearchBar.java:18)
-at com.healthline.testscripts.SearchBar.searchBar(SearchBar.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="subscribeFunctionality()[pri:0, instance:com.healthline.testscripts.Subscribe@6ae5aa72]" started-at="2021-04-01T19:21:52 IST" name="subscribeFunctionality" finished-at="2021-04-01T19:21:53 IST" duration-ms="1250" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchBar -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.SearchBar@6ae5aa72]" started-at="2021-04-01T19:08:45 IST" name="afterMethod" finished-at="2021-04-01T19:08:45 IST" duration-ms="775" status="PASS">
+        </test-method> <!-- subscribeFunctionality -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.Subscribe@6ae5aa72]" started-at="2021-04-01T19:21:53 IST" name="afterMethod" finished-at="2021-04-01T19:21:53 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.healthline.testscripts.SearchBar -->
-    </test> <!-- Search Bar -->
+      </class> <!-- com.healthline.testscripts.Subscribe -->
+    </test> <!-- Subscribe -->
   </suite> <!-- Automation Practice Suite -->
 </testng-results>
