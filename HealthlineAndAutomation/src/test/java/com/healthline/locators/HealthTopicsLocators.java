@@ -122,8 +122,7 @@ public class HealthTopicsLocators {
 		
 		symptom.click();
 		ticherbust.click();
-		
-
+	
 		driver.navigate().back();
 		nutri.click();
 

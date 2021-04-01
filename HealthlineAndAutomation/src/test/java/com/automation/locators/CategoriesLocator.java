@@ -1,10 +1,16 @@
 package com.automation.locators;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CategoriesLocator {
-	//categories
+	
+	public CategoriesLocator(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
 	@FindBy(xpath="//a[text()='Women']")
 	public WebElement womenCategory;
 	
@@ -32,15 +38,4 @@ public class CategoriesLocator {
 
 	@FindBy(className="ui-slider-handle ui-state-default ui-corner-all")
 	public WebElement slider;
-	
-	public void womenCategoryClicks() {
-		womenCategory.click();
-		tops.click();
-		t_shirts.click();
-		smallCheckbox.click();
-		colorCheckbox.click();
-		cottonCheckbox.click();
-		shortSelvees.click();
-	}
-	
 }
