@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Automation_Practice_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.EditorsPick" class="method navigator-link" hash-for-method="editorsPickWork">editorsPickWork</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.SearchBar" class="method navigator-link" hash-for-method="searchBar">searchBar</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Automation_Practice_Suite -->
@@ -122,38 +122,31 @@
           <div class="suite-Automation_Practice_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.healthline.testscripts.EditorsPick</span>
+              <span class="class-name">com.healthline.testscripts.SearchBar</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editorsPickWork">
-                  </a> <!-- editorsPickWork -->
-                  <span class="method-name">editorsPickWork</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;css-1qd1r5f&quot;&gt;...&lt;/li&gt; is not clickable at point (230, 501). Other element would receive the click: &lt;div class=&quot;css-1fi8wio&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=89.0.4389.90)
+                  <a name="searchBar">
+                  </a> <!-- searchBar -->
+                  <span class="method-name">searchBar</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using class name=autocomplete
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 836310c5889e9fe304b2244e8c15149f
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.page.object.model.EditorsPickPOM.workingOfEditorsPickLocators(EditorsPickPOM.java:18)
-	at com.healthline.testscripts.EditorsPick.editorsPickWork(EditorsPick.java:32)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at com.page.object.model.HealthlineSearchBar.workingOfSearchBar(HealthlineSearchBar.java:18)
+	at com.healthline.testscripts.SearchBar.searchBar(SearchBar.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
-                  <em>
-(To verify editor's pick functionality)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,11 +166,11 @@ Session ID: 836310c5889e9fe304b2244e8c15149f
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Editors Pick&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Search Bar&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.healthline.testscripts.EditorsPick&quot;/&gt;
+      &lt;class name=&quot;com.healthline.testscripts.SearchBar&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Editors Pick --&gt;
+  &lt;/test&gt; &lt;!-- Search Bar --&gt;
 &lt;/suite&gt; &lt;!-- Automation Practice Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,7 +182,7 @@ Session ID: 836310c5889e9fe304b2244e8c15149f
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Editors Pick (1 class)</span>
+                <span class="test-name">Search Bar (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -217,14 +210,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editorsPickWork')
-data.setCell(0, 2, 'com.healthline.testscripts.EditorsPick')
-data.setCell(0, 3, 1195);
+data.setCell(0, 1, 'searchBar')
+data.setCell(0, 2, 'com.healthline.testscripts.SearchBar')
+data.setCell(0, 3, 4292);
 window.suiteTableData['Automation_Practice_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Automation_Practice_Suite">
               </div> <!-- times-div-Automation_Practice_Suite -->
             </div> <!-- times-div -->
@@ -250,7 +243,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.healthline.testscripts.EditorsPick</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.healthline.testscripts.SearchBar</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome, https://www.healthline.com/)</span>
                 <span class="method-start">0 ms</span>
@@ -258,9 +251,13 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">editorsPickWork</span>
-                <span class="method-start">7891 ms</span>
+                <span class="method-name">searchBar</span>
+                <span class="method-start">6451 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">10757 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,13 +1,9 @@
 package com.healthline.testscripts;
 
 import org.testng.annotations.Test;
-import com.healthline.locators.HealthlineLogoLocators;
-import utils.SetupEnvironment;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
 
 public class HealthlineLogo {
 	public WebDriver driver;

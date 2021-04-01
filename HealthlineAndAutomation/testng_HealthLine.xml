@@ -28,17 +28,17 @@
 <!-- 	     </classes>  -->
 <!-- 	   </test>  -->
    
-	    <test name="Latest Stories">     
-	     <classes>  
-	       <class name="com.healthline.testscripts.LatestStories"/>  
-	      </classes>  
-	    </test>  
+<!-- 	    <test name="Latest Stories">      -->
+<!-- 	     <classes>   -->
+<!-- 	       <class name="com.healthline.testscripts.LatestStories"/>   -->
+<!-- 	      </classes>   -->
+<!-- 	    </test>   -->
   
-<!-- 		   <test name="Search Bar">   -->
-<!-- 		    <classes>  -->
-<!-- 		     <class name="com.healthline.testscripts.SearchBar"/>  -->
-<!-- 		    </classes>  -->
-<!-- 		   </test>  -->
+		   <test name="Search Bar">  
+		    <classes> 
+		     <class name="com.healthline.testscripts.SearchBar"/> 
+		    </classes> 
+		   </test> 
 
 <!-- 		<test name="Subscribe">   -->
 <!-- 	    <classes> -->

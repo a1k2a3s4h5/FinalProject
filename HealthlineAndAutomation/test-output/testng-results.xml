@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-01T17:47:53 IST" name="Automation Practice Suite" finished-at="2021-04-01T17:48:02 IST" duration-ms="9163">
+  <suite started-at="2021-04-01T19:08:34 IST" name="Automation Practice Suite" finished-at="2021-04-01T19:08:45 IST" duration-ms="11588">
     <groups>
     </groups>
-    <test started-at="2021-04-01T17:47:53 IST" name="Editors Pick" finished-at="2021-04-01T17:48:02 IST" duration-ms="9163">
-      <class name="com.healthline.testscripts.EditorsPick">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.EditorsPick@1aa7ecca]" started-at="2021-04-01T17:47:53 IST" name="beforeMethod" finished-at="2021-04-01T17:48:01 IST" duration-ms="7890" status="PASS">
+    <test started-at="2021-04-01T19:08:34 IST" name="Search Bar" finished-at="2021-04-01T19:08:45 IST" duration-ms="11588">
+      <class name="com.healthline.testscripts.SearchBar">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.SearchBar@6ae5aa72]" started-at="2021-04-01T19:08:34 IST" name="beforeMethod" finished-at="2021-04-01T19:08:40 IST" duration-ms="6447" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,46 +23,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="editorsPickWork()[pri:0, instance:com.healthline.testscripts.EditorsPick@1aa7ecca]" started-at="2021-04-01T17:48:01 IST" name="editorsPickWork" description="To verify editor&#039;s pick functionality" finished-at="2021-04-01T17:48:02 IST" duration-ms="1195" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="searchBar()[pri:0, instance:com.healthline.testscripts.SearchBar@6ae5aa72]" started-at="2021-04-01T19:08:40 IST" name="searchBar" finished-at="2021-04-01T19:08:45 IST" duration-ms="4292" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element <li class="css-1qd1r5f">...</li> is not clickable at point (230, 501). Other element would receive the click: <div class="css-1fi8wio">...</div>
-  (Session info: chrome=89.0.4389.90)
+              <![CDATA[Cannot locate an element using class name=autocomplete
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 836310c5889e9fe304b2244e8c15149f]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <li class="css-1qd1r5f">...</li> is not clickable at point (230, 501). Other element would receive the click: <div class="css-1fi8wio">...</div>
-  (Session info: chrome=89.0.4389.90)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using class name=autocomplete
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 836310c5889e9fe304b2244e8c15149f
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at com.page.object.model.EditorsPickPOM.workingOfEditorsPickLocators(EditorsPickPOM.java:18)
-at com.healthline.testscripts.EditorsPick.editorsPickWork(EditorsPick.java:32)
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+at com.page.object.model.HealthlineSearchBar.workingOfSearchBar(HealthlineSearchBar.java:18)
+at com.healthline.testscripts.SearchBar.searchBar(SearchBar.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -93,11 +77,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editorsPickWork -->
-      </class> <!-- com.healthline.testscripts.EditorsPick -->
-    </test> <!-- Editors Pick -->
+        </test-method> <!-- searchBar -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.SearchBar@6ae5aa72]" started-at="2021-04-01T19:08:45 IST" name="afterMethod" finished-at="2021-04-01T19:08:45 IST" duration-ms="775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.healthline.testscripts.SearchBar -->
+    </test> <!-- Search Bar -->
   </suite> <!-- Automation Practice Suite -->
 </testng-results>
