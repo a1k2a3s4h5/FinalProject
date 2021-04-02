@@ -40,17 +40,17 @@
 <!-- 		    </classes>  -->
 <!-- 		   </test>  -->
 
-		<test name="Subscribe">  
-	    <classes>
-	      <class name="com.healthline.testscripts.Subscribe"/>
-	    </classes>
-	   </test>  
+<!-- 		<test name="Subscribe">   -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.healthline.testscripts.Subscribe"/> -->
+<!-- 	    </classes> -->
+<!-- 	   </test>   -->
   
-<!-- 	   <test name="Trending Post">  -->
-<!-- 	   <classes>  -->
-<!-- 	   <class name="com.healthline.testscripts.TrendingPost" />  -->
-<!-- 	   </classes>  -->
-<!-- 	   </test>  -->
+	   <test name="Trending Post"> 
+	   <classes> 
+	   <class name="com.healthline.testscripts.TrendingPost" /> 
+	   </classes> 
+	   </test> 
   
  	    <parameter name = "url" value="https://www.healthline.com/"/>
 </suite> 

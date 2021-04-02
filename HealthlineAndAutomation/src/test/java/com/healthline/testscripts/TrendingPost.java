@@ -17,8 +17,15 @@ import org.testng.annotations.AfterMethod;
 public class TrendingPost {
 
 	public WebDriver driver;
-	SetupEnvironment setup = new SetupEnvironment();
-	TrendingPostLocators loc;
+	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	public com.page.object.model.TrendingPostPOM trendingPost;
+	
+	@Parameters({"browserName","url"})
+	@BeforeMethod
+	public void beforeMethod(String browserName,String url) {
+		driver = setup.driverReturn(browserName,url);
+		trendingPost=new com.page.object.model.TrendingPostPOM(driver);
+	}
 
 	/**
 	 * Function name:trendingPostFunctionality To navigate to the Trending post
@@ -26,16 +33,9 @@ public class TrendingPost {
 	 */
 	@Test(description = "trending post functionality")
 	public void trendingPostFunctionality() {
-		loc.workingOfTrendingPost();
+		trendingPost.workingOfTrendingPost();
 	}
 
-	@Parameters({ "browserName", "url" })
-	@BeforeMethod
-	public void beforeMethod(String browserName, String url) {
-		driver = setup.driverReturn(browserName, url);
-		loc = new TrendingPostLocators(driver);
-		System.out.println("Starting Browser");
-	}
 
 	@AfterMethod
 	public void afterMethod() {

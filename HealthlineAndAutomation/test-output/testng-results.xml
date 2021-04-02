@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-01T19:21:45 IST" name="Automation Practice Suite" finished-at="2021-04-01T19:21:53 IST" duration-ms="8019">
+  <suite started-at="2021-04-02T10:05:57 IST" name="Automation Practice Suite" finished-at="2021-04-02T10:06:15 IST" duration-ms="17566">
     <groups>
     </groups>
-    <test started-at="2021-04-01T19:21:45 IST" name="Subscribe" finished-at="2021-04-01T19:21:53 IST" duration-ms="8019">
-      <class name="com.healthline.testscripts.Subscribe">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.Subscribe@6ae5aa72]" started-at="2021-04-01T19:21:45 IST" name="beforeMethod" finished-at="2021-04-01T19:21:52 IST" duration-ms="6706" status="PASS">
+    <test started-at="2021-04-02T10:05:57 IST" name="Trending Post" finished-at="2021-04-02T10:06:15 IST" duration-ms="17566">
+      <class name="com.healthline.testscripts.TrendingPost">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.TrendingPost@7ec7ffd3]" started-at="2021-04-02T10:05:57 IST" name="beforeMethod" finished-at="2021-04-02T10:06:05 IST" duration-ms="7531" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="subscribeFunctionality()[pri:0, instance:com.healthline.testscripts.Subscribe@6ae5aa72]" started-at="2021-04-01T19:21:52 IST" name="subscribeFunctionality" finished-at="2021-04-01T19:21:53 IST" duration-ms="1250" status="PASS">
+        <test-method signature="trendingPostFunctionality()[pri:0, instance:com.healthline.testscripts.TrendingPost@7ec7ffd3]" started-at="2021-04-02T10:06:05 IST" name="trendingPostFunctionality" description="trending post functionality" finished-at="2021-04-02T10:06:14 IST" duration-ms="8795" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- subscribeFunctionality -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.Subscribe@6ae5aa72]" started-at="2021-04-01T19:21:53 IST" name="afterMethod" finished-at="2021-04-01T19:21:53 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- trendingPostFunctionality -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.TrendingPost@7ec7ffd3]" started-at="2021-04-02T10:06:14 IST" name="afterMethod" finished-at="2021-04-02T10:06:15 IST" duration-ms="1184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.healthline.testscripts.Subscribe -->
-    </test> <!-- Subscribe -->
+      </class> <!-- com.healthline.testscripts.TrendingPost -->
+    </test> <!-- Trending Post -->
   </suite> <!-- Automation Practice Suite -->
 </testng-results>

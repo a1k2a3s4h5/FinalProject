@@ -6,15 +6,15 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Search Bar(failed)">
+  <test thread-count="5" name="Trending Post(failed)">
     <classes>
-      <class name="com.healthline.testscripts.SearchBar">
+      <class name="com.healthline.testscripts.TrendingPost">
         <methods>
-          <include name="afterMethod"/>
-          <include name="searchBar"/>
           <include name="beforeMethod"/>
+          <include name="trendingPostFunctionality"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.healthline.testscripts.SearchBar -->
+      </class> <!-- com.healthline.testscripts.TrendingPost -->
     </classes>
-  </test> <!-- Search Bar(failed) -->
+  </test> <!-- Trending Post(failed) -->
 </suite> <!-- Failed suite [Automation Practice Suite] -->
