@@ -12,21 +12,21 @@
 <!-- 	      <class name="com.automation.testscripts.SignIn"/>  -->
 <!-- 	    </classes>  -->
 <!-- 	  </test>   -->
-<!--     <test name="SignUp" >   -->
-<!--      <classes>  -->
-<!--       <class name="com.automation.testscripts.SignUp" />   -->
-<!--     </classes>   -->
-<!--    </test>   -->
+    <test name="SignUp" >  
+     <classes> 
+      <class name="com.automation.testscripts.SignUp" />  
+    </classes>  
+   </test>  
 <!-- 		<test name="NewsLetter"> -->
 <!-- 		<classes> -->
 <!-- 		<class name="com.automation.testscripts.NewsLetter"/> -->
 <!-- 		</classes> -->
 <!-- 		</test> -->
-   <test name="BestSellerTestCase">  
-  		<classes> 
-     		<class name="com.automation.testscripts.BestSellers"/> 
-     </classes> 
-   </test> 
+<!--    <test name="BestSellerTestCase">   -->
+<!--   		<classes>  -->
+<!--      		<class name="com.automation.testscripts.BestSellers"/>  -->
+<!--      </classes>  -->
+<!--    </test>  -->
    
 <!-- 	    <test name="CategoriesTestCase">      -->
 <!-- 	     <classes>   -->

@@ -11,6 +11,6 @@ public class BestSellersLocator {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath="//a[text()='Best Sellerss']")
+	@FindBy(xpath="//a[text()='Best Sellers']")
 	public WebElement bestSeller;	
 }

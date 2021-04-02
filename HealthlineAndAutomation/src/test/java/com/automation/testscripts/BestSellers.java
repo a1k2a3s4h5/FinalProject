@@ -19,7 +19,6 @@ import org.testng.annotations.Parameters;
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

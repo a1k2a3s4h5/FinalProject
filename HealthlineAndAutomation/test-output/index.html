@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Automation_Practice_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.automation.testscripts.BestSellers" class="method navigator-link" hash-for-method="bestSellerFunctionality">bestSellerFunctionality</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.automation.testscripts.SignUp" class="method navigator-link" hash-for-method="invalidSignUp(test#%1510@test.com)">invalidSignUp(test#%1510@test.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Automation_Practice_Suite -->
@@ -122,23 +122,24 @@
           <div class="suite-Automation_Practice_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.automation.testscripts.BestSellers</span>
+              <span class="class-name">com.automation.testscripts.SignUp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="bestSellerFunctionality">
-                  </a> <!-- bestSellerFunctionality -->
-                  <span class="method-name">bestSellerFunctionality</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Best Sellerss&apos;]&quot;}
+                  <a name="invalidSignUp(test#%1510@test.com)">
+                  </a> <!-- invalidSignUp(test#%1510@test.com) -->
+                  <span class="method-name">invalidSignUp</span>
+                  <span class="parameters">(test#%1510@test.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;create_account_error&apos;]//li&quot;}
   (Session info: chrome=89.0.4389.114)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54150}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 635b4890d675ef46c525dc8ec20d4743
-*** Element info: {Using=xpath, value=//a[text()=&apos;Best Sellerss&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55312}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ee15f84389ca8d074d2422669b4054d2
+*** Element info: {Using=xpath, value=//div[@id=&apos;create_account_error&apos;]//li}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -149,16 +150,12 @@ Session ID: 635b4890d675ef46c525dc8ec20d4743
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at com.page.object.model.BestSellersPOM.bestSellers(BestSellersPOM.java:16)
-	at com.automation.testscripts.BestSellers.bestSellerFunctionality(BestSellers.java:61)
+	at com.automation.testscripts.SignUp.invalidSignUp(SignUp.java:87)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(To verify the bestseller item)                  </em>
+(Provide invalid email and check the functionality)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -178,11 +175,11 @@ Session ID: 635b4890d675ef46c525dc8ec20d4743
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;BestSellerTestCase&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;SignUp&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.testscripts.BestSellers&quot;/&gt;
+      &lt;class name=&quot;com.automation.testscripts.SignUp&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- BestSellerTestCase --&gt;
+  &lt;/test&gt; &lt;!-- SignUp --&gt;
 &lt;/suite&gt; &lt;!-- Automation Practice Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,7 +191,7 @@ Session ID: 635b4890d675ef46c525dc8ec20d4743
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">BestSellerTestCase (1 class)</span>
+                <span class="test-name">SignUp (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,14 +219,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'bestSellerFunctionality')
-data.setCell(0, 2, 'com.automation.testscripts.BestSellers')
-data.setCell(0, 3, 10554);
+data.setCell(0, 1, 'invalidSignUp')
+data.setCell(0, 2, 'com.automation.testscripts.SignUp')
+data.setCell(0, 3, 12829);
 window.suiteTableData['Automation_Practice_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Automation_Practice_Suite">
               </div> <!-- times-div-Automation_Practice_Suite -->
             </div> <!-- times-div -->
@@ -255,28 +252,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.testscripts.BestSellers</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.testscripts.SignUp</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setExtent</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome, http://automationpractice.com/index.php)</span>
-                <span class="method-start">273 ms</span>
+                <span class="method-start">244 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">bestSellerFunctionality</span>
-                <span class="method-start">12116 ms</span>
+                <span class="method-name">invalidSignUp(test#%1510@test.com)</span>
+                <span class="method-start">10185 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=bestSellerFunctionality status=FAILURE method=BestSellers.bestSellerFunctionality()...)</span>
-                <span class="method-start">22679 ms</span>
+                <span class="method-name">afterMethod([TestResult name=invalidSignUp status=FAILURE method=SignUp.invalidSignUp(java.lang.String)[pri:1, i...)</span>
+                <span class="method-start">23026 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">24282 ms</span>
+                <span class="method-start">24159 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

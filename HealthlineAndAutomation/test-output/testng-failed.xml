@@ -6,17 +6,17 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="BestSellerTestCase(failed)">
+  <test thread-count="5" name="SignUp(failed)">
     <classes>
-      <class name="com.automation.testscripts.BestSellers">
+      <class name="com.automation.testscripts.SignUp">
         <methods>
-          <include name="bestSellerFunctionality"/>
-          <include name="beforeMethod"/>
-          <include name="endReport"/>
-          <include name="afterMethod"/>
+          <include name="invalidSignUp" invocation-numbers="0"/>
           <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.automation.testscripts.BestSellers -->
+      </class> <!-- com.automation.testscripts.SignUp -->
     </classes>
-  </test> <!-- BestSellerTestCase(failed) -->
+  </test> <!-- SignUp(failed) -->
 </suite> <!-- Failed suite [Automation Practice Suite] -->

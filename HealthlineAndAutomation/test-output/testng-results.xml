@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-02T11:55:14 IST" name="Automation Practice Suite" finished-at="2021-04-02T11:55:38 IST" duration-ms="24854">
+  <suite started-at="2021-04-02T12:38:50 IST" name="Automation Practice Suite" finished-at="2021-04-02T12:39:15 IST" duration-ms="24601">
     <groups>
     </groups>
-    <test started-at="2021-04-02T11:55:14 IST" name="BestSellerTestCase" finished-at="2021-04-02T11:55:38 IST" duration-ms="24854">
-      <class name="com.automation.testscripts.BestSellers">
-        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.automation.testscripts.BestSellers@38c6f217]" started-at="2021-04-02T11:55:14 IST" name="setExtent" finished-at="2021-04-02T11:55:14 IST" duration-ms="242" status="PASS">
+    <test started-at="2021-04-02T12:38:50 IST" name="SignUp" finished-at="2021-04-02T12:39:15 IST" duration-ms="24601">
+      <class name="com.automation.testscripts.SignUp">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:38:50 IST" name="setExtent" finished-at="2021-04-02T12:38:51 IST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.BestSellers@38c6f217]" started-at="2021-04-02T11:55:14 IST" name="beforeMethod" finished-at="2021-04-02T11:55:26 IST" duration-ms="11838" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:38:51 IST" name="beforeMethod" finished-at="2021-04-02T12:39:01 IST" duration-ms="9939" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,29 +27,36 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="bestSellerFunctionality()[pri:0, instance:com.automation.testscripts.BestSellers@38c6f217]" started-at="2021-04-02T11:55:26 IST" name="bestSellerFunctionality" description="To verify the bestseller item" finished-at="2021-04-02T11:55:36 IST" duration-ms="10554" status="FAIL">
+        <test-method signature="invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:39:01 IST" name="invalidSignUp" description="Provide invalid email and check the functionality" data-provider="invalidEmail" finished-at="2021-04-02T12:39:13 IST" duration-ms="12829" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test#%1510@test.com]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Best Sellerss']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='create_account_error']//li"}
   (Session info: chrome=89.0.4389.114)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54150}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 635b4890d675ef46c525dc8ec20d4743
-*** Element info: {Using=xpath, value=//a[text()='Best Sellerss']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55312}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ee15f84389ca8d074d2422669b4054d2
+*** Element info: {Using=xpath, value=//div[@id='create_account_error']//li}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Best Sellerss']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='create_account_error']//li"}
   (Session info: chrome=89.0.4389.114)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54150}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 635b4890d675ef46c525dc8ec20d4743
-*** Element info: {Using=xpath, value=//a[text()='Best Sellerss']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55312}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ee15f84389ca8d074d2422669b4054d2
+*** Element info: {Using=xpath, value=//div[@id='create_account_error']//li}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -65,11 +72,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at com.page.object.model.BestSellersPOM.bestSellers(BestSellersPOM.java:16)
-at com.automation.testscripts.BestSellers.bestSellerFunctionality(BestSellers.java:61)
+at com.automation.testscripts.SignUp.invalidSignUp(SignUp.java:87)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,23 +106,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bestSellerFunctionality -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.automation.testscripts.BestSellers@38c6f217]" started-at="2021-04-02T11:55:36 IST" name="afterMethod" finished-at="2021-04-02T11:55:38 IST" duration-ms="1599" status="PASS">
+        </test-method> <!-- invalidSignUp -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:39:13 IST" name="afterMethod" finished-at="2021-04-02T12:39:15 IST" duration-ms="1129" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=bestSellerFunctionality status=FAILURE method=BestSellers.bestSellerFunctionality()[pri:0, instance:com.automation.testscripts.BestSellers@38c6f217] output={null}]]]>
+                <![CDATA[[TestResult name=invalidSignUp status=FAILURE method=SignUp.invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@131774fe] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.automation.testscripts.BestSellers@38c6f217]" started-at="2021-04-02T11:55:38 IST" name="endReport" finished-at="2021-04-02T11:55:38 IST" duration-ms="560" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:39:15 IST" name="endReport" finished-at="2021-04-02T12:39:15 IST" duration-ms="433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- com.automation.testscripts.BestSellers -->
-    </test> <!-- BestSellerTestCase -->
+      </class> <!-- com.automation.testscripts.SignUp -->
+    </test> <!-- SignUp -->
   </suite> <!-- Automation Practice Suite -->
 </testng-results>
