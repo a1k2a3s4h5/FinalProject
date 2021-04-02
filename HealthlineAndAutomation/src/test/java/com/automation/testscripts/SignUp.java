@@ -26,8 +26,6 @@ public class SignUp {
 		driver = setup.driverReturn(browserName,url);
 		signUp=new com.page.object.model.SignUpPagePOM(driver);
 	}
-	
-	
 	/**
 	 * Function name:signUpValidDetails
 	 * Data provider with valid details

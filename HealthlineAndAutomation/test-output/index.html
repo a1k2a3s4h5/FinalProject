@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Automation_Practice_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Automation Practice Suite</span>
+              <span class="suite-name border-failed">Automation Practice Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Automation_Practice_Suite" class="navigator-link ">
-                    <span>C:\Users\vanshika.joukani\git\FinalProject\HealthlineAndAutomation\testng_HealthLine.xml</span>
+                    <span>C:\Users\vanshika.joukani\git\FinalProject\HealthlineAndAutomation\testng_Automation.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Automation_Practice_Suite" class="hide-methods passed suite-Automation_Practice_Suite"> (hide)</a> <!-- hide-methods passed suite-Automation_Practice_Suite -->
-                      <a href="#" panel-name="suite-Automation_Practice_Suite" class="show-methods passed suite-Automation_Practice_Suite"> (show)</a> <!-- show-methods passed suite-Automation_Practice_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Automation_Practice_Suite" class="hide-methods failed suite-Automation_Practice_Suite"> (hide)</a> <!-- hide-methods failed suite-Automation_Practice_Suite -->
+                      <a href="#" panel-name="suite-Automation_Practice_Suite" class="show-methods failed suite-Automation_Practice_Suite"> (show)</a> <!-- show-methods failed suite-Automation_Practice_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Automation_Practice_Suite">
+                    <div class="method-list-content failed suite-Automation_Practice_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.TrendingPost" class="method navigator-link" hash-for-method="trendingPostFunctionality">trendingPostFunctionality</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.automation.testscripts.BestSellers" class="method navigator-link" hash-for-method="bestSellerFunctionality">bestSellerFunctionality</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Automation_Practice_Suite -->
+                    </div> <!-- method-list-content failed suite-Automation_Practice_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,27 +119,54 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Automation_Practice_Suite" class="panel Automation_Practice_Suite">
-          <div class="suite-Automation_Practice_Suite-class-passed">
+          <div class="suite-Automation_Practice_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.healthline.testscripts.TrendingPost</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.automation.testscripts.BestSellers</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="trendingPostFunctionality">
-                  </a> <!-- trendingPostFunctionality -->
-                  <span class="method-name">trendingPostFunctionality</span>
+                  <a name="bestSellerFunctionality">
+                  </a> <!-- bestSellerFunctionality -->
+                  <span class="method-name">bestSellerFunctionality</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Best Sellerss&apos;]&quot;}
+  (Session info: chrome=89.0.4389.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54150}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 635b4890d675ef46c525dc8ec20d4743
+*** Element info: {Using=xpath, value=//a[text()=&apos;Best Sellerss&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at com.page.object.model.BestSellersPOM.bestSellers(BestSellersPOM.java:16)
+	at com.automation.testscripts.BestSellers.bestSellerFunctionality(BestSellers.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(trending post functionality)                  </em>
+(To verify the bestseller item)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Automation_Practice_Suite-class-passed -->
+          </div> <!-- suite-Automation_Practice_Suite-class-failed -->
         </div> <!-- panel Automation_Practice_Suite -->
         <div panel-name="test-xml-Automation_Practice_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vanshika.joukani\git\FinalProject\HealthlineAndAutomation\testng_HealthLine.xml</span>
+            <span class="header-content">C:\Users\vanshika.joukani\git\FinalProject\HealthlineAndAutomation\testng_Automation.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,15 +174,15 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Automation Practice Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
-  &lt;parameter name=&quot;url&quot; value=&quot;https://www.healthline.com/&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;http://automationpractice.com/index.php&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Trending Post&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;BestSellerTestCase&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.healthline.testscripts.TrendingPost&quot;/&gt;
+      &lt;class name=&quot;com.automation.testscripts.BestSellers&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Trending Post --&gt;
+  &lt;/test&gt; &lt;!-- BestSellerTestCase --&gt;
 &lt;/suite&gt; &lt;!-- Automation Practice Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +194,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Trending Post (1 class)</span>
+                <span class="test-name">BestSellerTestCase (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,14 +222,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'trendingPostFunctionality')
-data.setCell(0, 2, 'com.healthline.testscripts.TrendingPost')
-data.setCell(0, 3, 8795);
+data.setCell(0, 1, 'bestSellerFunctionality')
+data.setCell(0, 2, 'com.automation.testscripts.BestSellers')
+data.setCell(0, 3, 10554);
 window.suiteTableData['Automation_Practice_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Automation_Practice_Suite">
               </div> <!-- times-div-Automation_Practice_Suite -->
             </div> <!-- times-div -->
@@ -228,19 +255,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.healthline.testscripts.TrendingPost</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(chrome, https://www.healthline.com/)</span>
+              <div class="chronological-class-name">com.automation.testscripts.BestSellers</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setExtent</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chrome, http://automationpractice.com/index.php)</span>
+                <span class="method-start">273 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">trendingPostFunctionality</span>
-                <span class="method-start">7532 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">bestSellerFunctionality</span>
+                <span class="method-start">12116 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">16332 ms</span>
+                <span class="method-name">afterMethod([TestResult name=bestSellerFunctionality status=FAILURE method=BestSellers.bestSellerFunctionality()...)</span>
+                <span class="method-start">22679 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">endReport</span>
+                <span class="method-start">24282 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
