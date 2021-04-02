@@ -7,6 +7,7 @@ package com.automation.testscripts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -43,7 +44,7 @@ public class NewsLetter {
 	/*
 	 * Function name:  inValidEmailNewsLetter
 	 */
-	@Test(dataProvider="inValidEmail",priority=1)
+	@Test(dataProvider="inValidEmail",priority=1,description="To provide invalid email for newsletter functionality.")
 	public void inValidEmailNewsLetter(String email)
 	{
 		newsLetter.newsLetter(email);
@@ -53,7 +54,7 @@ public class NewsLetter {
 	 * Function name:  registeredNewsLetter
 	 */
 	
-	@Test(dataProvider="regsiteredEmail",priority=2)
+	@Test(dataProvider="regsiteredEmail",priority=2,description="To provide registered email for newsletter functionality.")
 	public void registeredNewsLetter(String email)
 	{
 		newsLetter.newsLetter(email);
@@ -63,11 +64,16 @@ public class NewsLetter {
 	 * Function name:  unRegisterednNewsLetter
 	 */
 
-	@Test(dataProvider="unRegisteredEmail",priority=3)
+	@Test(dataProvider="unRegisteredEmail",priority=3,description="To provide unregistered email for newsletter functionality.")
 	public void unRegisterednNewsLetter(String email)
 	{
 		newsLetter.newsLetter(email);
 		Assert.assertEquals(driver.findElement(By.xpath("//p[@class='alert alert-success']")).isDisplayed(), true);
+	}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Closing Browsr");
+		driver.quit();
 	}
 
 }

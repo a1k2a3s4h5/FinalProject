@@ -3,6 +3,7 @@ package com.automation.testscripts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -22,11 +23,14 @@ public class SearchItems {
 		search=new com.page.object.model.SearchPOM(driver);
 	}
 
-	@Test
+	@Test(description="To verify the search functionality.")
 	public void searchItems()
 	{
 		search.sendSearchText();
-		//Assert.assertEquals(driver.findElement(By.id("order-confirmation")).isDisplayed(), true);
+	}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Closing Browsr");
 		driver.quit();
 	}
 }

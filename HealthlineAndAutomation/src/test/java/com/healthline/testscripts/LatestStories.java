@@ -27,8 +27,8 @@ public class LatestStories {
 		latestStories=new com.page.object.model.LatestStoriesPOM(driver);
 	}
 	
-	@Test
-	public void f() {
+	@Test(description="To verify latest stories functionality.")
+	public void latestStories() {
 		latestStories.workingOfLatestStories();
 	}
 	@AfterMethod

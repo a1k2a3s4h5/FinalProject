@@ -19,7 +19,7 @@ public class SearchBar {
 	}
 	
 	
-	@Test
+	@Test(description="To verify search bar functionality.")
 	  public void searchBar() {
 		searchBar.workingOfSearchBar();
 	  }

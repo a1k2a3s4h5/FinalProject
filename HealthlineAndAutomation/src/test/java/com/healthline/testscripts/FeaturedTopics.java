@@ -6,6 +6,7 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -29,9 +30,14 @@ public WebDriver driver;
 	 * To verify the click functionality of editor's pick collection
 	 * @throws InterruptedException 
 	 */
-	@Test(description = "To verify the featured topics")
+	@Test(description = "To verify the featured topics functionality.")
 	public void featuredTopicsWork() {
 		
 		featuredTopics.workingOfFeaturedTopics(); 
+	}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Closing Browsr");
+		driver.quit();
 	}
 }

@@ -8,6 +8,7 @@ package com.automation.testscripts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -108,5 +109,10 @@ public class SignUp {
 		signUp.personalInformation(firstname,lastname, password);
 		signUp.yourAddressDetails(fName,lName, company, adrs1, adrs2, city, postCode, addinfo, hPhone, mPhone, alias);
 		Assert.assertEquals(driver.findElement(By.className("page-heading")).isDisplayed(), true);
+	}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Closing Browsr");
+		driver.quit();
 	}
 }

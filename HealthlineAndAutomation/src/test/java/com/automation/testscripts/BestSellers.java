@@ -6,6 +6,7 @@ package com.automation.testscripts;
  * Modified Last:30/03/2021
  */
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -33,5 +34,10 @@ public class BestSellers {
 	@Test(description = "To verify the bestseller item")
 	public void bestSellerFunctionality() {
 		bestsellers.bestSellers();
+	}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Closing Browsr");
+		driver.quit();
 	}
 }

@@ -25,14 +25,15 @@ public class Subscribe {
 		subscribe=new com.page.object.model.SubscribePOM(driver);
 	}
 
-	@Test
+	@Test(description="To verify subscribe functionality.")
 	public void subscribeFunctionality() {
 		subscribe.workingOfSubscriber();
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Closing Browser");
+		System.out.println("Closing Browsr");
+		driver.quit();
 	}
 
 }

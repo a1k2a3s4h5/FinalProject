@@ -7,8 +7,6 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
-import com.healthline.locators.TrendingPostLocators;
-import utils.SetupEnvironment;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -31,11 +29,10 @@ public class TrendingPost {
 	 * Function name:trendingPostFunctionality To navigate to the Trending post
 	 * pages and verify that the functionality is working or not
 	 */
-	@Test(description = "trending post functionality")
+	@Test(description = "To verify trending post functionality.")
 	public void trendingPostFunctionality() {
 		trendingPost.workingOfTrendingPost();
 	}
-
 
 	@AfterMethod
 	public void afterMethod() {

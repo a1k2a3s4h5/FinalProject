@@ -6,6 +6,7 @@ package com.automation.testscripts;
  * Modified on:30/03/2021
  */
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
@@ -27,8 +28,13 @@ public class Categories {
 	 * @param browserName
 	 * @param url
 	 */
-	@Test(description = "To verify the women category")
+	@Test(description = "To verify the women category functionality.")
 	public void categoriesWomenCheck() {
 		categories.womenCategoryClicks();
+	}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Closing Browsr");
+		driver.quit();
 	}
 }

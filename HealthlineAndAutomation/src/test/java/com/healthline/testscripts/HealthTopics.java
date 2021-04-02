@@ -27,7 +27,7 @@ public WebDriver driver;
 		healthlineTopics=new com.page.object.model.HealthTopicsPOM(driver);
 	}
 
-		@Test(description="To verify the health topics")
+		@Test(description="To verify the health topics functionality.")
 		public void healthTopics() {
 			
 		healthlineTopics.workingOfHealthTopics();
@@ -36,7 +36,8 @@ public WebDriver driver;
 	
 		@AfterMethod
 		public void afterMethod() {
-			System.out.println("Closing Browser");
+			System.out.println("Closing Browsr");
+			driver.quit();
 		}
 
 }
