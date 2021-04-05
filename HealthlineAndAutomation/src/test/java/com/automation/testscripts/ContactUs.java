@@ -22,12 +22,27 @@ public class ContactUs {
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
 	public com.page.object.model.ContactUsPOM contactus;
 	
-	@DataProvider(name="contact-us-details")
-	public Object[][] contactusdetails(){
+	@DataProvider(name="valid-contact-us-details")
+	public Object[][] validContactusdetails(){
 		//return new Object[][] {{"test1605@gmail.com","REF123","./src/main/resources/images/ss.JPG","xyz"}};
 		
-	return new Object[][] {{"test@gmail.com","REF123","D:\\Vanshika\\Automation Testing\\ss.jpg","xyz"}};
+	return new Object[][] {{"test@gmail.com","REF123","C:\\Users\\akash.patel\\Desktop\\email.png","Hi"}};
 	}
+	
+	@DataProvider(name="invalid-contact-us-details")
+	public Object[][] inValidContactusdetails(){
+		//return new Object[][] {{"test1605@gmail.com","REF123","./src/main/resources/images/ss.JPG","xyz"}};
+		
+	return new Object[][] {{"test#24!chj@gmail.com","REF123","C:\\Users\\akash.patel\\Desktop\\testcasetemplate.xlsx","Hi"}};
+	}
+	
+	@DataProvider(name="invalid-only_email--contact-us-details")
+	public Object[][] inValidOnlyEmailContactusdetails(){
+		//return new Object[][] {{"test1605@gmail.com","REF123","./src/main/resources/images/ss.JPG","xyz"}};
+		
+	return new Object[][] {{"test#24!chj@gmail.com","REF123","C:\\Users\\akash.patel\\Desktop\\download.png","Hi"}};
+	}
+	
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
@@ -38,12 +53,27 @@ public class ContactUs {
 	
 	 // Function name:  validContactUs
 	 
-	@Test(dataProvider="contact-us-details",priority=1,description="To provide valid details for contact us.")
-	public void validContactUs(String email,String orderRef,String filePath,String message)
+	@Test(dataProvider="valid-contact-us-details",priority=2,description="To provide valid details for contact us.")
+	public void validContactUsWithValidEmailIdAndValidFileType(String email,String orderRef,String filePath,String message)
 	{
 		contactus.contactUs(email, orderRef, filePath, message);
 		Assert.assertEquals(driver.findElement(By.xpath("//p[text()='Your message has been successfully sent to our team.']")).isDisplayed(),true);
 	}
+	
+	@Test(dataProvider="invalid-contact-us-details",priority=1,description="To provide valid details for contact us.")
+	public void inValidContactUsWithInValidEmailIdAndInValidFileType(String email,String orderRef,String filePath,String message)
+	{
+		contactus.contactUs(email, orderRef, filePath, message);
+		Assert.assertEquals(driver.findElement(By.xpath("//p[contains(text(),'1 error')]")).isDisplayed(),true,"Here we can be able to send messege with improper mail id or with bad file extension.");
+	}
+	
+	@Test(dataProvider="invalid-only_email--contact-us-details",priority=3,description="To provide valid details for contact us.")
+	public void inValidContactUsWithInValidEmailIdAndValidFileType(String email,String orderRef,String filePath,String message)
+	{
+		contactus.contactUs(email, orderRef, filePath, message);
+		Assert.assertEquals(driver.findElement(By.xpath("//p[contains(text(),'1 error')]")).isDisplayed(),true,"Here we can be able to send messege with improper mail id.");
+	}
+	
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browsr");

@@ -15,9 +15,9 @@ public class SubscribePOM {
 			this.driver=driver;
 			subscribe=new SubscribeLocators(driver);
 		}
-	public void workingOfSubscriber(String email) {
+	public void workingOfSubscriber() {
 		subscribe.subscribeButton.click();
-		subscribe.subscribeTestBox.sendKeys(email);
+		subscribe.subscribeTestBox.sendKeys("vaishvipatel365@gmail.com");
 		subscribe.subscribeButton2.click();
 		subscribe.subscribeButton3.click();
 		Set<String> handlesSet = driver.getWindowHandles();

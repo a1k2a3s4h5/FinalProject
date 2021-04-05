@@ -2,19 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Automation Practice Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browserName" value="chrome"/>
-  <parameter name="url" value="http://automationpractice.com/index.php"/>
+  <parameter name="url" value="https://www.healthline.com/"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Add To cart Quick View(failed)">
+  <test thread-count="5" name="Subscribe(failed)">
     <classes>
-      <class name="com.automation.testscripts.AddToCartQuickView">
+      <class name="com.healthline.testscripts.Subscribe">
         <methods>
-          <include name="AddTocart" invocation-numbers="0"/>
-          <include name="afterMethod"/>
           <include name="beforeMethod"/>
+          <include name="subscribeFunctionalityWithInvalidEmail" invocation-numbers="0"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.automation.testscripts.AddToCartQuickView -->
+      </class> <!-- com.healthline.testscripts.Subscribe -->
     </classes>
-  </test> <!-- Add To cart Quick View(failed) -->
+  </test> <!-- Subscribe(failed) -->
 </suite> <!-- Failed suite [Automation Practice Suite] -->

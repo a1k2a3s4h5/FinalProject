@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import com.automation.locators.SignUpLocators;
+
+import utils.Logger;
 public class SignUpPagePOM {
 	public SignUpLocators signup;
 	
@@ -16,7 +18,7 @@ public class SignUpPagePOM {
 		signup.email.click();
 		signup.email.clear();
 		signup.email.sendKeys(emailId);
-		
+		Logger.print("Send data in email field : "+ emailId );
 		signup.submit.click();
 	}
 	

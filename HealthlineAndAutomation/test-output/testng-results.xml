@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<b>Starting browser : chrome</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Starting browser : chrome</b> <br />]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-04-05T19:03:11 IST" name="Automation Practice Suite" finished-at="2021-04-05T19:04:01 IST" duration-ms="50076">
+  <suite started-at="2021-04-05T17:27:26 IST" name="Automation Practice Suite" finished-at="2021-04-05T17:27:56 IST" duration-ms="30543">
     <groups>
     </groups>
-    <test started-at="2021-04-05T19:03:11 IST" name="Add To cart Quick View" finished-at="2021-04-05T19:04:01 IST" duration-ms="50076">
-      <class name="com.automation.testscripts.AddToCartQuickView">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.AddToCartQuickView@49ec71f8]" started-at="2021-04-05T19:03:11 IST" name="beforeMethod" finished-at="2021-04-05T19:03:25 IST" duration-ms="13450" status="PASS">
+    <test started-at="2021-04-05T17:27:26 IST" name="Subscribe" finished-at="2021-04-05T17:27:56 IST" duration-ms="30543">
+      <class name="com.healthline.testscripts.Subscribe">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.Subscribe@36902638]" started-at="2021-04-05T17:27:26 IST" name="beforeMethod" finished-at="2021-04-05T17:27:33 IST" duration-ms="7018" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,41 +22,96 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://automationpractice.com/index.php]]>
+                <![CDATA[https://www.healthline.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Starting browser : chrome</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="subscribeFunctionalityWithValidEmail(java.lang.String)[pri:1, instance:com.healthline.testscripts.Subscribe@36902638]" started-at="2021-04-05T17:27:33 IST" name="subscribeFunctionalityWithValidEmail" description="To verify subscribe functionality." data-provider="validEmail" finished-at="2021-04-05T17:27:38 IST" duration-ms="5456" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@gmail.com]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="AddTocart(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.AddToCartQuickView@49ec71f8]" started-at="2021-04-05T19:03:25 IST" name="AddTocart" description="To verify the women category functionality." data-provider="validDetails" finished-at="2021-04-05T19:04:00 IST" duration-ms="35819" status="FAIL">
+        </test-method> <!-- subscribeFunctionalityWithValidEmail -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.Subscribe@36902638]" started-at="2021-04-05T17:27:38 IST" name="afterMethod" finished-at="2021-04-05T17:27:39 IST" duration-ms="677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.healthline.testscripts.Subscribe@36902638]" started-at="2021-04-05T17:27:39 IST" name="beforeMethod" finished-at="2021-04-05T17:27:45 IST" duration-ms="5621" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test1605@gmail.com]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[abcde]]>
+                <![CDATA[https://www.healthline.com/]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchFrameException">
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Starting browser : chrome</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="subscribeFunctionalityWithInvalidEmail(java.lang.String)[pri:2, instance:com.healthline.testscripts.Subscribe@36902638]" started-at="2021-04-05T17:27:45 IST" name="subscribeFunctionalityWithInvalidEmail" description="To verify subscribe functionality." data-provider="invalidEmail" finished-at="2021-04-05T17:27:56 IST" duration-ms="11014" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[No frame element found by name or id fancybox-frame1617627541728
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Thanks for subscribing']"}
+  (Session info: chrome=89.0.4389.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64921}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f1866df21e38676760feaff0c1da939
+*** Element info: {Using=xpath, value=//h2[text()='Thanks for subscribing']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchFrameException: No frame element found by name or id fancybox-frame1617627541728
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Thanks for subscribing']"}
+  (Session info: chrome=89.0.4389.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: driver.version: unknown
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
-at com.page.object.model.AddToCartQuickViewPOM.QuickView(AddToCartQuickViewPOM.java:34)
-at com.automation.testscripts.AddToCartQuickView.AddTocart(AddToCartQuickView.java:28)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64921}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f1866df21e38676760feaff0c1da939
+*** Element info: {Using=xpath, value=//h2[text()='Thanks for subscribing']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.healthline.testscripts.Subscribe.subscribeFunctionalityWithInvalidEmail(Subscribe.java:51)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,15 +142,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddTocart -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.AddToCartQuickView@49ec71f8]" started-at="2021-04-05T19:04:00 IST" name="afterMethod" finished-at="2021-04-05T19:04:01 IST" duration-ms="717" status="PASS">
+        </test-method> <!-- subscribeFunctionalityWithInvalidEmail -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.healthline.testscripts.Subscribe@36902638]" started-at="2021-04-05T17:27:56 IST" name="afterMethod" finished-at="2021-04-05T17:27:56 IST" duration-ms="683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.automation.testscripts.AddToCartQuickView -->
-    </test> <!-- Add To cart Quick View -->
+      </class> <!-- com.healthline.testscripts.Subscribe -->
+    </test> <!-- Subscribe -->
   </suite> <!-- Automation Practice Suite -->
 </testng-results>

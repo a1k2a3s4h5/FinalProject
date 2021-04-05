@@ -1,7 +1,10 @@
 package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
+
 import com.healthline.locators.LatestStoriesLocators;
+
+
 
 public class LatestStoriesPOM {
 	public WebDriver driver;

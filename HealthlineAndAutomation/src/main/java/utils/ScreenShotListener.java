@@ -17,9 +17,18 @@ import org.testng.Reporter;
 
 public class ScreenShotListener implements ITestListener {
 
+	public WebDriver driver=null;
+	String filePath = "D:\\SCREENSHOTS";
+
+	public void ScreenShot(WebDriver driver) {
+		this.driver=driver;
+		System.out.println("Driver initialise in SSL class.");
+	}
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
+
 	}
 
 	@Override
@@ -30,15 +39,13 @@ public class ScreenShotListener implements ITestListener {
 	// When Test case get failed, this method is called.
 	@Override
 	public void onTestFailure(ITestResult result) {
-		SetupEnvironment setup=new SetupEnvironment();
-		WebDriver driver = setup.driverReturn("chrome","");
+		
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		String methodName = result.getName();
 		if (!result.isSuccess()) {
 			try {
-				File scrFile = ((TakesScreenshot) (driver))
-						.getScreenshotAs(OutputType.FILE);
+				File scrFile = ((TakesScreenshot) (SetupEnvironment.driver)).getScreenshotAs(OutputType.FILE);
 				String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath()
 						+ "/target/surefire-reports/html";
 				String time = formater.format(calendar.getTime());
@@ -63,21 +70,25 @@ public class ScreenShotListener implements ITestListener {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
+
 	}
 
 }

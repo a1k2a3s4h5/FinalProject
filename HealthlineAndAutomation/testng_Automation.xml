@@ -3,66 +3,62 @@
 <suite name="Automation Practice Suite">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="utils.ScreenShotListener" />
 	</listeners>
 
-   <parameter name = "browserName" value="chrome"/>
-   
-<!-- 	   <test name="SignIn">   -->
-<!-- 	   <classes>  -->
-<!-- 	      <class name="com.automation.testscripts.SignIn"/>  -->
-<!-- 	    </classes>  -->
-<!-- 	  </test>   -->
-<!--     <test name="SignUp" >   -->
-<!--      <classes>  -->
-<!--       <class name="com.automation.testscripts.SignUp" />   -->
-<!--     </classes>   -->
-<!--    </test>   -->
-<!-- 		<test name="NewsLetter"> -->
-<!-- 		<classes> -->
-<!-- 		<class name="com.automation.testscripts.NewsLetter"/> -->
-<!-- 		</classes> -->
-<!-- 		</test> -->
-<!--    <test name="BestSellerTestCase">   -->
-<!--   		<classes>  -->
-<!--      		<class name="com.automation.testscripts.BestSellers"/>  -->
-<!--      </classes>  -->
-<!--    </test>  -->
-   
-<!-- 	    <test name="CategoriesTestCase">      -->
-<!-- 	     <classes>   -->
-<!-- 	       <class name="com.automation.testscripts.Categories"/>   -->
-<!-- 	      </classes>   -->
-<!-- 	    </test>   -->
-  
-<!-- 	   <test name="ContactUsTestCase">   -->
-<!-- 	    <classes>  -->
-<!-- 	     <class name="com.automation.testscripts.ContactUs"/>  -->
-<!-- 	    </classes>  -->
-<!-- 	   </test>  -->
+	<parameter name="browserName" value="chrome" />
 
-<!-- 		<test name="AddToCart">   -->
-<!-- 	    <classes> -->
-<!-- 	      <class name="com.automation.testscripts.SearchAndAddToCart"/> -->
-<!-- 	    </classes> -->
-<!-- 	   </test>   -->
-	  
-<!-- 	   <test name="Send Email To">  -->
-<!-- 	   <classes>  -->
-<!-- 	   <class name="com.automation.testscripts.SendToEmail" />  -->
-<!-- 	   </classes>  -->
-<!-- 	   </test>  -->
-	  
-<!-- 	     <test name="About us">  -->
-<!-- 	   <classes>  -->
-<!-- 	   <class name="com.automation.testscripts.AboutUs" />  -->
-<!-- 	   </classes>  -->
-<!-- 	   </test>  -->
+	<!-- <test name="SignIn">
+		<classes>
+			<class name="com.automation.testscripts.SignIn" />
+		</classes>
+	</test>
+	<test name="SignUp">
+		<classes>
+			<class name="com.automation.testscripts.SignUp" />
+		</classes>
+	</test>
+	<test name="NewsLetter">
+		<classes>
+			<class name="com.automation.testscripts.NewsLetter" />
+		</classes>
+	</test>
+	<test name="BestSellerTestCase">
+		<classes>
+			<class name="com.automation.testscripts.BestSellers" />
+		</classes>
+	</test> -->
+	<test name="ContactUsTestCase">
+		<classes>
+			<class name="com.automation.testscripts.ContactUs" />
+		</classes>
+	</test>
 
-  <test name="Add To cart Quick View"> 
-	   <classes> 
-	   <class name="com.automation.testscripts.AddToCartQuickView" /> 
-	   </classes> 
-	   </test> 
+	<!-- <test name="CategoriesTestCase">
+		<classes>
+			<class name="com.automation.testscripts.Categories" />
+		</classes>
+	</test>
 
- 	    <parameter name = "url" value="http://automationpractice.com/index.php"/>
+
+
+	<test name="AddToCart">
+		<classes>
+			<class name="com.automation.testscripts.SearchAndAddToCart" />
+		</classes>
+	</test>
+
+	<test name="Send Email To">
+		<classes>
+			<class name="com.automation.testscripts.SendToEmail" />
+		</classes>
+	</test>
+
+	<test name="About us">
+		<classes>
+			<class name="com.automation.testscripts.AboutUs" />
+		</classes>
+	</test> -->
+	<parameter name="url"
+		value="http://automationpractice.com/index.php" />
 </suite> 

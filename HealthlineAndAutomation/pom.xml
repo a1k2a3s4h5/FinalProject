@@ -6,6 +6,7 @@
 	<artifactId>HealthlineAndAutomation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
+	
 	<plugins>
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
@@ -21,27 +22,32 @@
 			<version>3.0.0-M5</version>
 			<configuration>
 				<properties>
-					<property>
+					<!-- <property>
 						<name>usedefaultlisteners</name>
 						<value>false</value>
 					</property>
 					<property>
 						<name>listener</name>
 						<value>org.uncommons.reportng.HTMLReporter</value>
-					</property>
+					</property> -->
 				</properties>
 				<suiteXmlFiles>
 					<suiteXmlFile>
 						testng_Automation.xml
 					</suiteXmlFile>
+					<!-- <suiteXmlFile>
+						testng_HealthLine.xml
+					</suiteXmlFile> -->
 				</suiteXmlFiles>
 			</configuration>
 		</plugin>
+
 	</plugins>
 	</build>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
+
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>

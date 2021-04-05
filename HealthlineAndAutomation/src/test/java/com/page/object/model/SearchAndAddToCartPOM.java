@@ -2,8 +2,6 @@ package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-
-
 import com.automation.locators.SearchAndAddToCart;
 
 public class SearchAndAddToCartPOM {
@@ -54,7 +52,5 @@ public SearchAndAddToCart addtocart;
 		addtocart.proceedCarrier.click();
 		addtocart.proceedByCheque.click();
 		addtocart.confirmOrder.click();
-	}
-	
-	
+	}		
 }

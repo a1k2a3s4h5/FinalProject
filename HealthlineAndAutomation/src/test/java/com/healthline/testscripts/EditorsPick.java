@@ -34,7 +34,7 @@ public class EditorsPick {
 	}
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Closing Browser");
+		System.out.println("Closing Browsr");
 		driver.quit();
 	}
 }

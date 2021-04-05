@@ -17,6 +17,6 @@ public class SearchBarLocators {
 	@FindBy(how=How.CLASS_NAME , using="autocomplete")
 	public WebElement searchBox;
 	
-	@FindBy(how=How.CLASS_NAME , using=".css-xadql7")
+	@FindBy(how=How.XPATH , using="//button[@aria-label='Click to Search']")
 	public WebElement searchElement;
 }

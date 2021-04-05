@@ -76,4 +76,63 @@ public class HealthTopicsLocators {
 	
 	@FindBy(how=How.XPATH , using="//a[text()='ADHD']")
 	public WebElement adhd;
+	
+	
+	
+	public void workingOfHealthTopics() {
+		menuButton.click();
+		allTopicsAtoZ.click();
+		next.click();
+		next.click();
+		next.click();
+		usaGlasses.click();
+
+		try {
+			mainPopUp.click();
+		} catch (Exception e) {
+			System.out.println("Pop-UP not found.");
+		}
+		prosAndCons.click();
+		eyeStrain.click();
+
+		driver.navigate().back();
+		visionPresc.click();
+
+		driver.navigate().back();
+
+		doubleVision.click();
+
+		driver.navigate().back();
+
+		enterEmail.click();
+		enterEmail.clear();
+
+		enterEmail.sendKeys("akash@gmail.com");
+		signUp.click();
+
+		sourceButton.click();
+
+		mailClick.click();
+
+		popUpClose.click();
+
+		driver.navigate().back();
+
+		menuButton.click();
+
+		allTopicsAtoZ.click();
+		
+		symptom.click();
+		ticherbust.click();
+	
+		driver.navigate().back();
+		nutri.click();
+
+		news.click();
+		Diabetes.click();
+		
+		menuButton.click();
+		adhd.click();
+	}
+	
 }

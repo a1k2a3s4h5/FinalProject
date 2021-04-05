@@ -26,7 +26,7 @@ public class AboutUs {
 	 * @param browserName
 	 * 
 	 */
-	@Test(description = "To verify the send to email item")
+	@Test(description = "To verify about us is opend succesfully or not.")
 	@Parameters({"browserName","url"})
 	public void aboutUs(String browserName,String url) {
 		WebDriver driver = setup.driverReturn(browserName,url);

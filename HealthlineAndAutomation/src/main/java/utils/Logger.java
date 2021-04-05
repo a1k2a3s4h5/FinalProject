@@ -11,4 +11,5 @@ public class Logger {
 		System.setProperty(ESCAPE_PROPERTY, "false");
 		Reporter.log("<b>" + message + "</b> <br />");
 	}
+
 }
