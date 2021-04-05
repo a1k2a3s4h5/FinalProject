@@ -42,7 +42,7 @@ public class SignIn {
 	 * @return
 	 */
 	@DataProvider(name="validDetails")
-	public Object[][] signInValidDetails(){
+	public Object[][] SignInValidDetails(){
 		return new Object[][] {{"test1605@gmail.com","abcde"}};
 	}
 	
