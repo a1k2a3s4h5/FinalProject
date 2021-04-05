@@ -34,7 +34,7 @@ public class Categories {
 	}
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Closing Browsr");
-		driver.quit();
+		System.out.println("Closing Browser");
+		//driver.quit();
 	}
 }

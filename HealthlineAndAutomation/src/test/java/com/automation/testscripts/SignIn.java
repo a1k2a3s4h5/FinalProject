@@ -1,6 +1,6 @@
 package com.automation.testscripts;
 /*
- * Aim: To verify signin functionality
+ * Aim: To verify sign in functionality
  * Author:Group Q
  * Created on: 10/03/2021
  * Modified Last:31/03/2021

@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Automation_Practice_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.automation.testscripts.SignUp" class="method navigator-link" hash-for-method="invalidSignUp(test#%1510@test.com)">invalidSignUp(test#%1510@test.com)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.automation.testscripts.AddToCartQuickView" class="method navigator-link" hash-for-method="AddTocart(test1605@gmail.com, abcde)">AddTocart(test1605@gmail.com, abcde)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Automation_Practice_Suite -->
@@ -122,40 +122,27 @@
           <div class="suite-Automation_Practice_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.automation.testscripts.SignUp</span>
+              <span class="class-name">com.automation.testscripts.AddToCartQuickView</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="invalidSignUp(test#%1510@test.com)">
-                  </a> <!-- invalidSignUp(test#%1510@test.com) -->
-                  <span class="method-name">invalidSignUp</span>
-                  <span class="parameters">(test#%1510@test.com)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;create_account_error&apos;]//li&quot;}
-  (Session info: chrome=89.0.4389.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <a name="AddTocart(test1605@gmail.com, abcde)">
+                  </a> <!-- AddTocart(test1605@gmail.com, abcde) -->
+                  <span class="method-name">AddTocart</span>
+                  <span class="parameters">(test1605@gmail.com, abcde)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchFrameException: No frame element found by name or id fancybox-frame1617627541728
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55312}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ee15f84389ca8d074d2422669b4054d2
-*** Element info: {Using=xpath, value=//div[@id=&apos;create_account_error&apos;]//li}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.automation.testscripts.SignUp.invalidSignUp(SignUp.java:87)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+	at com.page.object.model.AddToCartQuickViewPOM.QuickView(AddToCartQuickViewPOM.java:34)
+	at com.automation.testscripts.AddToCartQuickView.AddTocart(AddToCartQuickView.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Provide invalid email and check the functionality)                  </em>
+(To verify the women category functionality.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -175,11 +162,11 @@ Session ID: ee15f84389ca8d074d2422669b4054d2
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;SignUp&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Add To cart Quick View&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.testscripts.SignUp&quot;/&gt;
+      &lt;class name=&quot;com.automation.testscripts.AddToCartQuickView&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- SignUp --&gt;
+  &lt;/test&gt; &lt;!-- Add To cart Quick View --&gt;
 &lt;/suite&gt; &lt;!-- Automation Practice Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,7 +178,7 @@ Session ID: ee15f84389ca8d074d2422669b4054d2
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">SignUp (1 class)</span>
+                <span class="test-name">Add To cart Quick View (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -219,14 +206,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidSignUp')
-data.setCell(0, 2, 'com.automation.testscripts.SignUp')
-data.setCell(0, 3, 12829);
+data.setCell(0, 1, 'AddTocart')
+data.setCell(0, 2, 'com.automation.testscripts.AddToCartQuickView')
+data.setCell(0, 3, 35819);
 window.suiteTableData['Automation_Practice_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Automation_Practice_Suite">
               </div> <!-- times-div-Automation_Practice_Suite -->
             </div> <!-- times-div -->
@@ -252,29 +239,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.testscripts.SignUp</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setExtent</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="chronological-class-name">com.automation.testscripts.AddToCartQuickView</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome, http://automationpractice.com/index.php)</span>
-                <span class="method-start">244 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">invalidSignUp(test#%1510@test.com)</span>
-                <span class="method-start">10185 ms</span>
+                <span class="method-name">AddTocart(test1605@gmail.com, abcde)</span>
+                <span class="method-start">13451 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=invalidSignUp status=FAILURE method=SignUp.invalidSignUp(java.lang.String)[pri:1, i...)</span>
-                <span class="method-start">23026 ms</span>
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">49279 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">endReport</span>
-                <span class="method-start">24159 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

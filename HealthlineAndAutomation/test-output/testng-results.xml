@@ -2,16 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-02T12:38:50 IST" name="Automation Practice Suite" finished-at="2021-04-02T12:39:15 IST" duration-ms="24601">
+  <suite started-at="2021-04-05T19:03:11 IST" name="Automation Practice Suite" finished-at="2021-04-05T19:04:01 IST" duration-ms="50076">
     <groups>
     </groups>
-    <test started-at="2021-04-02T12:38:50 IST" name="SignUp" finished-at="2021-04-02T12:39:15 IST" duration-ms="24601">
-      <class name="com.automation.testscripts.SignUp">
-        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:38:50 IST" name="setExtent" finished-at="2021-04-02T12:38:51 IST" duration-ms="199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:38:51 IST" name="beforeMethod" finished-at="2021-04-02T12:39:01 IST" duration-ms="9939" status="PASS">
+    <test started-at="2021-04-05T19:03:11 IST" name="Add To cart Quick View" finished-at="2021-04-05T19:04:01 IST" duration-ms="50076">
+      <class name="com.automation.testscripts.AddToCartQuickView">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.AddToCartQuickView@49ec71f8]" started-at="2021-04-05T19:03:11 IST" name="beforeMethod" finished-at="2021-04-05T19:03:25 IST" duration-ms="13450" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,52 +23,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:39:01 IST" name="invalidSignUp" description="Provide invalid email and check the functionality" data-provider="invalidEmail" finished-at="2021-04-02T12:39:13 IST" duration-ms="12829" status="FAIL">
+        <test-method signature="AddTocart(java.lang.String, java.lang.String)[pri:0, instance:com.automation.testscripts.AddToCartQuickView@49ec71f8]" started-at="2021-04-05T19:03:25 IST" name="AddTocart" description="To verify the women category functionality." data-provider="validDetails" finished-at="2021-04-05T19:04:00 IST" duration-ms="35819" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test#%1510@test.com]]>
+                <![CDATA[test1605@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abcde]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="org.openqa.selenium.NoSuchFrameException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='create_account_error']//li"}
-  (Session info: chrome=89.0.4389.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[No frame element found by name or id fancybox-frame1617627541728
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55312}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ee15f84389ca8d074d2422669b4054d2
-*** Element info: {Using=xpath, value=//div[@id='create_account_error']//li}]]>
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='create_account_error']//li"}
-  (Session info: chrome=89.0.4389.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.NoSuchFrameException: No frame element found by name or id fancybox-frame1617627541728
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DSK-323', ip: '10.0.1.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55312}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ee15f84389ca8d074d2422669b4054d2
-*** Element info: {Using=xpath, value=//div[@id='create_account_error']//li}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.automation.testscripts.SignUp.invalidSignUp(SignUp.java:87)
+Driver info: driver.version: unknown
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+at com.page.object.model.AddToCartQuickViewPOM.QuickView(AddToCartQuickViewPOM.java:34)
+at com.automation.testscripts.AddToCartQuickView.AddTocart(AddToCartQuickView.java:28)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,26 +81,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidSignUp -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:39:13 IST" name="afterMethod" finished-at="2021-04-02T12:39:15 IST" duration-ms="1129" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=invalidSignUp status=FAILURE method=SignUp.invalidSignUp(java.lang.String)[pri:1, instance:com.automation.testscripts.SignUp@131774fe] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- AddTocart -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.automation.testscripts.AddToCartQuickView@49ec71f8]" started-at="2021-04-05T19:04:00 IST" name="afterMethod" finished-at="2021-04-05T19:04:01 IST" duration-ms="717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.automation.testscripts.SignUp@131774fe]" started-at="2021-04-02T12:39:15 IST" name="endReport" finished-at="2021-04-02T12:39:15 IST" duration-ms="433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- com.automation.testscripts.SignUp -->
-    </test> <!-- SignUp -->
+      </class> <!-- com.automation.testscripts.AddToCartQuickView -->
+    </test> <!-- Add To cart Quick View -->
   </suite> <!-- Automation Practice Suite -->
 </testng-results>

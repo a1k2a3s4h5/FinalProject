@@ -6,17 +6,15 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="SignUp(failed)">
+  <test thread-count="5" name="Add To cart Quick View(failed)">
     <classes>
-      <class name="com.automation.testscripts.SignUp">
+      <class name="com.automation.testscripts.AddToCartQuickView">
         <methods>
-          <include name="invalidSignUp" invocation-numbers="0"/>
-          <include name="setExtent"/>
-          <include name="endReport"/>
-          <include name="beforeMethod"/>
+          <include name="AddTocart" invocation-numbers="0"/>
           <include name="afterMethod"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.automation.testscripts.SignUp -->
+      </class> <!-- com.automation.testscripts.AddToCartQuickView -->
     </classes>
-  </test> <!-- SignUp(failed) -->
+  </test> <!-- Add To cart Quick View(failed) -->
 </suite> <!-- Failed suite [Automation Practice Suite] -->

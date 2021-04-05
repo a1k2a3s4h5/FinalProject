@@ -12,11 +12,11 @@
 <!-- 	      <class name="com.automation.testscripts.SignIn"/>  -->
 <!-- 	    </classes>  -->
 <!-- 	  </test>   -->
-    <test name="SignUp" >  
-     <classes> 
-      <class name="com.automation.testscripts.SignUp" />  
-    </classes>  
-   </test>  
+<!--     <test name="SignUp" >   -->
+<!--      <classes>  -->
+<!--       <class name="com.automation.testscripts.SignUp" />   -->
+<!--     </classes>   -->
+<!--    </test>   -->
 <!-- 		<test name="NewsLetter"> -->
 <!-- 		<classes> -->
 <!-- 		<class name="com.automation.testscripts.NewsLetter"/> -->
@@ -57,5 +57,12 @@
 <!-- 	   <class name="com.automation.testscripts.AboutUs" />  -->
 <!-- 	   </classes>  -->
 <!-- 	   </test>  -->
+
+  <test name="Add To cart Quick View"> 
+	   <classes> 
+	   <class name="com.automation.testscripts.AddToCartQuickView" /> 
+	   </classes> 
+	   </test> 
+
  	    <parameter name = "url" value="http://automationpractice.com/index.php"/>
 </suite> 
