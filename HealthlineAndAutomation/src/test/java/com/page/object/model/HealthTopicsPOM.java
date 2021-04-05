@@ -1,7 +1,6 @@
 package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
-
 import com.healthline.locators.HealthTopicsLocators;
 
 public class HealthTopicsPOM {
@@ -12,14 +11,18 @@ public class HealthTopicsPOM {
 		public HealthTopicsPOM(WebDriver driver) {	
 			this.driver=driver;
 			healthlineTopics=new HealthTopicsLocators(driver);
-		}
+	}
 		
-		public void workingOfHealthTopics() {
+		public void workingOfHealthTopics(String email) {
 			healthlineTopics.menuButton.click();
 			healthlineTopics.allTopicsAtoZ.click();
+			
 			healthlineTopics.next.click();
+			
 			healthlineTopics.next.click();
+			
 			healthlineTopics.next.click();
+			
 			healthlineTopics.usaGlasses.click();
 
 			try {
@@ -29,44 +32,27 @@ public class HealthTopicsPOM {
 			}
 			healthlineTopics.prosAndCons.click();
 			healthlineTopics.eyeStrain.click();
-
+			
 			driver.navigate().back();
 			healthlineTopics.visionPresc.click();
-
+			
 			driver.navigate().back();
-
 			healthlineTopics.doubleVision.click();
-
+			
 			driver.navigate().back();
-
+			
 			healthlineTopics.enterEmail.click();
+			
 			healthlineTopics.enterEmail.clear();
-
-			healthlineTopics.enterEmail.sendKeys("akash@gmail.com");
+			
+			healthlineTopics.enterEmail.sendKeys(email);
+			
 			healthlineTopics.signUp.click();
-
+			
 			healthlineTopics.sourceButton.click();
-
+			
 			healthlineTopics.mailClick.click();
-
+			
 			healthlineTopics.popUpClose.click();
-
-			driver.navigate().back();
-
-			healthlineTopics.menuButton.click();
-
-			healthlineTopics.allTopicsAtoZ.click();
-			
-			healthlineTopics.symptom.click();
-			healthlineTopics.ticherbust.click();
-		
-			driver.navigate().back();
-			healthlineTopics.nutri.click();
-
-			healthlineTopics.news.click();
-			healthlineTopics.Diabetes.click();
-			
-			healthlineTopics.menuButton.click();
-			healthlineTopics.adhd.click();
-		}
+	}
 }

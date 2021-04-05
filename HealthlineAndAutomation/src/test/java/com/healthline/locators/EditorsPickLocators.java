@@ -22,8 +22,4 @@ public class EditorsPickLocators {
 	
 	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[3]")
 	public WebElement editorPick3;
-	
-	
-	
-	
 }

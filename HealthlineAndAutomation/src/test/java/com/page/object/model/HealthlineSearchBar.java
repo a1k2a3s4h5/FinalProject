@@ -1,8 +1,6 @@
 package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
-
-
 import com.healthline.locators.SearchBarLocators;
 
 public class HealthlineSearchBar {
@@ -12,10 +10,9 @@ public class HealthlineSearchBar {
 		public HealthlineSearchBar(WebDriver driver) {	
 			this.driver=driver;
 			searchBar=new SearchBarLocators(driver);
-		}
-	
-	public void workingOfSearchBar() {
-		searchBar.searchBox.sendKeys("Women Health");
+	}
+	public void workingOfSearchBar(String searchItem) {
+		searchBar.searchBox.sendKeys(searchItem);
 		searchBar.searchElement.click();
 	}
 }

@@ -9,21 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 public class HealthlineLogoLocators {
 
 	public WebDriver driver;
-	
+	public HealthlineLogoLocators(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
 	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
 	public WebElement popupSubmitButton;
 	
 	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[1]")
 	public WebElement logo;
-	
-	public HealthlineLogoLocators(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
-	
-	public void workOfHealthlineLogo() {
-		logo.click();
-		System.out.println("The page is refreshed");
-		driver.quit();
-	}
 }

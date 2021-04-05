@@ -10,9 +10,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import com.healthline.locators.LatestStoriesLocators;
-
-import utils.SetupEnvironment;
 
 public class LatestStories {
 
@@ -27,13 +24,13 @@ public class LatestStories {
 		latestStories=new com.page.object.model.LatestStoriesPOM(driver);
 	}
 	
-	@Test(description="To verify latest stories functionality.")
+	@Test(priority=1,description="To verify latest stories functionality.")
 	public void latestStories() {
 		latestStories.workingOfLatestStories();
 	}
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("closing browser");
+		System.out.println("Closing Browser");
 		driver.quit();
 	}
 }

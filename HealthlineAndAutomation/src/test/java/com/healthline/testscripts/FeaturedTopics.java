@@ -37,7 +37,7 @@ public WebDriver driver;
 	}
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Closing Browsr");
+		System.out.println("Closing Browser");
 		driver.quit();
 	}
 }

@@ -8,7 +8,10 @@ package com.healthline.testscripts;
  */
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 
@@ -18,6 +21,17 @@ public class Subscribe {
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
 	public com.page.object.model.SubscribePOM subscribe;
 	
+	@DataProvider(name="validEmail")
+	public Object[][] validEmailAddress(){
+		return new Object[][] {{"test@gmail.com"}};
+	}
+	
+	@DataProvider(name="invalidEmail")
+	public Object[][] invalidEmailAddress(){
+		return new Object[][] {{"test.com"}};
+	}
+	
+	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
@@ -25,14 +39,20 @@ public class Subscribe {
 		subscribe=new com.page.object.model.SubscribePOM(driver);
 	}
 
-	@Test(description="To verify subscribe functionality.")
-	public void subscribeFunctionality() {
-		subscribe.workingOfSubscriber();
+	@Test(dataProvider="validEmail",priority=1,description="To verify subscribe functionality wuth valid email address.")
+	public void subscribeFunctionalityWithValidEmail(String email) {
+		subscribe.workingOfSubscriber(email);
+		Assert.assertEquals(driver.findElement(By.xpath("//h2[text()='Thanks for subscribing']")).isDisplayed(), true);
+	}
+
+	@Test(dataProvider="invalidEmail",priority=2,description="To verify subscribe functionality with invalid email address.")
+	public void subscribeFunctionalityWithInvalidEmail(String email) {
+		subscribe.workingOfSubscriber(email);
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Closing Browsr");
+		System.out.println("Closing Browser");
 		driver.quit();
 	}
 
