@@ -50,8 +50,6 @@ public void beforeMethod(String browserName,String url) {
 	Assert.assertEquals(driver.findElement(By.xpath("//div[@data-testid='is-inline-success']")).isDisplayed(), true);
 	}
 
-
-
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browser");

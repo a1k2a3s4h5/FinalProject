@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 01 19:00:04 IST 2021</td>
+<td>Started on:</td><td>Tue Apr 06 15:49:51 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13401 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25161 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,37 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.healthline.testscripts.LatestStories.f()'><b>f</b><br>Test class: com.healthline.testscripts.LatestStories</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.navigate()&quot; because &quot;this.driver&quot; is null
-	at com.page.object.model.LatestStoriesPOM.workingOfLatestStories(LatestStoriesPOM.java:19)
-	at com.healthline.testscripts.LatestStories.f(LatestStories.java:32)
+<td title='com.healthline.testscripts.LatestStories.latestStories()'><b>latestStories</b><br>Test class: com.healthline.testscripts.LatestStories<br>Test method: To verify latest stories functionality.</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//li[@class=&apos;css-a4lyxf&apos;]/div
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.page.object.model.LatestStoriesPOM.workingOfLatestStories(LatestStoriesPOM.java:23)
+	at com.healthline.testscripts.LatestStories.latestStories(LatestStories.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace976358110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace976358110'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.navigate()&quot; because &quot;this.driver&quot; is null
-	at com.page.object.model.LatestStoriesPOM.workingOfLatestStories(LatestStoriesPOM.java:19)
-	at com.healthline.testscripts.LatestStories.f(LatestStories.java:32)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1532800776", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1532800776'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//li[@class=&apos;css-a4lyxf&apos;]/div
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.page.object.model.LatestStoriesPOM.workingOfLatestStories(LatestStoriesPOM.java:23)
+	at com.healthline.testscripts.LatestStories.latestStories(LatestStories.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,8 +135,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
-<td>com.healthline.testscripts.LatestStories@6ae5aa72</td></tr>
+<td>9</td>
+<td>com.healthline.testscripts.LatestStories@3270d194</td></tr>
 </table><p>
 </body>
 </html>

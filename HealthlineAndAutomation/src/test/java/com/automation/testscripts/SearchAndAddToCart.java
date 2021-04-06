@@ -63,6 +63,6 @@ public class SearchAndAddToCart {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browsr");
-		//driver.quit();
+		driver.quit();
 	}
 }

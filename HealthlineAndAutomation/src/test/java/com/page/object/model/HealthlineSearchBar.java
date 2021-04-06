@@ -15,6 +15,10 @@ public class HealthlineSearchBar {
 		}
 	
 	public void workingOfSearchBar() {
+		try {
+			searchBar.popupSubmitButton.click();
+		}
+		catch(Exception e) {}
 		searchBar.searchBox.sendKeys("Women Health");
 		searchBar.searchElement.click();
 	}

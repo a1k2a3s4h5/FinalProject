@@ -15,7 +15,10 @@ public HealthlineLogoLocators healthlineLogo;
 	}
 	
 	public void workOfHealthlineLogo() {
-		healthlineLogo.popupSubmitButton.click();
+		try {
+			healthlineLogo.popupSubmitButton.click();
+		}
+		catch(Exception e) {}
 		healthlineLogo.logo.click();
 		System.out.println("The page is refreshed");
 		driver.quit();

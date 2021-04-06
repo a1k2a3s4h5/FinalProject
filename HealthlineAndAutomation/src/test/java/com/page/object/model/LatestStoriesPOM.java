@@ -11,10 +11,15 @@ public class LatestStoriesPOM {
     public LatestStoriesLocators latestStory;
 	
 	public LatestStoriesPOM(WebDriver driver) {	
+		this.driver=driver;
 		latestStory=new LatestStoriesLocators(driver);
 	}
 	
 	public void workingOfLatestStories() {
+			try {
+				latestStory.popupSubmitButton.click();
+			}
+			catch(Exception e) {}
 		latestStory.latestStories.click();
 		driver.navigate().back();
 			

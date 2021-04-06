@@ -14,6 +14,10 @@ public class HealthTopicsPOM {
 	}
 		
 		public void workingOfHealthTopics(String email) {
+			try {
+				healthlineTopics.popupSubmitButton.click();
+			}
+			catch(Exception e) {}
 			healthlineTopics.menuButton.click();
 			healthlineTopics.allTopicsAtoZ.click();
 			

@@ -13,6 +13,8 @@ public class SearchBarLocators {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
+	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	public WebElement popupSubmitButton;
 	
 	@FindBy(how=How.CLASS_NAME , using="autocomplete")
 	public WebElement searchBox;
