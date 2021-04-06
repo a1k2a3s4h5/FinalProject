@@ -40,8 +40,6 @@
 		</classes>
 	</test> -->
 
-
-
 	<test name="AddToCart">
 		<classes>
 			<class name="com.automation.testscripts.SearchAndAddToCart" />

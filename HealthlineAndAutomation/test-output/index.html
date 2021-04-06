@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content failed suite-Automation_Practice_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.Subscribe" class="method navigator-link" hash-for-method="subscribeFunctionalityWithInvalidEmail(test.com)">subscribeFunctionalityWithInvalidEmail(test.com)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.HealthTopics" class="method navigator-link" hash-for-method="healthTopicsWithInvalidEmail(test#$@test.com)">healthTopicsWithInvalidEmail(test#$@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.HealthTopics" class="method navigator-link" hash-for-method="healthTopicsWithValidEmail(test@gmail.com)">healthTopicsWithValidEmail(test@gmail.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Automation_Practice_Suite -->
@@ -118,7 +123,7 @@
                     <div class="method-list-content passed suite-Automation_Practice_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.Subscribe" class="method navigator-link" hash-for-method="subscribeFunctionalityWithValidEmail(test@gmail.com)">subscribeFunctionalityWithValidEmail(test@gmail.com)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Automation_Practice_Suite" title="com.healthline.testscripts.HealthTopics" class="method navigator-link" hash-for-method="healthTopicsWithInvalidEmail(test.com)">healthTopicsWithInvalidEmail(test.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Automation_Practice_Suite -->
@@ -136,24 +141,24 @@
           <div class="suite-Automation_Practice_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.healthline.testscripts.Subscribe</span>
+              <span class="class-name">com.healthline.testscripts.HealthTopics</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="subscribeFunctionalityWithInvalidEmail(test.com)">
-                  </a> <!-- subscribeFunctionalityWithInvalidEmail(test.com) -->
-                  <span class="method-name">subscribeFunctionalityWithInvalidEmail</span>
-                  <span class="parameters">(test.com)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[text()=&apos;Thanks for subscribing&apos;]&quot;}
+                  <a name="healthTopicsWithInvalidEmail(test#$@test.com)">
+                  </a> <!-- healthTopicsWithInvalidEmail(test#$@test.com) -->
+                  <span class="method-name">healthTopicsWithInvalidEmail</span>
+                  <span class="parameters">(test#$@test.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;icon-hl-circle-alert css-1dj97s9&apos;]&quot;}
   (Session info: chrome=89.0.4389.114)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64921}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4f1866df21e38676760feaff0c1da939
-*** Element info: {Using=xpath, value=//h2[text()=&apos;Thanks for subscribing&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57911}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a4a1cd3884e0c5e667b7000ea78d107
+*** Element info: {Using=xpath, value=//div[@class=&apos;icon-hl-circle-alert css-1dj97s9&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -164,12 +169,49 @@ Session ID: 4f1866df21e38676760feaff0c1da939
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.healthline.testscripts.Subscribe.subscribeFunctionalityWithInvalidEmail(Subscribe.java:51)
+	at com.healthline.testscripts.HealthTopics.healthTopicsWithInvalidEmail(HealthTopics.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(To verify subscribe functionality.)                  </em>
+(To verify the health topics functionality with invalid email.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="healthTopicsWithValidEmail(test@gmail.com)">
+                  </a> <!-- healthTopicsWithValidEmail(test@gmail.com) -->
+                  <span class="method-name">healthTopicsWithValidEmail</span>
+                  <span class="parameters">(test@gmail.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;css-1t6cvut&apos;]/li[@class=&apos;css-efqyut&apos;][1]/a&quot;}
+  (Session info: chrome=89.0.4389.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DSK-323&apos;, ip: &apos;10.0.1.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\VANSHI~1.JOU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58159}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 04ad15951c2b84e35aeae1c2f252028a
+*** Element info: {Using=xpath, value=//ul[@class=&apos;css-1t6cvut&apos;]/li[@class=&apos;css-efqyut&apos;][1]/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.page.object.model.HealthTopicsPOM.workingOfHealthTopics(HealthTopicsPOM.java:18)
+	at com.healthline.testscripts.HealthTopics.healthTopicsWithValidEmail(HealthTopics.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To verify the health topics functionality with invalid email.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,17 +219,17 @@ Session ID: 4f1866df21e38676760feaff0c1da939
           <div class="suite-Automation_Practice_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.healthline.testscripts.Subscribe</span>
+              <span class="class-name">com.healthline.testscripts.HealthTopics</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="subscribeFunctionalityWithValidEmail(test@gmail.com)">
-                  </a> <!-- subscribeFunctionalityWithValidEmail(test@gmail.com) -->
-                  <span class="method-name">subscribeFunctionalityWithValidEmail</span>
-                  <span class="parameters">(test@gmail.com)</span>
+                  <a name="healthTopicsWithInvalidEmail(test.com)">
+                  </a> <!-- healthTopicsWithInvalidEmail(test.com) -->
+                  <span class="method-name">healthTopicsWithInvalidEmail</span>
+                  <span class="parameters">(test.com)</span>
                   <em>
-(To verify subscribe functionality.)                  </em>
+(To verify the health topics functionality with invalid email.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,11 +249,11 @@ Session ID: 4f1866df21e38676760feaff0c1da939
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Subscribe&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;HealthTopics&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.healthline.testscripts.Subscribe&quot;/&gt;
+      &lt;class name=&quot;com.healthline.testscripts.HealthTopics&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Subscribe --&gt;
+  &lt;/test&gt; &lt;!-- HealthTopics --&gt;
 &lt;/suite&gt; &lt;!-- Automation Practice Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -223,7 +265,7 @@ Session ID: 4f1866df21e38676760feaff0c1da939
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Subscribe (1 class)</span>
+                <span class="test-name">HealthTopics (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -249,20 +291,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'subscribeFunctionalityWithInvalidEmail')
-data.setCell(0, 2, 'com.healthline.testscripts.Subscribe')
-data.setCell(0, 3, 11014);
+data.setCell(0, 1, 'healthTopicsWithInvalidEmail')
+data.setCell(0, 2, 'com.healthline.testscripts.HealthTopics')
+data.setCell(0, 3, 33778);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'subscribeFunctionalityWithValidEmail')
-data.setCell(1, 2, 'com.healthline.testscripts.Subscribe')
-data.setCell(1, 3, 5456);
+data.setCell(1, 1, 'healthTopicsWithInvalidEmail')
+data.setCell(1, 2, 'com.healthline.testscripts.HealthTopics')
+data.setCell(1, 3, 24317);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'healthTopicsWithValidEmail')
+data.setCell(2, 2, 'com.healthline.testscripts.HealthTopics')
+data.setCell(2, 3, 10180);
 window.suiteTableData['Automation_Practice_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Automation_Practice_Suite">
               </div> <!-- times-div-Automation_Practice_Suite -->
             </div> <!-- times-div -->
@@ -288,32 +334,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.healthline.testscripts.Subscribe</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.healthline.testscripts.HealthTopics</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome, https://www.healthline.com/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">subscribeFunctionalityWithValidEmail(test@gmail.com)</span>
-                <span class="method-start">7019 ms</span>
+                <span class="method-name">healthTopicsWithInvalidEmail(test.com)</span>
+                <span class="method-start">7188 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">12483 ms</span>
+                <span class="method-start">31511 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome, https://www.healthline.com/)</span>
-                <span class="method-start">13165 ms</span>
+                <span class="method-start">31512 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">subscribeFunctionalityWithInvalidEmail(test.com)</span>
-                <span class="method-start">18786 ms</span>
+                <span class="method-name">healthTopicsWithInvalidEmail(test#$@test.com)</span>
+                <span class="method-start">38815 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">29806 ms</span>
+                <span class="method-start">72600 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chrome, https://www.healthline.com/)</span>
+                <span class="method-start">72606 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">healthTopicsWithValidEmail(test@gmail.com)</span>
+                <span class="method-start">78068 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">88251 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

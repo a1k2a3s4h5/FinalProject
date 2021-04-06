@@ -6,15 +6,16 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Subscribe(failed)">
+  <test thread-count="5" name="HealthTopics(failed)">
     <classes>
-      <class name="com.healthline.testscripts.Subscribe">
+      <class name="com.healthline.testscripts.HealthTopics">
         <methods>
+          <include name="healthTopicsWithInvalidEmail" invocation-numbers="1"/>
+          <include name="healthTopicsWithValidEmail" invocation-numbers="0"/>
           <include name="beforeMethod"/>
-          <include name="subscribeFunctionalityWithInvalidEmail" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.healthline.testscripts.Subscribe -->
+      </class> <!-- com.healthline.testscripts.HealthTopics -->
     </classes>
-  </test> <!-- Subscribe(failed) -->
+  </test> <!-- HealthTopics(failed) -->
 </suite> <!-- Failed suite [Automation Practice Suite] -->

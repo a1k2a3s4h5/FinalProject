@@ -31,6 +31,7 @@ public class HealthTopicsPOM {
 				System.out.println("Pop-UP not found.");
 			}
 			healthlineTopics.prosAndCons.click();
+			
 			healthlineTopics.eyeStrain.click();
 			
 			driver.navigate().back();
