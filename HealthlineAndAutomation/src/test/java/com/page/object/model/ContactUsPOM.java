@@ -27,7 +27,7 @@ public ContactUsLocators newsLetter;
 		newsLetter.orderRef.click();
 		newsLetter.orderRef.clear();
 		newsLetter.orderRef.sendKeys(orderRef);
-		Logger.print("Send lorder reference is :"+orderRef);
+		Logger.print("Send order reference is :"+orderRef);
 		newsLetter.fileUpload.sendKeys(filePath);
 		Logger.print("Send file with it's path is "+filePath);
 		newsLetter.message.sendKeys(message);

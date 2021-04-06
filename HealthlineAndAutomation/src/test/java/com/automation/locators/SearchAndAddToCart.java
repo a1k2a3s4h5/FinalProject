@@ -73,4 +73,16 @@ public class SearchAndAddToCart {
 	@FindBy(how=How.XPATH,using="//button[@class='button btn btn-default button-medium']")
 	public WebElement confirmOrder;
 	
+	@FindBy(how=How.ID , using="layer_cart_product_attributes")
+	public WebElement colorAndSize;
+	
+	@FindBy(how=How.ID , using="layer_cart_product_quantity")
+	public WebElement qt;
+	
+	@FindBy(how=How.ID , using="layer_cart_product_price")
+	public WebElement totalPrice;
+	
+	@FindBy(how=How.ID , using="layer_cart_product_title")
+	public WebElement productName;
+	
 }

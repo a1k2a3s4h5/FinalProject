@@ -22,22 +22,19 @@
 			<version>3.0.0-M5</version>
 			<configuration>
 				<properties>
-					<!-- <property>
+					<property>
 						<name>usedefaultlisteners</name>
 						<value>false</value>
 					</property>
 					<property>
 						<name>listener</name>
 						<value>org.uncommons.reportng.HTMLReporter</value>
-					</property> -->
+					</property>
 				</properties>
 				<suiteXmlFiles>
 					<suiteXmlFile>
 						testng_Automation.xml
 					</suiteXmlFile>
-					<!-- <suiteXmlFile>
-						testng_HealthLine.xml
-					</suiteXmlFile> -->
 				</suiteXmlFiles>
 			</configuration>
 		</plugin>

@@ -27,18 +27,18 @@
 		<classes>
 			<class name="com.automation.testscripts.BestSellers" />
 		</classes>
-	</test> -->
+	</test>
 	<test name="ContactUsTestCase">
 		<classes>
 			<class name="com.automation.testscripts.ContactUs" />
 		</classes>
 	</test>
 
-	<!-- <test name="CategoriesTestCase">
+	<test name="CategoriesTestCase">
 		<classes>
 			<class name="com.automation.testscripts.Categories" />
 		</classes>
-	</test>
+	</test> -->
 
 
 
@@ -47,7 +47,7 @@
 			<class name="com.automation.testscripts.SearchAndAddToCart" />
 		</classes>
 	</test>
-
+<!-- 
 	<test name="Send Email To">
 		<classes>
 			<class name="com.automation.testscripts.SendToEmail" />
@@ -58,7 +58,14 @@
 		<classes>
 			<class name="com.automation.testscripts.AboutUs" />
 		</classes>
-	</test> -->
+	</test>
+	
+	<test name="Search">
+		<classes>
+			<class name="com.automation.testscripts.SearchItems" />
+		</classes>
+	</test>
+	 -->
 	<parameter name="url"
 		value="http://automationpractice.com/index.php" />
 </suite> 

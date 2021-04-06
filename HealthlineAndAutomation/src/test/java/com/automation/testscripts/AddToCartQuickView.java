@@ -9,24 +9,27 @@ import org.testng.annotations.Test;
 
 public class AddToCartQuickView {
 	public WebDriver driver;
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
+	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	public com.page.object.model.AddToCartQuickViewPOM quickView;
-	
-	@DataProvider(name="validDetails")
-	public Object[][] SignInValidDetails(){
-		return new Object[][] {{"test1605@gmail.com","abcde"}};
+
+	@DataProvider(name = "validDetails")
+	public Object[][] SignInValidDetails() {
+		return new Object[][] { { "test1605@gmail.com", "abcde" } };
 	}
-	
-	@Parameters({"browserName","url"})
+
+	@Parameters({ "browserName", "url" })
 	@BeforeMethod
-	public void beforeMethod(String browserName,String url) {
-		driver = setup.driverReturn(browserName,url);
-		quickView=new com.page.object.model.AddToCartQuickViewPOM(driver);
+	public void beforeMethod(String browserName, String url) {
+		driver = setup.driverReturn(browserName, url);
+		quickView = new com.page.object.model.AddToCartQuickViewPOM(driver);
 	}
-	@Test(dataProvider="validDetails",description = "To verify the women category functionality.")
-	public void AddTocart(String email,String password) {
-		quickView.QuickView(email, password);;
+
+	@Test(dataProvider = "validDetails", description = "To verify the women category functionality.")
+	public void AddTocart(String email, String password) {
+		quickView.QuickView(email, password);
+		;
 	}
+
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browser");

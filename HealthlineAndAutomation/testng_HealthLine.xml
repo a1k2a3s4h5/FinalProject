@@ -37,11 +37,11 @@
 <!-- 		</classes> -->
 <!-- 	</test> -->
 
-		<test name="Subscribe">
+		<!-- <test name="Subscribe">
 			<classes>
 				<class name="com.healthline.testscripts.Subscribe" />
 			</classes>
-		</test>
+		</test> -->
 		
 <!-- 	<test name="Trending Post"> -->
 <!-- 		<classes> -->

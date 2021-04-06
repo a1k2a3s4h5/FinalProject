@@ -11,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import utils.Logger;
 import utils.SetupEnvironment;
 
 public class SendToEmail {
@@ -30,6 +32,7 @@ public class SendToEmail {
 		WebDriver driver = setup.driverReturn(browserName,url);
 		WebElement sendTolink = driver.findElement(By.linkText("support@seleniumframework.com"));
 		sendTolink.click();
+		Logger.print("We can send email by this link.");
 		driver.quit();
 	}
 

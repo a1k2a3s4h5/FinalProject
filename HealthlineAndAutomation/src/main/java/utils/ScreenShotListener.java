@@ -18,7 +18,6 @@ import org.testng.Reporter;
 public class ScreenShotListener implements ITestListener {
 
 	public WebDriver driver=null;
-	String filePath = "D:\\SCREENSHOTS";
 
 	public void ScreenShot(WebDriver driver) {
 		this.driver=driver;

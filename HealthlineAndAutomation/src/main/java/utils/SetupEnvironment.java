@@ -13,33 +13,37 @@ public class SetupEnvironment {
 	 * @param browserName
 	 * @param url
 	 */
+	public static WebDriver driver;
 	public WebDriver driverReturn(String browserName, String url) {
-		WebDriver driver=null;
+		driver=null;
+		
+		Logger.print("Starting browser : "+browserName );
+		
 		if(browserName.equalsIgnoreCase("chrome")) {
 			
-		String chromePath ="./Drivers/chromedriver.exe";
+		String chromePath =System.getProperty("user.dir")+"\\src\\main\\resources\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chromePath);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(3	, TimeUnit.SECONDS);
 		}
 		else if(browserName.equalsIgnoreCase("firefox")) {
-			String edgePath = "./drivers/msedgedriver.exe";
+			String edgePath =System.getProperty("user.dir")+"\\src\\main\\resources\\msedgedriver.exe";
 			System.setProperty("webdriver.msedge.driver", edgePath);
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		}
 		
 		else if(browserName.equalsIgnoreCase("edge")) {
-			String edgePath = "./Drivers/msedgedriver.exe";
+			String edgePath =System.getProperty("user.dir")+"\\src\\main\\resources\\msedgedriver.exe";
 			System.setProperty("webdriver.msedge.driver", edgePath);
 			driver = new EdgeDriver();
 			driver.manage().window().maximize();
 			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		}
 		else {
 			System.out.println("Invalid browser name");
