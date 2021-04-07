@@ -1,5 +1,9 @@
 package com.automation.testscripts;
-
+/**
+ * Aim: To search the product and add to cart
+ * Author: Group Q
+ * Created on: 30/03/2021
+ */
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -9,12 +13,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.page.objects.SearchAndAddToCartPOM;
+
 import utils.Logger;
+import utils.SetupEnvironment;
 
 public class SearchAndAddToCart {
 	public WebDriver driver;
-	utils.SetupEnvironment setup = new utils.SetupEnvironment();
-	public com.page.object.model.SearchAndAddToCartPOM addtocart;
+	SetupEnvironment setup = new SetupEnvironment();
+	public SearchAndAddToCartPOM addtocart;
 
 	@DataProvider(name = "validDetails")
 	public Object[][] signInValidDetails() {
@@ -30,9 +37,13 @@ public class SearchAndAddToCart {
 	@BeforeMethod
 	public void beforeMethod(String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		addtocart = new com.page.object.model.SearchAndAddToCartPOM(driver);
+		addtocart = new SearchAndAddToCartPOM(driver);
 	}
-
+	
+	/**
+	 * Function: addToCart
+	 * Functionality: To add the product to cart 
+	 */
 	@Test(dataProvider = "validDetails", description = "To provide valid details for add to cart functionality.")
 	public void addToCart(String email, String password, String item) {
 		addtocart.signIn(email, password);

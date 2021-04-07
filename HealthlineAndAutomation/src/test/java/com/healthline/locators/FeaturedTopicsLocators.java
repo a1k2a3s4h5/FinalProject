@@ -1,5 +1,9 @@
 package com.healthline.locators;
-
+/**
+ * Aim: Locator file of featured topics section
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,18 +17,22 @@ public class FeaturedTopicsLocators {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	@FindBy(xpath="//button[@class='accept css-143g64q']")
 	public WebElement popupSubmitButton;
 	
-	@FindBy(how=How.XPATH , using="//div[@class='css-if9915']//div[@class='css-1z98t3']/ul/li[1]/a\r\n")
+	@FindBy(xpath="//div[@class='css-if9915']//div[@class='css-1z98t3']/ul/li[1]/a\r\n")
 	public WebElement coronaVirus;
 	
-	@FindBy(how=How.XPATH , using="//div[@class='css-if9915']//div[@class='css-1z98t3']/ul/li[2]/a\r\n")
+	@FindBy(xpath="//div[@class='css-if9915']//div[@class='css-1z98t3']/ul/li[2]/a\r\n")
 	public WebElement nutrition;
 	
-	@FindBy(how=How.XPATH , using="//div[@class='css-if9915']//div[@class='css-1z98t3']/ul/li[3]/a\r\n")
+	@FindBy(xpath="//div[@class='css-if9915']//div[@class='css-1z98t3']/ul/li[3]/a\r\n")
 	public WebElement parentHood;	
 	
-	@FindBy(how=How.XPATH , using="//button[@class='css-1eiym9q icon-hl-close window-close-button']")
+	@FindBy(xpath="//button[@class='css-1eiym9q icon-hl-close window-close-button']")
 	public WebElement mainPopUp;
+	
+	@FindBy(xpath="//h2[text()='Featured Health Topics']")
+	public WebElement featuredHealthTopics;
+	
 }

@@ -1,9 +1,12 @@
 package com.automation.locators;
-
+/**
+ * Aim: Locators file for contact us functionality
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class ContactUsLocators {
@@ -13,25 +16,25 @@ public class ContactUsLocators {
 	}
 	
 	//Contact us locators
-	@FindBy(how=How.XPATH,using="//a[text()='Contact us']")
+	@FindBy(xpath="//a[text()='Contact us']")
 	public WebElement contactUsLink;
 	
-	@FindBy(how=How.ID,using="id_contact")
+	@FindBy(id="id_contact")
 	public WebElement subjectHeaingDD;
 	
-	@FindBy(how=How.ID,using="email")
+	@FindBy(id="email")
 	public WebElement email;
 	
-	@FindBy(how=How.ID,using="id_order")
+	@FindBy(id="id_order")
 	public WebElement orderRef;
 	
-	@FindBy(how=How.ID,using="message")
+	@FindBy(id="message")
 	public WebElement message;
 	
-	@FindBy(how=How.ID,using="fileUpload")
+	@FindBy(id="fileUpload")
 	public WebElement fileUpload;
 	
-	@FindBy(how=How.ID,using="submitMessage")
+	@FindBy(id="submitMessage")
 	public WebElement submit;
 	
 }

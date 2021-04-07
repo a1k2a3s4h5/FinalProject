@@ -1,5 +1,9 @@
 package com.automation.locators;
-
+/**
+ * Aim: Locators file for search item and add to cart functionality
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,80 +16,80 @@ public class SearchAndAddToCart {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how=How.CLASS_NAME,using="login")
+	@FindBy(className="login")
 	public WebElement signInLink;
 	
-	@FindBy(how=How.ID,using="email")
+	@FindBy(id="email")
 	public WebElement emailField;
 	
-	@FindBy(how=How.ID,using="passwd")
+	@FindBy(id="passwd")
 	public WebElement passwordField;
 	
-	@FindBy(how=How.ID,using="SubmitLogin")
+	@FindBy(id="SubmitLogin")
 	public WebElement submitLogin;
 	
-	@FindBy(how=How.ID,using="search_query_top")
+	@FindBy(id="search_query_top")
 	public WebElement searchInput;
 	
-	@FindBy(how=How.XPATH,using="//button[@class='btn btn-default button-search']")
+	@FindBy(xpath="//button[@class='btn btn-default button-search']")
 	public WebElement btnSearch;
 	
 	
-	@FindBy(how=How.XPATH,using="//h5[@itemprop]/a[@title='Printed Chiffon Dress']")
+	@FindBy(xpath="//h5[@itemprop]/a[@title='Printed Chiffon Dress']")
 	public WebElement dress;
 	
-	@FindBy(how=How.XPATH,using="//a[@class='btn btn-default button-plus product_quantity_up']")
+	@FindBy(xpath="//a[@class='btn btn-default button-plus product_quantity_up']")
 	public WebElement quantityUp;
 	
-	@FindBy(how=How.ID,using="group_1")
+	@FindBy(id="group_1")
 	public WebElement sizeDD;
 	
-	@FindBy(how=How.ID,using="color_15")
+	@FindBy(id="color_15")
 	public WebElement colorGreen;
 	
-	@FindBy(how=How.XPATH,using="//button[@class='exclusive']")
+	@FindBy(xpath="//button[@class='exclusive']")
 	public WebElement btnAddToCart;
 	
-	@FindBy(how=How.XPATH,using="//span[@title='Close window']")
+	@FindBy(xpath="//span[@title='Close window']")
 	public WebElement closePopup;
 	
-	@FindBy(how=How.XPATH,using="//a[@title='View my shopping cart']")
+	@FindBy(xpath="//a[@title='View my shopping cart']")
 	public WebElement shoppingCart;
 	
-	@FindBy(how=How.XPATH,using="//p/a[@title='Proceed to checkout']")
+	@FindBy(xpath="//p/a[@title='Proceed to checkout']")
 	public WebElement btnProceed;
 	
-	@FindBy(how=How.XPATH,using="//textarea[@name='message']")
+	@FindBy(xpath="//textarea[@name='message']")
 	public WebElement addComments;
 	
-	@FindBy(how=How.XPATH,using="//button[@name='processAddress']")
+	@FindBy(xpath="//button[@name='processAddress']")
 	public WebElement proceedAddress;
 	
-	@FindBy(how=How.ID,using="cgv")
+	@FindBy(id="cgv")
 	public WebElement agreeTerms;
 	
-	@FindBy(how=How.XPATH,using="//button[@name='processCarrier']")
+	@FindBy(xpath="//button[@name='processCarrier']")
 	public WebElement proceedCarrier;
 	
-	@FindBy(how=How.XPATH,using="//a[@class='cheque']")
+	@FindBy(xpath="//a[@class='cheque']")
 	public WebElement proceedByCheque;
 	
-	@FindBy(how=How.XPATH,using="//button[@class='button btn btn-default button-medium']")
+	@FindBy(xpath="//button[@class='button btn btn-default button-medium']")
 	public WebElement confirmOrder;
 	
-	@FindBy(how=How.ID , using="layer_cart_product_attributes")
+	@FindBy(id="layer_cart_product_attributes")
 	public WebElement colorAndSize;
 	
-	@FindBy(how=How.ID , using="layer_cart_product_quantity")
+	@FindBy(id="layer_cart_product_quantity")
 	public WebElement qt;
 	
-	@FindBy(how=How.ID , using="layer_cart_product_price")
+	@FindBy(id="layer_cart_product_price")
 	public WebElement totalPrice;
 	
-	@FindBy(how=How.ID , using="layer_cart_product_title")
+	@FindBy(id="layer_cart_product_title")
 	public WebElement productName;
 	
-	@FindBy(how=How.XPATH , using="//div[@id='layer_cart']/div[@class='clearfix']")
+	@FindBy(xpath="//div[@id='layer_cart']/div[@class='clearfix']")
 	public WebElement popUp;
 	
 	@FindBy(css = "div#layer_cart h2")

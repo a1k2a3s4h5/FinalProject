@@ -1,9 +1,12 @@
 package com.healthline.locators;
-
+/**
+ * Aim: Locator file of trending post section
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class TrendingPostLocators {
@@ -15,15 +18,15 @@ public class TrendingPostLocators {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	@FindBy(xpath="//button[@class='accept css-143g64q']")
 	public WebElement popupSubmitButton;
 	
-	@FindBy(how=How.XPATH , using="//a[text()='10 Natural Energy Drinks to Put Pep in Your Step']")
+	@FindBy(xpath="//a[text()='10 Natural Energy Drinks to Put Pep in Your Step']")
 	public WebElement trendingPost1;
 
-	@FindBy(how=How.XPATH , using="//a[text()='11 Ways to Get the Dewiest Skin of Your Life']")
+	@FindBy(xpath="//a[text()='11 Ways to Get the Dewiest Skin of Your Life']")
 	public WebElement trendingPost2;
 	
-	@FindBy(how=How.XPATH , using="//button[@class='css-1eiym9q icon-hl-close window-close-button']")
+	@FindBy(xpath="//button[@class='css-1eiym9q icon-hl-close window-close-button']")
 	public WebElement mainPopUp;
 }

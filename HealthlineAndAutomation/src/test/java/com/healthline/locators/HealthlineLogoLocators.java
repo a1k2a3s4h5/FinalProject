@@ -1,5 +1,9 @@
 package com.healthline.locators;
-
+/**
+ * Aim: Locator file of healthline logo section
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +18,13 @@ public class HealthlineLogoLocators {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	@FindBy(xpath="//button[@class='accept css-143g64q']")
 	public WebElement popupSubmitButton;
 	
-	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[1]")
+	@FindBy(xpath="//ul[@class='css-q8m3bq']/li[1]")
 	public WebElement logo;
+	
+	@FindBy(xpath="//button[@class='css-1eiym9q icon-hl-close window-close-button']")
+	public WebElement mainPopUp;
+	
 }

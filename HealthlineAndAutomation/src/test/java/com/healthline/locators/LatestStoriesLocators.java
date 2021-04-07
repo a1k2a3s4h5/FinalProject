@@ -1,9 +1,12 @@
 package com.healthline.locators;
-
+/**
+ * Aim: Locator file of latest stories section
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class LatestStoriesLocators {
@@ -14,9 +17,9 @@ public class LatestStoriesLocators {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	@FindBy(xpath="//button[@class='accept css-143g64q']")
 	public WebElement popupSubmitButton;
 	
-	@FindBy(how=How.XPATH , using="//li[@class='css-a4lyxf']/div")
+	@FindBy(xpath="//li[@class='css-a4lyxf']/div")
 	public WebElement latestStories;
 }

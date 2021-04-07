@@ -1,9 +1,12 @@
 package com.automation.locators;
-
+/**
+ * Aim: Locators file for sign up functionality
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class SignUpLocators {
@@ -12,82 +15,82 @@ public class SignUpLocators {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how=How.XPATH,using="//a[@title='Log in to your customer account']")
+	@FindBy(xpath="//a[@title='Log in to your customer account']")
 	public WebElement signInLink;
 	
-	@FindBy(how=How.ID,using="email_create")
+	@FindBy(id="email_create")
 	public WebElement email;
 	
-	@FindBy(how=How.ID,using="SubmitCreate")
+	@FindBy(id="SubmitCreate")
 	public WebElement submit;
 	
-	@FindBy(how=How.ID,using="uniform-id_gender1")
+	@FindBy(id="uniform-id_gender1")
 	public WebElement rdobtnMr;
 	
-	@FindBy(how=How.ID,using="id_gender2")
+	@FindBy(id="id_gender2")
 	public WebElement rdobtnMrs;
 	
-	@FindBy(how=How.ID,using="customer_firstname")
+	@FindBy(id="customer_firstname")
 	public WebElement firstName;
 	
-	@FindBy(how=How.ID,using="customer_lastname")
+	@FindBy(id="customer_lastname")
 	public WebElement lastName;
 	
-	@FindBy(how=How.ID,using="passwd")
+	@FindBy(id="passwd")
 	public WebElement password;
 	
-	@FindBy(how=How.ID,using="days")
+	@FindBy(id="days")
 	public WebElement days;
 	
-	@FindBy(how=How.ID,using="months")
+	@FindBy(id="months")
 	public WebElement months;
 	
-	@FindBy(how=How.ID,using="years")
+	@FindBy(id="years")
 	public WebElement years;
 	
-	@FindBy(how=How.ID,using="newsletter")
+	@FindBy(id="newsletter")
 	public WebElement newsletterChk;
 	
-	@FindBy(how=How.ID,using="optin")
+	@FindBy(id="optin")
 	public WebElement specialOffersChk;
 	
-	@FindBy(how=How.ID,using="firstname")
+	@FindBy(id="firstname")
 	public WebElement fName;
 	
-	@FindBy(how=How.ID,using="lastname")
+	@FindBy(id="lastname")
 	public WebElement lName;
 	
-	@FindBy(how=How.ID,using="company")
+	@FindBy(id="company")
 	public WebElement company;
 	
-	@FindBy(how=How.ID,using="address1")
+	@FindBy(id="address1")
 	public WebElement yourAddress1;
 	
-	@FindBy(how=How.ID,using="address2")
+	@FindBy(id="address2")
 	public WebElement yourAddress2;
 	
-	@FindBy(how=How.ID,using="city")
+	@FindBy(id="city")
 	public WebElement city;
 	
-	@FindBy(how=How.ID,using="id_state")
+	@FindBy(id="id_state")
 	public WebElement states;
 	
-	@FindBy(how=How.ID,using="postcode")
+	@FindBy(id="postcode")
 	public WebElement pinCode;
 	
-	@FindBy(how=How.ID,using="other")
+	@FindBy(id="other")
 	public WebElement additionalinfo;
 	
-	@FindBy(how=How.ID,using="phone")
+	@FindBy(id="phone")
 	public WebElement homePhone;
 	
-	@FindBy(how=How.ID,using="phone_mobile")
+	@FindBy(id="phone_mobile")
 	public WebElement mobilePhone;
 	
-	@FindBy(how=How.ID,using="alias")
+	@FindBy(id="alias")
 	public WebElement alias;
 
-	@FindBy(how=How.ID,using="submitAccount")
+	@FindBy(id="submitAccount")
 	public WebElement register;
 
 }
