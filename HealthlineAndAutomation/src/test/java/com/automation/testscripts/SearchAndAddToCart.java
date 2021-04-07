@@ -47,17 +47,13 @@ public class SearchAndAddToCart {
 		Logger.print("Items quantity "+quantity);
 		String totalPrice = addtocart.getPrice();
 		Logger.print("Total Price of only product is  "+totalPrice);
-		if(driver.findElement(By.xpath("//span[@id='layer_cart_product_attributes']")).isEnabled()) {
-			System.out.println("DOMName: "+driver.findElement(By.xpath("//span[@id='layer_cart_product_attributes']")).getAttribute("innerHTML"));
-		}
-		else {
-			System.out.println("Hiii i am not found..");
-		}
-		
-		Assert.assertEquals(driver.findElement(By.xpath("//span[@id='layer_cart_product_attributes']")).getText(),item,"Differernt product name found.");
-		Assert.assertEquals(addtocart.getSizeAndColor(), "Green, M","Different size and color was found.");
-		Assert.assertEquals(addtocart.getQt(), "2","Quantity is different");
-		Assert.assertEquals(addtocart.getPrice(), "32.80","total price is differernt");
+		String addToCartMessege = addtocart.getAddToCartMessege();
+		Logger.print(addToCartMessege);
+		Assert.assertEquals(addToCartMessege, "Product successfully added to your shopping cart","Product is not added succesfully.");
+		Assert.assertEquals(productName,item,"Differernt product name found.");
+		Assert.assertEquals(sizeAndColor, "Green, M","Different size and color was found.");
+		Assert.assertEquals(quantity, "2","Quantity is different");
+		Assert.assertEquals(totalPrice, "$32.80","total price is differernt");
 	}
 
 	@AfterMethod
