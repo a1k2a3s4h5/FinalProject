@@ -6,6 +6,7 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -34,6 +35,8 @@ public WebDriver driver;
 	public void featuredTopicsWork() {
 		
 		featuredTopics.workingOfFeaturedTopics(); 
+		String featureHealth=featuredTopics.featuredHealthTopics();
+		Assert.assertEquals(featureHealth,"FEATURED HEALTH TOPICS");
 	}
 	@AfterMethod
 	public void afterMethod() {

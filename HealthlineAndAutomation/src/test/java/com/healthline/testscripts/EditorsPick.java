@@ -6,6 +6,7 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -16,7 +17,7 @@ public class EditorsPick {
 	public WebDriver driver;
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
 	public com.page.object.model.EditorsPickPOM editorsPick;
-	
+	boolean visibleFlag=false; 
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
@@ -31,10 +32,12 @@ public class EditorsPick {
 	@Test(description = "To verify editor's pick functionality")
 	public void editorsPickWork() {
 		editorsPick.workingOfEditorsPickLocators();
+		String editorspick=editorsPick.moreEditorsPick();
+		Assert.assertEquals(editorspick,"MORE ON THE TOPIC YOU WERE READING");
 	}
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Closing Browsr");
+		System.out.println("Closing Browser");
 		driver.quit();
 	}
 }

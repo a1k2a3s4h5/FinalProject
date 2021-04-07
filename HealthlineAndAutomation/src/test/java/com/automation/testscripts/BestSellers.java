@@ -41,7 +41,7 @@ public class BestSellers {
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
 		System.out.println("Closing Browser");
-		//driver.quit();
+		driver.quit();
 	}
 	
 }

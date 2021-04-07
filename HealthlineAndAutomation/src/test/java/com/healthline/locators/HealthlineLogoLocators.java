@@ -14,9 +14,9 @@ public class HealthlineLogoLocators {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how=How.XPATH, using="//button[@class='accept css-143g64q']")
+	@FindBy(xpath="//button[@class='accept css-143g64q']")
 	public WebElement popupSubmitButton;
 	
-	@FindBy(how=How.XPATH , using="//ul[@class='css-q8m3bq']/li[1]")
+	@FindBy(xpath="//ul[@class='css-q8m3bq']/li[1]")
 	public WebElement logo;
 }

@@ -1,6 +1,9 @@
 package com.automation.testscripts;
 
 import java.io.IOException;
+import java.util.Random;
+
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -13,12 +16,17 @@ import org.testng.annotations.Test;
 import utils.VisibilityOfElement;
 
 public class SignUp {
-
+	public String randomEmail() {
+	    String generatedstring=RandomStringUtils.randomAlphabetic(5);
+	    Random randomGenerator = new Random();  
+		int randomInt = randomGenerator.nextInt(1000);
+		return generatedstring +randomInt;
+	}
 	public WebDriver driver;
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	public com.page.object.model.SignUpPagePOM signUp;
 	public boolean visibleFlag = false;
-
+	String emailID=randomEmail() +"@gmail.com";
 	public WebDriver returnStateOfDriver() {
 		return this.driver;
 	}
@@ -37,7 +45,7 @@ public class SignUp {
 	 */
 	@DataProvider(name = "validDetails")
 	public Object[][] signUpValidDetails() {
-		return new Object[][] { { "test1510@test.com", "Abc", "Xyz", "abcde", "Abc", "Xyz", "Pqr", "Gateway Group",
+		return new Object[][] { { emailID, "Abc", "Xyz", "abcde", "Abc", "Xyz", "Pqr", "Gateway Group",
 				"Gateway", "Ahmedabad", "00000", "abcdefgh", "0000000000", "0000000000", "pqr" } };
 	}
 

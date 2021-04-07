@@ -13,6 +13,4 @@ public class SearchLocators {
 
 	@FindBy(id="search_query_top")
 	public WebElement searchTextBox;
-	
-
 }
