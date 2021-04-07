@@ -1,5 +1,13 @@
 package com.healthline.locators;
 
+
+
+/**
+ * Aim: Locator file of subscribe section
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

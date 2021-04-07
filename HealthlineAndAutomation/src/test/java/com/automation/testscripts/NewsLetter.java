@@ -1,5 +1,6 @@
 package com.automation.testscripts;
 
+
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -16,15 +17,21 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.page.objects.NewsLetterPage;
+
 import utils.Logger;
+
 import utils.VisibilityOfElement;
+
+import utils.SetupEnvironment;
+
 
 public class NewsLetter {
 	public WebDriver driver;
 	boolean visibleFlag=false; 
 
-	utils.SetupEnvironment setup = new utils.SetupEnvironment();
-	public com.page.object.model.NewsLetterPage newsLetter;
+	SetupEnvironment setup = new SetupEnvironment();
+	public NewsLetterPage newsLetter;
 
 	@DataProvider(name = "unRegisteredEmail")
 	public Object[] newsLetterUnRegisteredEmail() {
@@ -41,15 +48,20 @@ public class NewsLetter {
 	@BeforeMethod
 	public void beforeMethod(String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		newsLetter = new com.page.object.model.NewsLetterPage(driver);
+		newsLetter = new NewsLetterPage(driver);
 	}
 
-	/*
-	 * Function name: inValidEmailNewsLetter
+	/**
+	 * Function: invalidEmailNewsLetter
+	 * Functionality: To provide invalid email and check newsletter functionality
 	 */
 	@Test(dataProvider = "inValidEmail", priority = 1, description = "To provide invalid email for newsletter functionality.")
-	public void inValidEmailNewsLetter(String email){
+
+	
 		
+
+	public void invalidEmailNewsLetter(String email) {
+
 		newsLetter.newsLetter(email);
 		
 		visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//p[contains(text(),' Newsletter : Invalid email address.')]"), driver);
@@ -57,8 +69,9 @@ public class NewsLetter {
 		Logger.print("We can not registered.");
 			
 	}
-	/*
+	/**
 	 * Function name: registeredNewsLetter
+	 * Functionality: To provide invalid email and check newsletter functionality
 	 */
 
 	@Test(dataProvider = "unRegisteredEmail", priority = 2, description = "To check whether with alredy registered email we can be able to re-register or not")

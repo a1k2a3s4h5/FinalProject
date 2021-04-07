@@ -8,6 +8,9 @@ package com.healthline.testscripts;
  */
 import org.testng.annotations.Test;
 
+import com.page.objects.TrendingPostPOM;
+
+import utils.SetupEnvironment;
 import utils.VisibilityOfElement;
 
 import org.testng.annotations.BeforeMethod;
@@ -21,25 +24,29 @@ public class TrendingPost {
 
 	public WebDriver driver;
 	public boolean visibleFlag=false;
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.TrendingPostPOM trendingPost;
+	public SetupEnvironment setup=new SetupEnvironment();
+	public TrendingPostPOM trendingPost;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		trendingPost=new com.page.object.model.TrendingPostPOM(driver);
+		trendingPost=new TrendingPostPOM(driver);
 	}
 
 	/**
-	 * Function name:trendingPostFunctionality To navigate to the Trending post
-	 * pages and verify that the functionality is working or not
+	 * Function name:trendingPostFunctionality 
+	 * Functionality: To navigate to the Trending post pages and verify that the functionality is working or not
 	 */
 	@Test(description = "To verify trending post functionality.")
 	public void trendingPostFunctionality() {
-		trendingPost.workingOfTrendingPost();
+
+		trendingPost.trendingPost();
 		visibleFlag = VisibilityOfElement.isElementVisible(trendingPost.getTrandingPost1(), driver);
 		Assert.assertEquals(visibleFlag, true,"Back on homepage is not working.");
+
+		trendingPost.trendingPost();
+
 	}
 
 	@AfterMethod

@@ -1,4 +1,4 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 
@@ -16,13 +16,16 @@ public class NewsLetterPage {
 		newsLetter=new NewsletterLocators(driver);
 	}
 	
+	/**
+	 * Description: To send email and submit
+	 */
 	public void newsLetter(String email) {
-		
 		newsLetter.emailAddress.click();
 		newsLetter.emailAddress.clear();
 		newsLetter.emailAddress.sendKeys(email);
-		Logger.print("Send email: "+email);
+		Logger.print("Email entered is : "+email);
 		newsLetter.btnSubmit.click();
+		Logger.print("Subscribed to newsletter");
 	}
 
 }

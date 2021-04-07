@@ -1,10 +1,12 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.healthline.locators.EditorsPickLocators;
+
+import utils.Logger;
 
 public class EditorsPickPOM {
 
@@ -17,10 +19,13 @@ public class EditorsPickPOM {
 		editor=new EditorsPickLocators(driver);
 		wait=new WebDriverWait(driver, 20);
 	}
-	
-	public void workingOfEditorsPickLocators() {
+	/**
+	 * Description: Click on different editors pick links 
+	 */
+	public void editorsPickClicks() {
 		editor.popupSubmitButton.click();
 		editor.editorPick1.click();
+		Logger.print("Editor's Pick article one opened successful");
 		driver.navigate().back();
 		try {
 			editor.mainPopUp.click();
@@ -28,6 +33,7 @@ public class EditorsPickPOM {
 			System.out.println("Pop-UP not found.");
 		}
 		editor.editorPick2.click();
+		Logger.print("Editor's Pick article two opened successful");
 		driver.navigate().back();
 		try {
 			editor.mainPopUp.click();
@@ -35,6 +41,7 @@ public class EditorsPickPOM {
 			System.out.println("Pop-UP not found.");
 		}
 		editor.editorPick3.click();
+		Logger.print("Editor's Pick article three opened successful");
 		driver.navigate().back();
 		try {
 			editor.mainPopUp.click();
