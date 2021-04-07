@@ -7,10 +7,13 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
+
+import utils.VisibilityOfElement;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -18,6 +21,7 @@ import org.testng.annotations.AfterMethod;
 public class Subscribe {
 
 	public WebDriver driver;
+	public boolean visibleFlag=false;
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
 	public com.page.object.model.SubscribePOM subscribe;
 	
@@ -42,12 +46,15 @@ public class Subscribe {
 	@Test(dataProvider="validEmail",priority=1,description="To verify subscribe functionality wuth valid email address.")
 	public void subscribeFunctionalityWithValidEmail(String email) {
 		subscribe.workingOfSubscriber(email);
-		Assert.assertEquals(driver.findElement(By.xpath("//h2[text()='Thanks for subscribing']")).isDisplayed(), true);
+		visibleFlag=VisibilityOfElement.isElementVisible(By.xpath("//h2[text()='Thanks for subscribing']"), driver);
+		Assert.assertEquals(visibleFlag, true,"Subscribe is not working.");
 	}
 
 	@Test(dataProvider="invalidEmail",priority=2,description="To verify subscribe functionality with invalid email address.")
 	public void subscribeFunctionalityWithInvalidEmail(String email) {
 		subscribe.workingOfSubscriber(email);
+		visibleFlag=VisibilityOfElement.isElementVisible(By.xpath("//h2[text()='Thanks for subscribing']"), driver);
+		Assert.assertEquals(visibleFlag, true,"Subscribe is not working.");
 	}
 
 	@AfterMethod

@@ -1,13 +1,19 @@
 package com.healthline.testscripts;
 
 import org.testng.annotations.Test;
+
+import utils.VisibilityOfElement;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HealthlineLogo {
 	public WebDriver driver;
+	public boolean visibleFlag=false;
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
 	public com.page.object.model.HealthlineLogoPOM healthlineLogo;
 	
@@ -21,6 +27,8 @@ public class HealthlineLogo {
 	@Test(description="To verify healthline logo functionality.")
 	public void clickFunctionalityOfHealthlineLogo() {
 		healthlineLogo.workOfHealthlineLogo();
+		visibleFlag = VisibilityOfElement.isElementVisible(healthlineLogo.getHomepage(), driver);
+		Assert.assertEquals(visibleFlag,true,"Refresh not worked.");
 	}
 	
 	@AfterMethod

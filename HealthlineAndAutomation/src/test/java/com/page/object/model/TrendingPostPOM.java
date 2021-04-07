@@ -1,6 +1,7 @@
 package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.healthline.locators.SubscribeLocators;
 import com.healthline.locators.TrendingPostLocators;
@@ -21,11 +22,14 @@ public class TrendingPostPOM {
 		try {
 			trendingPost.mainPopUp.click();
 			} catch (Exception e) {
-				System.out.println("Pop-UP not found.");
 			}
 		trendingPost.trendingPost2.click();
 		driver.navigate().back();
 		
+	}
+	
+	public WebElement getTrandingPost1() {
+		return trendingPost.trendingPost1;
 	}
 
 }

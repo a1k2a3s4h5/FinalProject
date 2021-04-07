@@ -1,7 +1,7 @@
 package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 
 import com.healthline.locators.HealthlineLogoLocators;
 
@@ -20,8 +20,11 @@ public HealthlineLogoLocators healthlineLogo;
 		}
 		catch(Exception e) {}
 		healthlineLogo.logo.click();
-		System.out.println("The page is refreshed");
 		driver.quit();
+	}
+	
+	public WebElement getHomepage() {
+		return healthlineLogo.logo;
 	}
 	
 }
