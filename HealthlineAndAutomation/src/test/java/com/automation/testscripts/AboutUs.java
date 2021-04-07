@@ -18,7 +18,11 @@ import utils.SetupEnvironment;
 import utils.VisibilityOfElement;
 
 public class AboutUs {
+
 	public boolean visibleFlag=false;
+
+	WebDriver driver;
+
 	SetupEnvironment setup = new SetupEnvironment();
 	/**
 	 * Function name: aboutUs 
@@ -30,13 +34,15 @@ public class AboutUs {
 	@Test(description = "To verify about us is opend succesfully or not.")
 	@Parameters({"browserName","url"})
 	public void aboutUs(String browserName,String url) {
-		WebDriver driver = setup.driverReturn(browserName,url);
+		driver = setup.driverReturn(browserName,url);
 		WebElement aboutUsLink = driver.findElement(By.xpath("//a[@title=\"About us\"]"));
 		aboutUsLink.click();
+
 		visibleFlag=VisibilityOfElement.isElementVisible(By.id("center_column"), driver);
 		Assert.assertEquals(visibleFlag, true,"error in loading about us page.");
-		Logger.print("The about us page is opened successfully");
-		driver.quit();
+		Logger.print("About us page opened");
+	
+
 	}
 
 	@BeforeMethod
@@ -47,5 +53,6 @@ public class AboutUs {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browser");
+		driver.quit();
 	}
 }

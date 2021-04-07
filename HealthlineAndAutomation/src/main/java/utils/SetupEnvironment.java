@@ -12,8 +12,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SetupEnvironment {
 	/**
 	 * Browser setting path for chrome,firefox and edge
-	 * @param browserName
-	 * @param url
 	 */
 	public static WebDriver driver;
 	public WebDriver driverReturn(String browserName, String url) {

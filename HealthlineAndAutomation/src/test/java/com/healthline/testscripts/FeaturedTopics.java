@@ -6,7 +6,16 @@ package com.healthline.testscripts;
  * Modified on: 31/03/2021
  */
 import org.testng.annotations.Test;
+
+
 import org.testng.Assert;
+
+
+import com.page.objects.FeaturedTopicsPOM;
+
+import utils.SetupEnvironment;
+
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -16,27 +25,30 @@ public class FeaturedTopics {
 
 public WebDriver driver;
 	
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.FeaturedTopicsPOM featuredTopics;
+	SetupEnvironment setup=new SetupEnvironment();
+	public FeaturedTopicsPOM featuredTopics;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		featuredTopics=new com.page.object.model.FeaturedTopicsPOM(driver);
+		featuredTopics=new FeaturedTopicsPOM(driver);
 	}
 
 	/**
 	 * Function name: featuredTopicsWork
 	 * To verify the click functionality of editor's pick collection
-	 * @throws InterruptedException 
 	 */
 	@Test(description = "To verify the featured topics functionality.")
 	public void featuredTopicsWork() {
+
 		
-		featuredTopics.workingOfFeaturedTopics(); 
+		featuredTopics.featuredTopicsClicks(); 
 		String featureHealth=featuredTopics.featuredHealthTopics();
 		Assert.assertEquals(featureHealth,"FEATURED HEALTH TOPICS");
+
+		featuredTopics.featuredTopicsClicks(); 
+
 	}
 	@AfterMethod
 	public void afterMethod() {

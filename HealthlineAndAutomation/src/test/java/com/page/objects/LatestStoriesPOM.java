@@ -1,4 +1,4 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,11 @@ public class LatestStoriesPOM {
 		latestStory=new LatestStoriesLocators(driver);
 	}
 	
-	public void workingOfLatestStories() {
+
+	/**
+	 * Description: To click on different latest stories link
+	 */
+	public void latestStoriesClicks() {
 			try {
 				latestStory.popupSubmitButton.click();
 			}

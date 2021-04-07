@@ -1,4 +1,4 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,13 +14,21 @@ public HealthlineLogoLocators healthlineLogo;
 		healthlineLogo=new HealthlineLogoLocators(driver);
 	}
 	
-	public void workOfHealthlineLogo() {
+	/**
+	 * Description: To click on healthline logo and the page should navigate to home page
+	 */
+	public void healthlineLogoClick() {
 		try {
 			healthlineLogo.popupSubmitButton.click();
 		}
 		catch(Exception e) {}
 		healthlineLogo.logo.click();
-		driver.quit();
+		try {
+			healthlineLogo.mainPopUp.click();
+		}
+		catch(Exception e) {}
+
+		
 	}
 	
 	public WebElement getHomepage() {

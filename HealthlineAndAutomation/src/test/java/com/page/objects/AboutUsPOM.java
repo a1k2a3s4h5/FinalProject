@@ -1,4 +1,4 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 
@@ -12,6 +12,9 @@ public class AboutUsPOM {
 		aboutUs=new AboutUsLocators(driver);
 	}
 	
+	/**
+	 * Description: Click on about us link
+	 */
 	public void clickAboutUs() {
 		aboutUs.aboutUsLink.click();
 	}

@@ -1,4 +1,4 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +18,9 @@ public CategoriesLocator categories;
 		categories=new CategoriesLocator(driver);
 	}
 	
+	/**
+	 * Description: navigate to women category with size, color, composition and properties 
+	 */
 	public void womenCategoryClicks() {
 		Logger.print("Click on women link from navbar");
 		categories.womenCategory.click();

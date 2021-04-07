@@ -8,7 +8,12 @@ package com.healthline.testscripts;
  */
 import org.testng.annotations.Test;
 
+
 import utils.VisibilityOfElement;
+
+import com.page.objects.SubscribePOM;
+
+import utils.SetupEnvironment;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -21,9 +26,12 @@ import org.testng.annotations.AfterMethod;
 public class Subscribe {
 
 	public WebDriver driver;
+
 	public boolean visibleFlag=false;
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.SubscribePOM subscribe;
+
+	SetupEnvironment setup=new SetupEnvironment();
+	public SubscribePOM subscribe;
+
 	
 	@DataProvider(name="validEmail")
 	public Object[][] validEmailAddress(){
@@ -40,21 +48,43 @@ public class Subscribe {
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		subscribe=new com.page.object.model.SubscribePOM(driver);
+		subscribe=new SubscribePOM(driver);
 	}
+
 
 	@Test(dataProvider="validEmail",priority=1,description="To verify subscribe functionality wuth valid email address.")
 	public void subscribeFunctionalityWithValidEmail(String email) {
-		subscribe.workingOfSubscriber(email);
+		subscribe.subscribe(email);
 		visibleFlag=VisibilityOfElement.isElementVisible(By.xpath("//h2[text()='Thanks for subscribing']"), driver);
 		Assert.assertEquals(visibleFlag, true,"Subscribe is not working.");
 	}
 
+	/**
+	 * Function: subscribeWithValidEmail
+	 * Functionality: To verify subscribe functionality with valid email address.
+	 */
+	@Test(dataProvider="validEmail",priority=1,description="To verify subscribe functionality with valid email address.")
+	public void subscribeWithValidEmail(String email) {
+		subscribe.subscribe(email);
+		Assert.assertEquals(driver.findElement(By.xpath("//h2[text()='Thanks for subscribing']")).isDisplayed(), true);
+
+	}
+	
+	/**
+	 * Function: subscribeWithInvalidEmail
+	 * Functionality: To verify subscribe functionality with invalid email address.
+	 */
 	@Test(dataProvider="invalidEmail",priority=2,description="To verify subscribe functionality with invalid email address.")
+
 	public void subscribeFunctionalityWithInvalidEmail(String email) {
-		subscribe.workingOfSubscriber(email);
+		subscribe.subscribe(email);
 		visibleFlag=VisibilityOfElement.isElementVisible(By.xpath("//h2[text()='Thanks for subscribing']"), driver);
 		Assert.assertEquals(visibleFlag, true,"Subscribe is not working.");
+	}
+
+	public void subscribeWithInvalidEmail(String email) {
+		subscribe.subscribe(email);
+
 	}
 
 	@AfterMethod
