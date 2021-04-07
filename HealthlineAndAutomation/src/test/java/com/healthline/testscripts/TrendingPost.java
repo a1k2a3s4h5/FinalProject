@@ -40,6 +40,7 @@ public class TrendingPost {
 		trendingPost.workingOfTrendingPost();
 		visibleFlag = VisibilityOfElement.isElementVisible(trendingPost.getTrandingPost1(), driver);
 		Assert.assertEquals(visibleFlag, true,"Back on homepage is not working.");
+		System.out.println("Vanshika");
 	}
 
 	@AfterMethod
