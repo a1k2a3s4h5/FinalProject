@@ -16,11 +16,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import utils.Logger;
+import utils.VisibilityOfElement;
 
 public class SignIn {
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	public com.page.object.model.SignInPagePOM signIn;
 	public WebDriver driver;
+	public boolean visibleFlag = false;
 
 	@Parameters({ "browserName", "url" })
 	@BeforeMethod
@@ -60,8 +62,9 @@ public class SignIn {
 	@Test(dataProvider = "invalidDetails", priority = 1, description = "To sign in with invalid email")
 	public void invalidSignIn(String emailAddress, String pswd) {
 		signIn.signIn(emailAddress, pswd);
-		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='alert alert-danger']/p")).isDisplayed(), true,"with invalid creadiatianls we can be able to login");
-		Logger.print("We can not log in with invalid crendiatials");
+		visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//div[@class='alert alert-danger']/p"), driver);
+		Assert.assertEquals(visibleFlag, true,"with invalid creadiatianls we can be able to login");
+		Logger.print("We can't log in.");
 	}
 
 	/**
@@ -74,8 +77,9 @@ public class SignIn {
 	@Test(dataProvider = "validDetails", priority = 2, description = "To verify login with valid credentials")
 	public void validSignIn(String emailAddress, String pswd) {
 		signIn.signIn(emailAddress, pswd);
-		Assert.assertEquals(driver.findElement(By.className("page-heading")).isDisplayed(), true,"We are not be able to login with valid creadiantials");
-		Logger.print("With valid creadiantials we can be able to log in.");
+		visibleFlag = VisibilityOfElement.isElementVisible(By.className("page-heading"), driver);
+		Assert.assertEquals(visibleFlag, true,"We are not be able to login with valid creadiantials");
+		Logger.print("we are logged in.");
 	}
 
 	@AfterMethod

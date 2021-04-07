@@ -1,5 +1,7 @@
 package com.automation.testscripts;
 
+import java.util.concurrent.TimeoutException;
+
 /**
  * Aim: to verify the newsletter email functionality
  * Author: Group Q
@@ -15,9 +17,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import utils.Logger;
+import utils.VisibilityOfElement;
 
 public class NewsLetter {
 	public WebDriver driver;
+	boolean visibleFlag=false; 
 
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	public com.page.object.model.NewsLetterPage newsLetter;
@@ -27,14 +31,9 @@ public class NewsLetter {
 		return new Object[] { "test016@gmail.com", "yeskiid023@gmail.com" };
 	}
 
-	/*
-	 * @DataProvider(name="regsiteredEmail") public Object[]
-	 * newsLetterRegisteredEmail(){ return new Object[] {"test1605@gmail.com"}; }
-	 */
-
 	@DataProvider(name = "inValidEmail")
 	public Object[][] newsLetterInValidEmail() {
-		return new Object[][] { { "sdshf#$%ashhs#jf34jds^svfd@xyz.com" }, { "     " },
+		return new Object[][] { { "sdshf#$%ash!hs#jf34jds^svfd@xyz.com" }, { "     " },
 				{ "dhbdhjsf3234@#$%@dsjk2342dfj.fjkds.fdjsbfk&" } };
 	}
 
@@ -49,18 +48,14 @@ public class NewsLetter {
 	 * Function name: inValidEmailNewsLetter
 	 */
 	@Test(dataProvider = "inValidEmail", priority = 1, description = "To provide invalid email for newsletter functionality.")
-	public void inValidEmailNewsLetter(String email) {
+	public void inValidEmailNewsLetter(String email){
+		
 		newsLetter.newsLetter(email);
-		try {
-			Assert.assertEquals(
-					driver.findElement(By.xpath("//p[contains(text(),' Newsletter : Invalid email address.')]"))
-							.isDisplayed(),
-					true);
-			Logger.print("With invalid email id " + email + "We can not registered.");
-		} catch (Exception e) {
-			Assert.assertFalse(true, "With Invaild email id , we can be able to apply for news letter.");
-		}
-
+		
+		visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//p[contains(text(),' Newsletter : Invalid email address.')]"), driver);
+		Assert.assertEquals(visibleFlag,true,"\"With Invaild email id , we can be able to apply for news letter.\"");
+		Logger.print("We can not registered.");
+			
 	}
 	/*
 	 * Function name: registeredNewsLetter
@@ -69,28 +64,33 @@ public class NewsLetter {
 	@Test(dataProvider = "unRegisteredEmail", priority = 2, description = "To check whether with alredy registered email we can be able to re-register or not")
 	public void validEmailIdWIthAlreadyRegisteredEmailsNewsLetter(String email) {
 		newsLetter.newsLetter(email);
-		try {
-			Assert.assertEquals(driver
-					.findElement(
-							By.xpath("//p[contains(text(),' Newsletter : This email address is already registered.')]"))
-					.isDisplayed(), true);
-			Logger.print("With already registered email id " + email + " We can not registered again.");
-		} catch (Exception e) {
-			Assert.assertFalse(true, "With registered email id we can be able to re-register.");
-		}
+		
+		visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//p[contains(text(),' Newsletter : This email address is already registered.')]"), driver);
+		Assert.assertEquals(visibleFlag, true,"With registered email id we can be able to re-register.");
+		Logger.print("We are able to apply for news letter.");
 
 	}
 	/*
 	 * Function name: unRegisterednNewsLetter
 	 */
 
+	
 	/*
 	 * @Test(dataProvider="unRegisteredEmail",priority=3,
 	 * description="To provide unregistered email for newsletter functionality.")
 	 * public void unRegisterednNewsLetter(String email) {
-	 * newsLetter.newsLetter(email); Assert.assertEquals(driver.findElement(By.
-	 * xpath("//p[@class='alert alert-success']")).isDisplayed(), true); }
+	 * 
+	 * 
+	 * newsLetter.newsLetter(email);
+	 * 
+	 * visibleFlag = VisibilityOfElement.isElementVisible(By.
+	 * xpath("//p[@class='alert alert-success']"), driver);
+	 * 
+	 * Assert.assertEquals(visibleFlag, true);
+	 * 
+	 * }
 	 */
+	 
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browsr");

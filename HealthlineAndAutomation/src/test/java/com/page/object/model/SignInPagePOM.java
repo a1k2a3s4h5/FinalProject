@@ -16,7 +16,6 @@ public SignInLocators signin;
 	
 	public void signIn(String email,String password) {
 		signin.signInLink.click();
-		
 		signin.emailField.click();
 		signin.emailField.clear();
 		signin.emailField.sendKeys(email);

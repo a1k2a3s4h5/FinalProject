@@ -85,4 +85,10 @@ public class SearchAndAddToCart {
 	@FindBy(how=How.ID , using="layer_cart_product_title")
 	public WebElement productName;
 	
+	@FindBy(how=How.XPATH , using="//div[@id='layer_cart']/div[@class='clearfix']")
+	public WebElement popUp;
+	
+	@FindBy(css = "div#layer_cart h2")
+	public WebElement cssSuccessMessageAddCart;
+	
 }

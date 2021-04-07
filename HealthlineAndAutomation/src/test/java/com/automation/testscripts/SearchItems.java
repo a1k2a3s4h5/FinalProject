@@ -12,12 +12,14 @@ import org.testng.annotations.Test;
 import com.page.object.model.SearchPOM;
 
 import utils.Logger;
+import utils.VisibilityOfElement;
 
 public class SearchItems {
 
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	SearchPOM search;
 	public WebDriver driver;
+	public boolean visibleFlag = false;
 
 	@DataProvider(name = "inValidSearch")
 	public Object[] inValidSearch() {
@@ -39,28 +41,20 @@ public class SearchItems {
 	@Test(dataProvider = "validSearch", priority = 2, description = "To verify the search functionality.")
 	public void validSearchItems(String searchData) {
 		search.sendSearchText(searchData);
-		try {
-			Assert.assertEquals(
-					driver.findElement(By.xpath("//p[contains(text(),'No results were found for your search')]"))
-							.isDisplayed(),
-					false, "For valid search it should not provide correct pages.");
-		} catch (Exception e) {
-			Logger.print("Item or items succesfully display on DOM.");
-		}
+		visibleFlag = VisibilityOfElement
+				.isElementVisible(By.xpath("//p[contains(text(),'No results were found for your search')]"), driver);
+		Assert.assertEquals(visibleFlag, false, "For valid search it should not provide correct pages.");
+		Logger.print("Item or items succesfully display on DOM.");
 	}
 
 	@Test(dataProvider = "inValidSearch", priority = 1, description = "To verify the search functionality.")
 	public void inValidSearchItems(String searchData) {
 		search.sendSearchText(searchData);
-		try {
-			Assert.assertEquals(
-					driver.findElement(By.xpath("//p[contains(text(),'No results were found for your search')]"))
-							.isDisplayed(),
-					true);
-			Logger.print("For \"" + searchData + "\" it will display no result found. ");
-		} catch (Exception e) {
-			Assert.assertFalse(true, "Not accepeted messege was found.");
-		}
+		visibleFlag = VisibilityOfElement
+				.isElementVisible(By.xpath("//p[contains(text(),'No results were found for your search')]"), driver);
+
+		Assert.assertEquals(visibleFlag, true, "Not accepeted messege was found.");
+		Logger.print("For \"" + searchData + "\" it will display no result found. ");
 
 	}
 

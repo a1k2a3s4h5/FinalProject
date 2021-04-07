@@ -15,9 +15,10 @@ import org.testng.annotations.Test;
 
 import utils.Logger;
 import utils.SetupEnvironment;
+import utils.VisibilityOfElement;
 
 public class AboutUs {
-	
+	public boolean visibleFlag=false;
 	SetupEnvironment setup = new SetupEnvironment();
 	/**
 	 * Function name: aboutUs 
@@ -32,7 +33,8 @@ public class AboutUs {
 		WebDriver driver = setup.driverReturn(browserName,url);
 		WebElement aboutUsLink = driver.findElement(By.xpath("//a[@title=\"About us\"]"));
 		aboutUsLink.click();
-		Assert.assertEquals(driver.findElement(By.id("center_column")).isDisplayed(), true);
+		visibleFlag=VisibilityOfElement.isElementVisible(By.id("center_column"), driver);
+		Assert.assertEquals(visibleFlag, true,"error in loading about us page.");
 		Logger.print("The about us page is opened successfully");
 		driver.quit();
 	}

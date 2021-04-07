@@ -10,11 +10,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import utils.VisibilityOfElement;
+
 public class SignUp {
 
 	public WebDriver driver;
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	public com.page.object.model.SignUpPagePOM signUp;
+	public boolean visibleFlag = false;
 
 	public WebDriver returnStateOfDriver() {
 		return this.driver;
@@ -68,8 +71,8 @@ public class SignUp {
 	@Test(dataProvider = "invalidEmail", priority = 1, description = "Provide invalid email and check the functionality")
 	public void invalidSignUp(String emailAddress) {
 		signUp.createAnAccount(emailAddress);
-		Assert.assertEquals(driver.findElement(By.id("create_account_error")).isDisplayed(), true,
-				"Through invalid email address we are able to create an account.");
+		visibleFlag = VisibilityOfElement.isElementVisible(By.id("create_account_error"), driver);
+		Assert.assertEquals(visibleFlag, true,"Through invalid email address we are able to create an account.");
 	}
 
 	/**
@@ -82,7 +85,8 @@ public class SignUp {
 	@Test(dataProvider = "emailIdExists", priority = 2, description = "Provide already exists email and check the functionality")
 	public void emailIdExits(String emailAddress) {
 		signUp.createAnAccount(emailAddress);
-		Assert.assertEquals(driver.findElement(By.id("create_account_error")).isDisplayed(), true);
+		visibleFlag = VisibilityOfElement.isElementVisible(By.id("create_account_error"), driver);
+		Assert.assertEquals(visibleFlag, true,"With exist email id we can log in");
 	}
 
 	/**
@@ -112,7 +116,8 @@ public class SignUp {
 		signUp.createAnAccount(emailAddress);
 		signUp.personalInformation(firstname, lastname, password);
 		signUp.yourAddressDetails(fName, lName, company, adrs1, adrs2, city, postCode, addinfo, hPhone, mPhone, alias);
-		Assert.assertEquals(driver.findElement(By.className("page-heading")).isDisplayed(), true);
+		visibleFlag = VisibilityOfElement.isElementVisible(By.className("page-heading"), driver);
+		Assert.assertEquals(visibleFlag, true,"We can't sign up.");
 	}
 
 	@AfterMethod

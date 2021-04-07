@@ -18,9 +18,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import utils.Logger;
+import utils.VisibilityOfElement;
 
 public class ContactUs {
 	public WebDriver driver;
+	public boolean visibleFlag = false;
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
 	public com.page.object.model.ContactUsPOM contactus;
 
@@ -28,8 +30,10 @@ public class ContactUs {
 	public Object[][] validContactusdetails() {
 		// return new Object[][]
 		// {{"test1605@gmail.com","REF123","./src/main/resources/images/ss.JPG","xyz"}};
-
-		return new Object[][] { { "test@gmail.com", "REF123", "C:\\Users\\akash.patel\\Desktop\\email.png", "Hi" } };
+		return new Object[][] {
+				{ "test@gmail.com", "REF123", System.getProperty("user.dir") + "\\images\\testReport.PNG", "Hi" } };
+		// return new Object[][] { { "test@gmail.com", "REF123",
+		// "C:\\Users\\akash.patel\\Desktop\\email.png", "Hi" } };
 	}
 
 	@DataProvider(name = "invalid-contact-us-details")
@@ -37,8 +41,11 @@ public class ContactUs {
 		// return new Object[][]
 		// {{"test1605@gmail.com","REF123","./src/main/resources/images/ss.JPG","xyz"}};
 
-		return new Object[][] {
-				{ "test#24!chj@gmail.com", "REF123", "C:\\Users\\akash.patel\\Desktop\\testcasetemplate.xlsx", "Hi" } };
+		return new Object[][] { { "test#24!chj@gmail.com", "REF123",
+				System.getProperty("user.dir") + "\\images\\testcasetemplate.xlsx", "Hi" } };
+
+//		return new Object[][] {
+//				{ "test#24!chj@gmail.com", "REF123", "C:\\Users\\akash.patel\\Desktop\\testcasetemplate.xlsx", "Hi" } };
 	}
 
 	@DataProvider(name = "invalid-only_email--contact-us-details")
@@ -46,8 +53,11 @@ public class ContactUs {
 		// return new Object[][]
 		// {{"test1605@gmail.com","REF123","./src/main/resources/images/ss.JPG","xyz"}};
 
-		return new Object[][] {
-				{ "test#24!chj@gmail.com", "REF123", "C:\\Users\\akash.patel\\Desktop\\download.png", "Hi" } };
+		return new Object[][] { { "test#24!chj@gmail.com", "REF123",
+				System.getProperty("user.dir") + "\\images\\testReport.PNG", "Hi" } };
+
+//		return new Object[][] {
+//				{ "test#24!chj@gmail.com", "REF123", "C:\\Users\\akash.patel\\Desktop\\download.png", "Hi" } };
 	}
 
 	@Parameters({ "browserName", "url" })
@@ -63,10 +73,9 @@ public class ContactUs {
 	public void validContactUsWithValidEmailIdAndValidFileType(String email, String orderRef, String filePath,
 			String message) {
 		contactus.contactUs(email, orderRef, filePath, message);
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//p[text()='Your message has been successfully sent to our team.']"))
-						.isDisplayed(),
-				true);
+		visibleFlag = VisibilityOfElement.isElementVisible(
+				By.xpath("//p[text()='Your message has been successfully sent to our team.']"), driver);
+		Assert.assertEquals(visibleFlag, true, "Messege was not sent.");
 		Logger.print("With valid email id and valid filetype we can be able to send messege.");
 	}
 
@@ -74,7 +83,8 @@ public class ContactUs {
 	public void inValidContactUsWithInValidEmailIdAndInValidFileType(String email, String orderRef, String filePath,
 			String message) {
 		contactus.contactUs(email, orderRef, filePath, message);
-		Assert.assertEquals(driver.findElement(By.xpath("//p[contains(text(),'1 error')]")).isDisplayed(), true,
+		visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//p[contains(text(),'1 error')]"), driver);
+		Assert.assertEquals(visibleFlag, true,
 				"Here we can be able to send messege with improper mail id or with bad file extension.");
 		Logger.print("With invalid email id and invalid filetype we can be able to send messege.");
 	}
@@ -83,15 +93,10 @@ public class ContactUs {
 	public void inValidContactUsWithInValidEmailIdAndValidFileType(String email, String orderRef, String filePath,
 			String message) {
 		contactus.contactUs(email, orderRef, filePath, message);
-		try {
-			Assert.assertEquals(driver.findElement(By.xpath("//p[contains(text(),'1 error')]")).isDisplayed(), true,
-					"Here we can be able to send messege with improper mail id.");
-			Logger.print("With invalid email id and valid filetype we can be able to send messege.");
-		} catch (Exception e) {
-			Assert.assertTrue(false, "Here we can be able to send messege with improper mail id.");
-			Logger.print("With invalid email id and valid filetype we can be able to send messege so it is bug.");
-		}
-		
+		visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//p[contains(text(),'1 error')]"), driver);
+		Assert.assertEquals(visibleFlag, true, "Here we can be able to send messege with improper mail id.");
+		Logger.print("With invalid email id and valid filetype we can't send messege.");
+
 	}
 
 	@AfterMethod

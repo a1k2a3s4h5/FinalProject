@@ -7,10 +7,12 @@ import org.testng.Assert;
 import com.automation.locators.CategoriesLocator;
 
 import utils.Logger;
+import utils.VisibilityOfElement;
 
 public class CategoriesPOM {
 public CategoriesLocator categories;
 	public WebDriver driver;
+	public boolean visibleFlag=false;
 	public CategoriesPOM(WebDriver driver) {
 		this.driver = driver;
 		categories=new CategoriesLocator(driver);
@@ -31,13 +33,10 @@ public CategoriesLocator categories;
 		categories.cottonCheckbox.click();
 		Logger.print("Click on shortsleeve cleckbox under properties.");
 		categories.shortSelvees.click();
-		try {
-			Assert.assertEquals(driver.findElement(By.xpath("//ul/p/img[@src='http://automationpractice.com/img/loader.gif']")).isDisplayed(),false,"Loader is only loading... no data was fetched..");
-		}
-		catch(Exception e) {
-			Assert.assertTrue(true,"Test case passed.");
-		}
-		Logger.print("Category wise selection is working correctly");
 		
+		visibleFlag= VisibilityOfElement.isElementVisible(By.xpath("//ul/p/img[@src='http://automationpractice.com/img/loader.gif']"), driver);
+		Assert.assertEquals(visibleFlag,false,"Loader is only loading... no data was fetched..");
+		Logger.print("Category wise selection is working correctly");
+	
 	}
 }
