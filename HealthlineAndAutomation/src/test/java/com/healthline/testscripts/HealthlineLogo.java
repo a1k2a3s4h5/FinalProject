@@ -29,6 +29,7 @@ public class HealthlineLogo {
 		healthlineLogo.workOfHealthlineLogo();
 		visibleFlag = VisibilityOfElement.isElementVisible(healthlineLogo.getHomepage(), driver);
 		Assert.assertEquals(visibleFlag,true,"Refresh not worked.");
+		System.out.println("Hii  i am in akash patel");
 	}
 	
 	@AfterMethod
