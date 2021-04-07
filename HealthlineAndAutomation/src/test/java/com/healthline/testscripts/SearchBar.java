@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.page.objects.HealthlineSearchBar;
 
+import utils.Logger;
 import utils.SetupEnvironment;
 
 public class SearchBar {
@@ -35,6 +36,7 @@ public class SearchBar {
 	@Test(description="To verify search bar functionality.")
 	  public void searchBar() {
 		searchBar.searchBar();
+		Logger.print("Women health articles are displayed.");
 	  }
 		@AfterMethod
 		public void afterMethod() {

@@ -29,7 +29,7 @@ public class SendToEmail {
 		driver = setup.driverReturn(browserName,url);
 		WebElement sendTolink = driver.findElement(By.linkText("support@seleniumframework.com"));
 		sendTolink.click();
-		Logger.print("We can send email by this link.");
+		Logger.print("Send email to the given link");
 	}
 
 	@BeforeMethod

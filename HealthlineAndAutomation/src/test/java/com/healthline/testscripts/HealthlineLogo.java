@@ -5,6 +5,9 @@ package com.healthline.testscripts;
  * Created on: 30/03/2021
  */
 import org.testng.annotations.Test;
+
+import utils.Logger;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -29,6 +32,7 @@ public class HealthlineLogo {
 	@Test(description="To verify healthline logo functionality.")
 	public void healthlineLogolick() {
 		healthlineLogo.healthlineLogoClick();
+		Logger.print("Navigated to home page");
 	}
 	
 	@AfterMethod

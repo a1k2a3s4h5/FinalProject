@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.healthline.locators.EditorsPickLocators;
 
+import utils.Logger;
+
 public class EditorsPickPOM {
 
 	public WebDriver driver;
@@ -19,10 +21,13 @@ public class EditorsPickPOM {
 	public void editorsPickClicks() {
 		editor.popupSubmitButton.click();
 		editor.editorPick1.click();
+		Logger.print("Editor's Pick article one opened successful");
 		driver.navigate().back();
 		editor.editorPick2.click();
+		Logger.print("Editor's Pick article two opened successful");
 		driver.navigate().back();
 		editor.editorPick3.click();
+		Logger.print("Editor's Pick article three opened successful");
 		driver.navigate().back();
 		driver.quit();
 	}

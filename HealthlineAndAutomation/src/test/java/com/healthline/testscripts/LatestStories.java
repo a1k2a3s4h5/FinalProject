@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.page.objects.LatestStoriesPOM;
 
+import utils.Logger;
 import utils.SetupEnvironment;
 
 public class LatestStories {
@@ -35,10 +36,11 @@ public class LatestStories {
 	@Test(description="To verify latest stories functionality.")
 	public void latestStories() {
 		latestStories.latestStoriesClicks();
+		Logger.print("Latest story article is opened.");
 	}
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("closing browser");
+		System.out.println("Closing browser");
 		driver.quit();
 	}
 }

@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.automation.locators.SearchAndAddToCart;
 
+import utils.Logger;
+
 public class SearchAndAddToCartPOM {
 
 public SearchAndAddToCart addtocart;
@@ -23,11 +25,11 @@ public SearchAndAddToCart addtocart;
 		addtocart.emailField.click();
 		addtocart.emailField.clear();
 		addtocart.emailField.sendKeys(email);
-	
+		Logger.print("Email address is entered"+email);
 		addtocart.passwordField.click();
 		addtocart.passwordField.clear();
 		addtocart.passwordField.sendKeys(password);
-	
+		Logger.print("Password address is entered");
 		addtocart.submitLogin.click();
 	}
 	
@@ -38,7 +40,7 @@ public SearchAndAddToCart addtocart;
 		addtocart.searchInput.click();
 		addtocart.searchInput.clear();
 		addtocart.searchInput.sendKeys(item);
-		
+		Logger.print("Product name is searched: "+item);
 		addtocart.btnSearch.click();
 	}
 	

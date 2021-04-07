@@ -6,6 +6,8 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import com.healthline.locators.SubscribeLocators;
 
+import utils.Logger;
+
 public class SubscribePOM {
 	
 	public WebDriver driver;
@@ -22,6 +24,7 @@ public class SubscribePOM {
 		public void subscribe(String email) {
 		subscribe.subscribeButton.click();
 		subscribe.subscribeTestBox.sendKeys(email);
+		Logger.print("Email is entered in the field");
 		subscribe.subscribeButton2.click();
 		subscribe.subscribeButton3.click();
 		Set<String> handlesSet = driver.getWindowHandles();
@@ -29,5 +32,6 @@ public class SubscribePOM {
 		driver.switchTo().window(handlesList.get(1));
 		driver.close();
 		driver.switchTo().window(handlesList.get(0));
+		Logger.print("Subscribed to website");
 	}
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.healthline.locators.SearchBarLocators;
 
+import utils.Logger;
+
 public class HealthlineSearchBar {
 	public WebDriver driver;
 	public SearchBarLocators searchBar;
@@ -23,6 +25,7 @@ public class HealthlineSearchBar {
 		}
 		catch(Exception e) {}
 		searchBar.searchBox.sendKeys("Women Health");
+		Logger.print("Women health is given as input in search by");
 		searchBar.searchElement.click();
 	}
 }

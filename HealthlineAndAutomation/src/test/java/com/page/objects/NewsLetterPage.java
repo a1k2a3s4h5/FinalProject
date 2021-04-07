@@ -23,8 +23,9 @@ public class NewsLetterPage {
 		newsLetter.emailAddress.click();
 		newsLetter.emailAddress.clear();
 		newsLetter.emailAddress.sendKeys(email);
-		Logger.print("Send email: "+email);
+		Logger.print("Email entered is : "+email);
 		newsLetter.btnSubmit.click();
+		Logger.print("Subscribed to newsletter");
 	}
 
 }

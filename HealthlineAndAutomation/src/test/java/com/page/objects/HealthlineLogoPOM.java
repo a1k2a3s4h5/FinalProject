@@ -23,8 +23,7 @@ public HealthlineLogoLocators healthlineLogo;
 		}
 		catch(Exception e) {}
 		healthlineLogo.logo.click();
-		System.out.println("The page is refreshed");
-		driver.quit();
+		
 	}
 	
 }
