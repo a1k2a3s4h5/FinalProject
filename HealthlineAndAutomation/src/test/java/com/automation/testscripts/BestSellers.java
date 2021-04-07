@@ -6,6 +6,11 @@ package com.automation.testscripts;
  * Modified Last:30/03/2021
  */
 import org.testng.annotations.Test;
+
+import com.page.object.model.BestSellersPOM;
+
+import utils.SetupEnvironment;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,14 +23,15 @@ import org.openqa.selenium.WebDriver;
 public class BestSellers {
 
 	public WebDriver driver;
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.BestSellersPOM bestsellers;
+	SetupEnvironment setup=new SetupEnvironment();
+	public BestSellersPOM bestsellers;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
+		System.out.println("Staring test");
 		driver = setup.driverReturn(browserName,url);
-		bestsellers=new com.page.object.model.BestSellersPOM(driver);
+		bestsellers=new BestSellersPOM(driver);
 	}
 	
 	/**
@@ -41,7 +47,7 @@ public class BestSellers {
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
 		System.out.println("Closing Browser");
-		//driver.quit();
+		driver.quit();
 	}
 	
 }

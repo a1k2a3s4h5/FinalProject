@@ -14,7 +14,9 @@ public ContactUsLocators newsLetter;
 	public ContactUsPOM(WebDriver driver) {	
 		newsLetter=new ContactUsLocators(driver);
 	}
-	
+	/**
+	 * Description: Click on contact us link and enter email, order ref, image and message and submit
+	 */
 	public void contactUs(String email,String orderRef,String filePath,String message) {
 		newsLetter.contactUsLink.click();
 		Select subHead = new Select(newsLetter.subjectHeaingDD);

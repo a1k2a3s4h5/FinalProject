@@ -1,5 +1,9 @@
 package com.automation.testscripts;
-
+/**
+ * Aim: To add the product to cart with quick view
+ * Author: Group Q
+ * Created on:30/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -7,10 +11,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.page.object.model.AddToCartQuickViewPOM;
+
+import utils.SetupEnvironment;
+
 public class AddToCartQuickView {
 	public WebDriver driver;
-	utils.SetupEnvironment setup = new utils.SetupEnvironment();
-	public com.page.object.model.AddToCartQuickViewPOM quickView;
+	SetupEnvironment setup = new SetupEnvironment();
+	public AddToCartQuickViewPOM quickView;
 
 	@DataProvider(name = "validDetails")
 	public Object[][] SignInValidDetails() {
@@ -21,13 +29,12 @@ public class AddToCartQuickView {
 	@BeforeMethod
 	public void beforeMethod(String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		quickView = new com.page.object.model.AddToCartQuickViewPOM(driver);
+		quickView = new AddToCartQuickViewPOM(driver);
 	}
 
 	@Test(dataProvider = "validDetails", description = "To verify the women category functionality.")
 	public void AddTocart(String email, String password) {
 		quickView.QuickView(email, password);
-		;
 	}
 
 	@AfterMethod

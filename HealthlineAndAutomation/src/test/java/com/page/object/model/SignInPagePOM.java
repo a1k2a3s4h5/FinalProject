@@ -14,6 +14,9 @@ public SignInLocators signin;
 		signin=new SignInLocators(driver);
 	}
 	
+	/**
+	 * Description: To sign in the website with email and password
+	 */
 	public void signIn(String email,String password) {
 		signin.signInLink.click();
 		

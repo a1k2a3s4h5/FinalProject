@@ -1,12 +1,10 @@
 package com.page.object.model;
 
-import org.testng.Assert;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import com.automation.locators.SearchLocators;
 
-import utils.Logger;
 
 public class SearchPOM {
 
@@ -17,6 +15,9 @@ public class SearchPOM {
 		loc=new SearchLocators(driver);
 	}
 	
+	/**
+	 * Description: To enter the value in search bar
+	 */
 	public void sendSearchText(String search) {
 		loc.searchTextBox.clear();
 		loc.searchTextBox.click();

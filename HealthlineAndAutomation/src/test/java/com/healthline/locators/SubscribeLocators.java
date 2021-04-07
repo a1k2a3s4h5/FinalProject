@@ -1,9 +1,9 @@
 package com.healthline.locators;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
+/**
+ * Aim: Locator file of subscribe section
+ * Author: Group Q
+ * Created on: 31/03/2021
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,5 +1,9 @@
 package com.healthline.testscripts;
-
+/**
+ * Aim: To check the logo navigates to home page or not
+ * Author: Group Q
+ * Created on: 30/03/2021
+ */
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,9 +22,13 @@ public class HealthlineLogo {
 		healthlineLogo=new com.page.object.model.HealthlineLogoPOM(driver);
 	}
 
+	/**
+	 * Function: healthlineLogolick
+	 * Functionality: To verify healthline logo functionality.
+	 */
 	@Test(description="To verify healthline logo functionality.")
-	public void clickFunctionalityOfHealthlineLogo() {
-		healthlineLogo.workOfHealthlineLogo();
+	public void healthlineLogolick() {
+		healthlineLogo.healthlineLogoClick();
 	}
 	
 	@AfterMethod

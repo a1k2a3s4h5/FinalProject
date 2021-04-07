@@ -1,5 +1,4 @@
 package com.automation.testscripts;
-
 /**
  * Aim: To check the categories functionality 
  * Author:Group Q
@@ -7,6 +6,11 @@ package com.automation.testscripts;
  * Modified on:30/03/2021
  */
 import org.testng.annotations.Test;
+
+import com.page.object.model.CategoriesPOM;
+
+import utils.SetupEnvironment;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -14,19 +18,19 @@ import org.openqa.selenium.WebDriver;
 
 public class Categories {
 	public WebDriver driver;
-	utils.SetupEnvironment setup = new utils.SetupEnvironment();
-	public com.page.object.model.CategoriesPOM categories;
+	SetupEnvironment setup = new SetupEnvironment();
+	public CategoriesPOM categories;
 
 	@Parameters({ "browserName", "url" })
 	@BeforeMethod
 	public void beforeMethod(String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		categories = new com.page.object.model.CategoriesPOM(driver);
+		categories = new CategoriesPOM(driver);
 	}
 
 	/**
-	 * Function name: categoriesWomenCheck To verify the categories of women
-	 * 
+	 * Function name: categories
+	 * Functionality: WomenCheck To verify the categories of women
 	 * @param browserName
 	 * @param url
 	 */

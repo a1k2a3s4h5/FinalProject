@@ -13,7 +13,10 @@ public class FeaturedTopicsPOM {
 		featuredTopics=new FeaturedTopicsLocators(driver);
 	}
 	
-	public void workingOfFeaturedTopics() {
+	/**
+	 * Description: Click on different featured topics link
+	 */
+	public void featuredTopicsClicks() {
 		try {
 			featuredTopics.popupSubmitButton.click();
 		}

@@ -13,18 +13,22 @@ public class TrendingPostPOM {
 			this.driver=driver;
 			trendingPost=new TrendingPostLocators(driver);
 		}
-	public void workingOfTrendingPost() {
-		trendingPost.popupSubmitButton.click();
-		trendingPost.trendingPost1.click();
-		driver.navigate().back();
-
-		try {
-			trendingPost.mainPopUp.click();
-			} catch (Exception e) {
-				System.out.println("Pop-UP not found.");
-			}
-		trendingPost.trendingPost2.click();
-		driver.navigate().back();
+	
+		/**
+		 * Description: to click on different trending post links
+		 */
+		public void trendingPost() {
+			trendingPost.popupSubmitButton.click();
+			trendingPost.trendingPost1.click();
+			driver.navigate().back();
+	
+			try {
+				trendingPost.mainPopUp.click();
+				} catch (Exception e) {
+					System.out.println("Pop-UP not found.");
+				}
+			trendingPost.trendingPost2.click();
+			driver.navigate().back();
 		
 	}
 

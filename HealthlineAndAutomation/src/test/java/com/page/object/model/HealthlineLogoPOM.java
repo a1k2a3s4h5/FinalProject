@@ -14,7 +14,10 @@ public HealthlineLogoLocators healthlineLogo;
 		healthlineLogo=new HealthlineLogoLocators(driver);
 	}
 	
-	public void workOfHealthlineLogo() {
+	/**
+	 * Description: To click on healthline logo and the page should navigate to home page
+	 */
+	public void healthlineLogoClick() {
 		try {
 			healthlineLogo.popupSubmitButton.click();
 		}

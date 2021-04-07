@@ -17,7 +17,7 @@ import utils.Logger;
 import utils.SetupEnvironment;
 
 public class AboutUs {
-	
+	WebDriver driver;
 	SetupEnvironment setup = new SetupEnvironment();
 	/**
 	 * Function name: aboutUs 
@@ -29,12 +29,12 @@ public class AboutUs {
 	@Test(description = "To verify about us is opend succesfully or not.")
 	@Parameters({"browserName","url"})
 	public void aboutUs(String browserName,String url) {
-		WebDriver driver = setup.driverReturn(browserName,url);
+		driver = setup.driverReturn(browserName,url);
 		WebElement aboutUsLink = driver.findElement(By.xpath("//a[@title=\"About us\"]"));
 		aboutUsLink.click();
 		Assert.assertEquals(driver.findElement(By.id("center_column")).isDisplayed(), true);
 		Logger.print("The about us page is opened successfully");
-		driver.quit();
+	
 	}
 
 	@BeforeMethod
@@ -45,5 +45,6 @@ public class AboutUs {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browser");
+		driver.quit();
 	}
 }

@@ -10,26 +10,30 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import com.healthline.locators.LatestStoriesLocators;
+import com.page.object.model.LatestStoriesPOM;
 
 import utils.SetupEnvironment;
 
 public class LatestStories {
 
 	public WebDriver driver;
-	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.LatestStoriesPOM latestStories;
+	SetupEnvironment setup=new SetupEnvironment();
+	public LatestStoriesPOM latestStories;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		latestStories=new com.page.object.model.LatestStoriesPOM(driver);
+		latestStories=new LatestStoriesPOM(driver);
 	}
 	
+	/**
+	 * Function: latestStories
+	 * Functionality: To perform click functionality on latest stories
+	 */
 	@Test(description="To verify latest stories functionality.")
 	public void latestStories() {
-		latestStories.workingOfLatestStories();
+		latestStories.latestStoriesClicks();
 	}
 	@AfterMethod
 	public void afterMethod() {

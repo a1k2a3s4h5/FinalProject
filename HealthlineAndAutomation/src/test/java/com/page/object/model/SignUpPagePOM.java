@@ -11,7 +11,9 @@ public class SignUpPagePOM {
 	public SignUpPagePOM(WebDriver driver) {	
 		signup=new SignUpLocators(driver);
 	}
-	
+	/**
+	 * Description: To create account with email address
+	 */
 	public void createAnAccount(String emailId) {
 		signup.signInLink.click();
 		
@@ -22,6 +24,9 @@ public class SignUpPagePOM {
 		signup.submit.click();
 	}
 	
+	/**
+	 * Description: To send first name, last, name and password, select birthday in the form 
+	 */
 	public void personalInformation(String first_name,String last_name,String pswd)
 	{
 		signup.rdobtnMr.click();
@@ -51,6 +56,9 @@ public class SignUpPagePOM {
 		signup.newsletterChk.click();
 		signup.specialOffersChk.click();
 	}
+	/**
+	 * Description: To send first name, last, name, company name, address, city, state, postcode, additional info, phone in the form 
+	 */
 	public void yourAddressDetails(String f_Name,String l_Name,String companyName,String address1,String address2,String cty,String postCode,String addinfo,String hPhone,String mPhone,String Alias) {
 		
 		signup.fName.click();
@@ -101,6 +109,9 @@ public class SignUpPagePOM {
 		signup.alias.sendKeys(Alias);
 	}
 	
+	/**
+	 * Description: To click on register button
+	 */
 	public void clickRegister() {
 		signup.register.click();
 	}

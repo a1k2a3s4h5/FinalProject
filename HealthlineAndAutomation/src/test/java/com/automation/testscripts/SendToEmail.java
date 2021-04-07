@@ -16,24 +16,20 @@ import utils.Logger;
 import utils.SetupEnvironment;
 
 public class SendToEmail {
-
+	WebDriver driver;
 	SetupEnvironment setup = new SetupEnvironment();
 
 	/**
 	 * Function name: SendToEmailTestCase Check the best seller product
-	 * functionality that performs click
-	 * 
-	 * @param browserName
-	 * 
+	 * functionality that performs click 
 	 */
 	@Test(description = "To verify the send to email item")
 	@Parameters({"browserName","url"})
 	public void sendToEmailTestCase(String browserName,String url) {
-		WebDriver driver = setup.driverReturn(browserName,url);
+		driver = setup.driverReturn(browserName,url);
 		WebElement sendTolink = driver.findElement(By.linkText("support@seleniumframework.com"));
 		sendTolink.click();
 		Logger.print("We can send email by this link.");
-		driver.quit();
 	}
 
 	@BeforeMethod
@@ -44,5 +40,6 @@ public class SendToEmail {
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Closing Browser");
+		driver.quit();
 	}
 }

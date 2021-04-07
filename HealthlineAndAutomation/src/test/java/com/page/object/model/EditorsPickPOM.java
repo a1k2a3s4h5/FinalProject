@@ -13,8 +13,10 @@ public class EditorsPickPOM {
 		this.driver=driver;
 		editor=new EditorsPickLocators(driver);
 	}
-	
-	public void workingOfEditorsPickLocators() {
+	/**
+	 * Description: Click on different editors pick links 
+	 */
+	public void editorsPickClicks() {
 		editor.popupSubmitButton.click();
 		editor.editorPick1.click();
 		driver.navigate().back();

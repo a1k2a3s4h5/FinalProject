@@ -16,6 +16,9 @@ public CategoriesLocator categories;
 		categories=new CategoriesLocator(driver);
 	}
 	
+	/**
+	 * Description: navigate to women category with size, color, composition and properties 
+	 */
 	public void womenCategoryClicks() {
 		Logger.print("Click on women link from navbar");
 		categories.womenCategory.click();

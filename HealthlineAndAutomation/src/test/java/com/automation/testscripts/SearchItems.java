@@ -1,5 +1,9 @@
 package com.automation.testscripts;
-
+/**
+ * Aim: To searchfor different products in the search bar
+ * Author:Group Q
+ * Created on: 31/03/2021
+ */
 import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,10 +16,11 @@ import org.testng.annotations.Test;
 import com.page.object.model.SearchPOM;
 
 import utils.Logger;
+import utils.SetupEnvironment;
 
 public class SearchItems {
 
-	utils.SetupEnvironment setup = new utils.SetupEnvironment();
+	SetupEnvironment setup = new SetupEnvironment();
 	SearchPOM search;
 	public WebDriver driver;
 
@@ -33,7 +38,7 @@ public class SearchItems {
 	@BeforeMethod
 	public void beforeMethod(@Optional String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		search = new com.page.object.model.SearchPOM(driver);
+		search = new SearchPOM(driver);
 	}
 
 	@Test(dataProvider = "validSearch", priority = 2, description = "To verify the search functionality.")

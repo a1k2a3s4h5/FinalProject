@@ -15,7 +15,11 @@ public class LatestStoriesPOM {
 		latestStory=new LatestStoriesLocators(driver);
 	}
 	
-	public void workingOfLatestStories() {
+
+	/**
+	 * Description: To click on different latest stories link
+	 */
+	public void latestStoriesClicks() {
 			try {
 				latestStory.popupSubmitButton.click();
 			}

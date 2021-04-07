@@ -12,8 +12,11 @@ public class HealthTopicsPOM {
 			this.driver=driver;
 			healthlineTopics=new HealthTopicsLocators(driver);
 	}
-		
-		public void workingOfHealthTopics(String email) {
+
+		/**
+		 * Description: To click on different health topics with email
+		 */
+		public void healthTopicsClicks(String email) {
 			try {
 				healthlineTopics.popupSubmitButton.click();
 			}

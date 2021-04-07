@@ -12,6 +12,9 @@ public class AboutUsPOM {
 		aboutUs=new AboutUsLocators(driver);
 	}
 	
+	/**
+	 * Description: Click on about us link
+	 */
 	public void clickAboutUs() {
 		aboutUs.aboutUsLink.click();
 	}

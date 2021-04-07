@@ -14,7 +14,10 @@ public class HealthlineSearchBar {
 			searchBar=new SearchBarLocators(driver);
 		}
 	
-	public void workingOfSearchBar() {
+		/**
+		 * Description: To click on search bar and send different values
+		 */
+	public void searchBar() {
 		try {
 			searchBar.popupSubmitButton.click();
 		}

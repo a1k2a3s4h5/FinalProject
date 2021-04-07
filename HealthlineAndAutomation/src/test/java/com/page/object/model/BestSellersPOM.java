@@ -18,6 +18,9 @@ public WebDriver driver;
 		bestsellers=new BestSellersLocator(driver);
 	}
 	
+	/**
+	 * Description: click on best seller link 
+	 */
 	public void bestSellers() {
 		Logger.print("Click on bestseller link");
 		bestsellers.bestSeller.click();

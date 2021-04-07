@@ -15,7 +15,11 @@ public class SubscribePOM {
 			this.driver=driver;
 			subscribe=new SubscribeLocators(driver);
 		}
-	public void workingOfSubscriber(String email) {
+
+		/**
+		 * Description: To subscribe to the website with email
+		 */		
+		public void subscribe(String email) {
 		subscribe.subscribeButton.click();
 		subscribe.subscribeTestBox.sendKeys(email);
 		subscribe.subscribeButton2.click();

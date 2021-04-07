@@ -15,24 +15,26 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.page.object.model.SignInPagePOM;
+
 import utils.Logger;
+import utils.SetupEnvironment;
 
 public class SignIn {
-	utils.SetupEnvironment setup = new utils.SetupEnvironment();
-	public com.page.object.model.SignInPagePOM signIn;
+	SetupEnvironment setup = new SetupEnvironment();
+	public SignInPagePOM signIn;
 	public WebDriver driver;
 
 	@Parameters({ "browserName", "url" })
 	@BeforeMethod
 	public void beforeMethod(String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		signIn = new com.page.object.model.SignInPagePOM(driver);
+		signIn = new SignInPagePOM(driver);
 	}
 
 	/**
-	 * Function name: signinInValidDetails Data provider with invalid details
-	 * 
-	 * @return
+	 * Function name: signinInValidDetails 
+	 * Data provider with invalid details
 	 */
 	@DataProvider(name = "invalidDetails")
 	public Object[][] signinInValidDetails() {
@@ -40,9 +42,8 @@ public class SignIn {
 	}
 
 	/**
-	 * Function name: signInValidDetails Data provider with valid details
-	 * 
-	 * @return
+	 * Function name: signInValidDetails 
+	 * Data provider with valid details
 	 */
 	@DataProvider(name = "validDetails")
 	public Object[][] SignInValidDetails() {
@@ -53,9 +54,6 @@ public class SignIn {
 	 * Function name: invalidSignIn To check the login functionality with invalid
 	 * email address and password There are 2 test scenarios where email address is
 	 * invalid and in other email is valid but password is invalid
-	 * 
-	 * @param emailAddress
-	 * @param pswd
 	 */
 	@Test(dataProvider = "invalidDetails", priority = 1, description = "To sign in with invalid email")
 	public void invalidSignIn(String emailAddress, String pswd) {
@@ -65,11 +63,8 @@ public class SignIn {
 	}
 
 	/**
-	 * Function name: validSignIn To check the login functionality with valid
-	 * credentials
-	 * 
-	 * @param emailAddress
-	 * @param pswd
+	 * Function name: validSignIn 
+	 * To check the login functionality with valid credentials
 	 */
 	@Test(dataProvider = "validDetails", priority = 2, description = "To verify login with valid credentials")
 	public void validSignIn(String emailAddress, String pswd) {

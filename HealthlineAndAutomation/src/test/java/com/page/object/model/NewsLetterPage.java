@@ -16,8 +16,10 @@ public class NewsLetterPage {
 		newsLetter=new NewsletterLocators(driver);
 	}
 	
+	/**
+	 * Description: To send email and submit
+	 */
 	public void newsLetter(String email) {
-		
 		newsLetter.emailAddress.click();
 		newsLetter.emailAddress.clear();
 		newsLetter.emailAddress.sendKeys(email);

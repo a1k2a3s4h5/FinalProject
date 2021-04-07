@@ -1,5 +1,9 @@
 package com.automation.testscripts;
-
+/**
+ * Aim: To verify signup functionality with different inputs
+ * Author: Group Q
+ * Created on: 30/03/2021
+ */
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,43 +31,25 @@ public class SignUp {
 		signUp = new com.page.object.model.SignUpPagePOM(driver);
 	}
 
-	/**
-	 * Function name:signUpValidDetails Data provider with valid details
-	 * 
-	 * @return
-	 */
 	@DataProvider(name = "validDetails")
 	public Object[][] signUpValidDetails() {
 		return new Object[][] { { "test1510@test.com", "Abc", "Xyz", "abcde", "Abc", "Xyz", "Pqr", "Gateway Group",
 				"Gateway", "Ahmedabad", "00000", "abcdefgh", "0000000000", "0000000000", "pqr" } };
 	}
 
-	/**
-	 * Function name:signUpInValidEmail Data provider with invalid email address
-	 * 
-	 * @return
-	 */
 	@DataProvider(name = "invalidEmail")
 	public Object[] signUpInValidEmail() {
 		return new Object[] { "test#%1510@test.com" };
 	}
 
-	/**
-	 * Function name:signUpAccountExists Data Provider with already exist email
-	 * address
-	 * 
-	 * @return
-	 */
 	@DataProvider(name = "emailIdExists")
 	public Object[] signUpAccountExists() {
 		return new Object[] { "test1605@gmail.com" };
 	}
 
 	/**
-	 * Function name:invalidSignUp To verify the signup functionality with invalid
-	 * email address
-	 * 
-	 * @param emailAddress
+	 * Function name:invalidSignUp 
+	 * Functionality:To verify the signup functionality with invalid email address
 	 */
 	@Test(dataProvider = "invalidEmail", priority = 1, description = "Provide invalid email and check the functionality")
 	public void invalidSignUp(String emailAddress) {
@@ -73,10 +59,8 @@ public class SignUp {
 	}
 
 	/**
-	 * Function name: emailIdExits To verify the signup functionality with already
-	 * registered email address
-	 * 
-	 * @param emailAddress
+	 * Function name: emailIdExits 
+	 * Functionality: To verify the signup functionality with already registered email address
 	 */
 
 	@Test(dataProvider = "emailIdExists", priority = 2, description = "Provide already exists email and check the functionality")
@@ -86,24 +70,8 @@ public class SignUp {
 	}
 
 	/**
-	 * Function name: validSignUp To provide valid details for signup and verify the
-	 * functionality
-	 * 
-	 * @param emailAddress
-	 * @param firstname
-	 * @param lastname
-	 * @param password
-	 * @param fName
-	 * @param lName
-	 * @param company
-	 * @param adrs1
-	 * @param adrs2
-	 * @param city
-	 * @param postCode
-	 * @param addinfo
-	 * @param hPhone
-	 * @param mPhone
-	 * @param alias
+	 * Function name: validSignUp 
+	 * Functionality: To provide valid details for signup and verify the functionality
 	 */
 	@Test(dataProvider = "validDetails", priority = 3, description = "Provide valid email and check the functionality")
 	public void validSignUp(String emailAddress, String firstname, String lastname, String password, String fName,
