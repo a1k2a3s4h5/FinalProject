@@ -5,12 +5,15 @@ import org.openqa.selenium.WebElement;
 
 import com.healthline.locators.HealthlineLogoLocators;
 
+import utils.PopUpHandle;
+
 public class HealthlineLogoPOM {
 	public WebDriver driver;
-public HealthlineLogoLocators healthlineLogo;
-	
+	public HealthlineLogoLocators healthlineLogo;
+	public PopUpHandle obj;
 	public HealthlineLogoPOM(WebDriver driver) {	
 		this.driver=driver;
+		obj=new PopUpHandle(driver);
 		healthlineLogo=new HealthlineLogoLocators(driver);
 	}
 	
