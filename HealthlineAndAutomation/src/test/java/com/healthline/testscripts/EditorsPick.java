@@ -7,7 +7,7 @@ package com.healthline.testscripts;
  */
 import org.testng.annotations.Test;
 
-import com.page.object.model.EditorsPickPOM;
+import com.page.objects.EditorsPickPOM;
 
 import utils.SetupEnvironment;
 

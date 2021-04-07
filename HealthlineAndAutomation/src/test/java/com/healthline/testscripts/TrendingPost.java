@@ -16,13 +16,13 @@ public class TrendingPost {
 
 	public WebDriver driver;
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.TrendingPostPOM trendingPost;
+	public com.page.objects.TrendingPostPOM trendingPost;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		trendingPost=new com.page.object.model.TrendingPostPOM(driver);
+		trendingPost=new com.page.objects.TrendingPostPOM(driver);
 	}
 
 	/**

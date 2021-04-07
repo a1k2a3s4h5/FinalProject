@@ -1,4 +1,4 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 

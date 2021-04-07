@@ -13,13 +13,13 @@ import org.openqa.selenium.WebDriver;
 public class HealthlineLogo {
 	public WebDriver driver;
 	utils.SetupEnvironment setup=new utils.SetupEnvironment();
-	public com.page.object.model.HealthlineLogoPOM healthlineLogo;
+	public com.page.objects.HealthlineLogoPOM healthlineLogo;
 	
 	@Parameters({"browserName","url"})
 	@BeforeMethod
 	public void beforeMethod(String browserName,String url) {
 		driver = setup.driverReturn(browserName,url);
-		healthlineLogo=new com.page.object.model.HealthlineLogoPOM(driver);
+		healthlineLogo=new com.page.objects.HealthlineLogoPOM(driver);
 	}
 
 	/**

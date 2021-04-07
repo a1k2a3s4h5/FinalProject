@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.page.object.model.NewsLetterPage;
+import com.page.objects.NewsLetterPage;
 
 import utils.Logger;
 import utils.SetupEnvironment;

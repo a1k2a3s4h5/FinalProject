@@ -18,7 +18,7 @@ public class SignUp {
 
 	public WebDriver driver;
 	utils.SetupEnvironment setup = new utils.SetupEnvironment();
-	public com.page.object.model.SignUpPagePOM signUp;
+	public com.page.objects.SignUpPagePOM signUp;
 
 	public WebDriver returnStateOfDriver() {
 		return this.driver;
@@ -28,7 +28,7 @@ public class SignUp {
 	@BeforeMethod
 	public void beforeMethod(String browserName, String url) {
 		driver = setup.driverReturn(browserName, url);
-		signUp = new com.page.object.model.SignUpPagePOM(driver);
+		signUp = new com.page.objects.SignUpPagePOM(driver);
 	}
 
 	@DataProvider(name = "validDetails")

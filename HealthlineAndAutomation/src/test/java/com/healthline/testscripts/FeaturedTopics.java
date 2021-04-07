@@ -7,7 +7,7 @@ package com.healthline.testscripts;
  */
 import org.testng.annotations.Test;
 
-import com.page.object.model.FeaturedTopicsPOM;
+import com.page.objects.FeaturedTopicsPOM;
 
 import utils.SetupEnvironment;
 

@@ -14,7 +14,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.page.object.model.ContactUsPOM;
+import com.page.objects.ContactUsPOM;
 
 import utils.Logger;
 import utils.SetupEnvironment;

@@ -8,7 +8,7 @@ package com.healthline.testscripts;
  */
 import org.testng.annotations.Test;
 
-import com.page.object.model.SubscribePOM;
+import com.page.objects.SubscribePOM;
 
 import utils.SetupEnvironment;
 

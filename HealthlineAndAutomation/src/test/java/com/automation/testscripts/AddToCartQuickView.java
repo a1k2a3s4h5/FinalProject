@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.page.object.model.AddToCartQuickViewPOM;
+import com.page.objects.AddToCartQuickViewPOM;
 
 import utils.SetupEnvironment;
 
@@ -34,7 +34,7 @@ public class AddToCartQuickView {
 
 	@Test(dataProvider = "validDetails", description = "To verify the women category functionality.")
 	public void AddTocart(String email, String password) {
-		quickView.QuickView(email, password);
+		quickView.quickView(email, password);
 	}
 
 	@AfterMethod

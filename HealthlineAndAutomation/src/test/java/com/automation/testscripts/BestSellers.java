@@ -7,7 +7,7 @@ package com.automation.testscripts;
  */
 import org.testng.annotations.Test;
 
-import com.page.object.model.BestSellersPOM;
+import com.page.objects.BestSellersPOM;
 
 import utils.SetupEnvironment;
 

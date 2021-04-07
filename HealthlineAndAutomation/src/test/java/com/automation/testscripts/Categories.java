@@ -7,7 +7,7 @@ package com.automation.testscripts;
  */
 import org.testng.annotations.Test;
 
-import com.page.object.model.CategoriesPOM;
+import com.page.objects.CategoriesPOM;
 
 import utils.SetupEnvironment;
 
@@ -31,8 +31,6 @@ public class Categories {
 	/**
 	 * Function name: categories
 	 * Functionality: WomenCheck To verify the categories of women
-	 * @param browserName
-	 * @param url
 	 */
 	@Test(description = "To verify the women category functionality.")
 	public void categoriesWomenCheck() {

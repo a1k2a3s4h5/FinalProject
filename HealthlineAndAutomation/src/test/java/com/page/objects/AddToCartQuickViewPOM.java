@@ -1,8 +1,10 @@
-package com.page.object.model;
+package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
 
 import com.automation.locators.AddToCartQuickViewLocators;
+
+import utils.Logger;
 
 public class AddToCartQuickViewPOM {
 public AddToCartQuickViewLocators quickView;
@@ -15,7 +17,7 @@ public AddToCartQuickViewLocators quickView;
 	/**
 	 * Description: Log in with email and password and add the product to cart with quick view method.
 	 */
-	public void QuickView(String email,String password) {
+	public void quickView(String email,String password) {
 		quickView.signInLink.click();
 		quickView.emailField.click();
 		quickView.emailField.clear();
@@ -24,10 +26,12 @@ public AddToCartQuickViewLocators quickView;
 		quickView.passwordField.clear();
 		quickView.passwordField.sendKeys(password);
 		quickView.submitLogin.click();
+		Logger.print("Login done successfully");
 		quickView.womenSection.click();
 		quickView.tops.click();
 		quickView.top1.click();
 		driver.switchTo().frame("fancybox-frame1617627541728");
 		quickView.quantityUp.click();
+		Logger.print("Top added to cart");
 	}
 }

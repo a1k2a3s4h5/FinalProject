@@ -33,7 +33,7 @@ public class AboutUs {
 		WebElement aboutUsLink = driver.findElement(By.xpath("//a[@title=\"About us\"]"));
 		aboutUsLink.click();
 		Assert.assertEquals(driver.findElement(By.id("center_column")).isDisplayed(), true);
-		Logger.print("The about us page is opened successfully");
+		Logger.print("About us page opened");
 	
 	}
 
