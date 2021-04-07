@@ -1,6 +1,7 @@
 package com.page.object.model;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.healthline.locators.LatestStoriesLocators;
 
@@ -19,9 +20,14 @@ public class LatestStoriesPOM {
 			try {
 				latestStory.popupSubmitButton.click();
 			}
-			catch(Exception e) {}
+			catch(Exception e) 
+			{}
 		latestStory.latestStories.click();
 		driver.navigate().back();
 			
+	}
+	
+	public WebElement getLatetestStories() {
+		return latestStory.latestStories;
 	}
 }

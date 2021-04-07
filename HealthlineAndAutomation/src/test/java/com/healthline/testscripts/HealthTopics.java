@@ -15,9 +15,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import utils.VisibilityOfElement;
+
 public class HealthTopics {
 
 public WebDriver driver;
+public boolean visibleFlag=false;
 utils.SetupEnvironment setup=new utils.SetupEnvironment();
 public com.page.object.model.HealthTopicsPOM healthlineTopics;
 
@@ -41,13 +44,15 @@ public void beforeMethod(String browserName,String url) {
 	@Test(dataProvider="invalidEmail",priority=1,description="To verify the health topics functionality with invalid email.")
 	public void healthTopicsWithInvalidEmail(String email) {
 	healthlineTopics.workingOfHealthTopics(email);
-	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='icon-hl-circle-alert css-1dj97s9']")).isDisplayed(), true);
+	visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//div[@class='icon-hl-circle-alert css-1dj97s9']"), driver);
+	Assert.assertEquals(visibleFlag, true);
 	}
 	
 	@Test(dataProvider="validEmail",priority=2,description="To verify the health topics functionality with invalid email.")
 	public void healthTopicsWithValidEmail(String email) {
 	healthlineTopics.workingOfHealthTopics(email);
-	Assert.assertEquals(driver.findElement(By.xpath("//div[@data-testid='is-inline-success']")).isDisplayed(), true);
+	visibleFlag = VisibilityOfElement.isElementVisible(By.xpath("//div[@data-testid='is-inline-success']"), driver);
+	Assert.assertEquals(visibleFlag, true);
 	}
 
 	@AfterMethod
