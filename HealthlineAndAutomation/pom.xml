@@ -32,8 +32,11 @@
 					</property>
 				</properties>
 				<suiteXmlFiles>
-					<suiteXmlFile>
+					<!-- <suiteXmlFile>
 						testng_Automation.xml
+					</suiteXmlFile> -->
+					<suiteXmlFile>
+						testng_HealthLine.xml
 					</suiteXmlFile>
 				</suiteXmlFiles>
 			</configuration>

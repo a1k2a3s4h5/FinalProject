@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.healthline.locators.FeaturedTopicsLocators;
 
 import utils.Logger;
+import utils.PopUpHandle;
 
 public class FeaturedTopicsPOM {
 
@@ -25,31 +26,22 @@ public class FeaturedTopicsPOM {
 	 * Description: Click on different featured topics link
 	 */
 	public void featuredTopicsClicks() {
-		try {
-			featuredTopics.popupSubmitButton.click();
-		} catch (Exception e) {
-		}
+		/*
+		 * try { featuredTopics.popupSubmitButton.click(); } catch (Exception e) { }
+		 */
+		PopUpHandle.acceptCookie(driver);
+		PopUpHandle.mainPopUp(driver);
 		featuredTopics.coronaVirus.click();
 		Logger.print("Featured topic- corona virus article opened");
 		driver.navigate().back();
-		try {
-			featuredTopics.mainPopUp.click();
-		} catch (Exception e) {
-		}
+		PopUpHandle.mainPopUp(driver);
 		featuredTopics.nutrition.click();
 		Logger.print("Featured topic- nutrition article opened");
 		driver.navigate().back();
-
-		try {
-			featuredTopics.mainPopUp.click();
-		} catch (Exception e) {
-		}
+		PopUpHandle.mainPopUp(driver);
 		featuredTopics.parentHood.click();
 		Logger.print("Featured topic- parenthood article opened");
-		try {
-			featuredTopics.mainPopUp.click();
-		} catch (Exception e) {
-		}
+		PopUpHandle.mainPopUp(driver);
 		driver.navigate().back();
 	}
 	public String featuredHealthTopics() {

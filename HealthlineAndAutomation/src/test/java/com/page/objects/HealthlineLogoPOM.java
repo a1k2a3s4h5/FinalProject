@@ -13,7 +13,7 @@ public class HealthlineLogoPOM {
 	public PopUpHandle obj;
 	public HealthlineLogoPOM(WebDriver driver) {	
 		this.driver=driver;
-		obj=new PopUpHandle(driver);
+		obj=new PopUpHandle();
 		healthlineLogo=new HealthlineLogoLocators(driver);
 	}
 	

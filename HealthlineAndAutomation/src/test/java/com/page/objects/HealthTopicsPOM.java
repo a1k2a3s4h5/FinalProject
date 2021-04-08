@@ -1,6 +1,7 @@
 package com.page.objects;
 
 import org.openqa.selenium.WebDriver;
+
 import com.healthline.locators.HealthTopicsLocators;
 
 import utils.Logger;

@@ -47,8 +47,6 @@ public WebDriver driver;
 		String featureHealth=featuredTopics.featuredHealthTopics();
 		Assert.assertEquals(featureHealth,"FEATURED HEALTH TOPICS");
 
-		featuredTopics.featuredTopicsClicks(); 
-
 	}
 	@AfterMethod
 	public void afterMethod() {

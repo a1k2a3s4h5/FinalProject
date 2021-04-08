@@ -25,8 +25,8 @@ public class SubscribePOM {
 		subscribe.subscribeButton.click();
 		subscribe.subscribeTestBox.sendKeys(email);
 		Logger.print("Email is entered in the field");
-		subscribe.subscribeButton2.click();
-		subscribe.subscribeButton3.click();
+		subscribe.subscribeButton.click();
+		subscribe.subscribeButton.click();
 		Set<String> handlesSet = driver.getWindowHandles();
 		List<String> handlesList = new ArrayList<String>(handlesSet);
 		driver.switchTo().window(handlesList.get(1));
