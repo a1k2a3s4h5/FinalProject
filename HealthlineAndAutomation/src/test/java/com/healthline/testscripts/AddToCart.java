@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class AddToCard {
+public class AddToCart {
 	
 	public static void main(String[] args) {
 	
